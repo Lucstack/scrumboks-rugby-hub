@@ -5,64 +5,64 @@ import { Clock, MapPin, Users, Calendar } from "lucide-react";
 const Teams = () => {
   const teams = [
     {
-      name: "Senioren 1",
+      name: "Heren 1",
       level: "Competitie",
-      description: "Ons eerste team dat strijdt in de hoogste regionale competitie. Ervaren spelers met ambities.",
-      training: "Dinsdag & Donderdag 19:30",
-      members: "25 spelers",
+      description: "Ons eerste herenteam dat strijdt in de regionale competitie. Voor ervaren spelers met ambities.",
+      training: "Dinsdag & Vrijdag 19:30",
+      members: "18 spelers",
       age: "18+",
       commitment: "Hoog",
-      color: "from-rugby-green to-rugby-green-light"
+      color: "from-scrumboks-blue to-scrumboks-blue-light"
     },
     {
-      name: "Senioren 2", 
+      name: "Heren 2", 
       level: "Recreatief",
-      description: "Een leuk team voor spelers die rugby willen spelen zonder de druk van competitie.",
-      training: "Woensdag 19:30",
-      members: "20 spelers",
+      description: "Een gezellig team voor spelers die rugby willen spelen in een ontspannen sfeer.",
+      training: "Dinsdag 19:30",
+      members: "15 spelers",
       age: "18+",
       commitment: "Gemiddeld",
-      color: "from-rugby-gold to-rugby-gold-light"
+      color: "from-scrumboks-yellow to-scrumboks-yellow-light"
     },
     {
-      name: "Jeugd U18",
-      level: "Ontwikkeling",
-      description: "Jonge talenten die zich voorbereiden op seniorenrugby. Focus op techniek en teamwork.",
-      training: "Zaterdag 10:00",
-      members: "18 spelers",
-      age: "15-18 jaar",
+      name: "Dames",
+      level: "Gemengd",
+      description: "Ons enthousiaste damesteam waar nieuwe speelsters van harte welkom zijn!",
+      training: "Vrijdag 19:30",
+      members: "12 speelsters",
+      age: "16+",
       commitment: "Gemiddeld",
-      color: "from-rugby-green-light to-rugby-gold"
+      color: "from-scrumboks-blue-light to-scrumboks-yellow"
     },
     {
-      name: "Jeugd U15",
-      level: "Basis",
-      description: "Leren van de basisprincipes van rugby in een veilige en leuke omgeving.",
-      training: "Zaterdag 09:00",
-      members: "22 spelers",
-      age: "12-15 jaar", 
+      name: "Jeugd",
+      level: "Ontwikkeling",
+      description: "Voor jonge rugbytalenten. Focus op techniek, plezier en teamwork in een veilige omgeving.",
+      training: "Zaterdag 10:00",
+      members: "8 spelers",
+      age: "12-18 jaar", 
       commitment: "Laag",
-      color: "from-accent to-rugby-gold-light"
+      color: "from-accent to-scrumboks-yellow-light"
+    },
+    {
+      name: "Walking Rugby",
+      level: "Laagdrempelig",
+      description: "Rugby zonder rennen! Perfect voor 50+ of mensen die rustiger aan willen doen.",
+      training: "Vrijdag 18:00",
+      members: "10+ spelers",
+      age: "Alle leeftijden",
+      commitment: "Flexibel",
+      color: "from-scrumboks-gray to-scrumboks-blue-light"
     },
     {
       name: "Touch Rugby",
-      level: "Laagdrempelig",
-      description: "Contactloze variant van rugby. Perfect voor beginners en een gemengd gezelschap.",
-      training: "Vrijdag 18:30",
-      members: "30+ spelers",
-      age: "Alle leeftijden",
-      commitment: "Flexibel",
-      color: "from-rugby-gray to-rugby-green-light"
-    },
-    {
-      name: "Veteranen",
-      level: "Masters",
-      description: "Voor de ervaren spelers die nog steeds de passie voelen. Gezelligheid staat voorop.",
-      training: "Zondag 11:00",
-      members: "15 spelers",
-      age: "35+",
-      commitment: "Laag",
-      color: "from-rugby-green-dark to-rugby-green"
+      level: "Contactloos",
+      description: "Contactloze variant in de zomer. Ideaal voor beginners en gemixte groepen.",
+      training: "Donderdag (zomer)",
+      members: "Variabel",
+      age: "Iedereen welkom",
+      commitment: "Zeer laag",
+      color: "from-scrumboks-yellow-light to-scrumboks-blue-light"
     }
   ];
 
@@ -71,12 +71,12 @@ const Teams = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rugby-green mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-scrumboks-blue mb-6">
             Onze Teams
           </h2>
-          <p className="text-lg lg:text-xl text-rugby-gray max-w-3xl mx-auto leading-relaxed">
-            Van beginnende jeugdspelers tot ervaren veteranen - er is een plek voor iedereen bij Scrumboks.
-            Ontdek welk team het beste bij jou past.
+          <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
+            Van ervaren competitiespelers tot nieuwsgierige beginners - bij Scrumboks is er een team 
+            voor iedereen. Ontdek waar jij het beste past!
           </p>
         </div>
 
@@ -88,38 +88,38 @@ const Teams = () => {
               <div className={`h-2 bg-gradient-to-r ${team.color}`} />
               
               <CardHeader className="pb-4">
-                <CardTitle className="text-rugby-green group-hover:text-rugby-green-dark transition-colors duration-200">
-                  {team.name}
-                </CardTitle>
-                <div className="inline-block bg-rugby-gold/20 text-rugby-green text-sm font-medium px-3 py-1 rounded-full w-fit">
-                  {team.level}
-                </div>
+              <CardTitle className="text-scrumboks-blue group-hover:text-scrumboks-blue-dark transition-colors duration-200">
+                {team.name}
+              </CardTitle>
+              <div className="inline-block bg-scrumboks-yellow/20 text-scrumboks-blue text-sm font-medium px-3 py-1 rounded-full w-fit">
+                {team.level}
+              </div>
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-rugby-gray leading-relaxed">
+                <p className="text-scrumboks-gray leading-relaxed">
                   {team.description}
                 </p>
 
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 text-sm text-rugby-gray">
-                    <Clock className="w-4 h-4 text-rugby-green" />
+                  <div className="flex items-center gap-3 text-sm text-scrumboks-gray">
+                    <Clock className="w-4 h-4 text-scrumboks-blue" />
                     <span>{team.training}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-rugby-gray">
-                    <Users className="w-4 h-4 text-rugby-green" />
+                  <div className="flex items-center gap-3 text-sm text-scrumboks-gray">
+                    <Users className="w-4 h-4 text-scrumboks-blue" />
                     <span>{team.members}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-rugby-gray">
-                    <Calendar className="w-4 h-4 text-rugby-green" />
+                  <div className="flex items-center gap-3 text-sm text-scrumboks-gray">
+                    <Calendar className="w-4 h-4 text-scrumboks-blue" />
                     <span>{team.age}</span>
                   </div>
                 </div>
 
                 <div className="pt-2">
                   <div className="flex justify-between items-center text-sm">
-                    <span className="text-rugby-gray">Inzet niveau:</span>
-                    <span className="font-medium text-rugby-green">{team.commitment}</span>
+                    <span className="text-scrumboks-gray">Inzet niveau:</span>
+                    <span className="font-medium text-scrumboks-blue">{team.commitment}</span>
                   </div>
                 </div>
 
@@ -135,22 +135,22 @@ const Teams = () => {
         <div className="bg-card p-8 rounded-lg shadow-soft">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-rugby-green mb-4">
+              <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
                 Trainingslocatie
               </h3>
-              <p className="text-rugby-gray mb-6 leading-relaxed">
-                Al onze teams trainen op ons prachtige hoofdveld met uitstekende faciliteiten. 
-                We beschikken over kleedkamers, een kantine en een moderne trainingsruimte.
+              <p className="text-scrumboks-gray mb-6 leading-relaxed">
+                Al onze teams trainen op ons prachtige veld in Tiel met goede faciliteiten. 
+                We hebben kleedkamers, een gezellige kantine en alles wat je nodig hebt.
               </p>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-rugby-green" />
-                  <span className="text-rugby-gray">Sportpark De Groene Weide, Rotterdam</span>
+                  <MapPin className="w-5 h-5 text-scrumboks-blue" />
+                  <span className="text-scrumboks-gray">Sportcomplex De Lok, Tiel</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-rugby-green" />
-                  <span className="text-rugby-gray">Velden open van 17:00 - 21:00</span>
+                  <Clock className="w-5 h-5 text-scrumboks-blue" />
+                  <span className="text-scrumboks-gray">Trainingen: dinsdag & vrijdag 19:30</span>
                 </div>
               </div>
 
@@ -160,10 +160,10 @@ const Teams = () => {
             </div>
 
             <div className="bg-muted/50 h-64 rounded-lg flex items-center justify-center">
-              <div className="text-center text-rugby-gray">
+              <div className="text-center text-scrumboks-gray">
                 <MapPin className="w-12 h-12 mx-auto mb-3 opacity-60" />
-                <p>Kaart van trainingslocatie</p>
-                <p className="text-sm">Google Maps integratie</p>
+                <p>Kaart van onze trainingslocatie</p>
+                <p className="text-sm">Sportcomplex De Lok, Tiel</p>
               </div>
             </div>
           </div>

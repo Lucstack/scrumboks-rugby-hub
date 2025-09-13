@@ -16,11 +16,11 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         
-        // Rugby-specific variants
-        hero: "bg-gradient-to-r from-rugby-green to-rugby-green-light text-rugby-white hover:from-rugby-green-dark hover:to-rugby-green transform hover:scale-105 shadow-lg hover:shadow-xl border-0",
-        action: "bg-gradient-to-r from-rugby-gold to-rugby-gold-light text-rugby-black font-semibold hover:from-accent hover:to-rugby-gold transform hover:scale-105 shadow-md hover:shadow-lg",
-        team: "bg-rugby-white text-rugby-green border-2 border-rugby-green hover:bg-rugby-green hover:text-rugby-white shadow-md hover:shadow-lg",
-        minimal: "bg-transparent text-rugby-white border border-rugby-white/30 hover:bg-rugby-white/10 hover:border-rugby-white/60 backdrop-blur-sm",
+        // Scrumboks-specific variants
+        hero: "bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-light text-scrumboks-white hover:from-scrumboks-blue-dark hover:to-scrumboks-blue transform hover:scale-105 shadow-lg hover:shadow-xl border-0",
+        action: "bg-gradient-to-r from-scrumboks-yellow to-scrumboks-yellow-light text-scrumboks-dark font-semibold hover:from-accent hover:to-scrumboks-yellow transform hover:scale-105 shadow-md hover:shadow-lg",
+        team: "bg-scrumboks-white text-scrumboks-blue border-2 border-scrumboks-blue hover:bg-scrumboks-blue hover:text-scrumboks-white shadow-md hover:shadow-lg",
+        minimal: "bg-transparent text-scrumboks-white border border-scrumboks-white/30 hover:bg-scrumboks-white/10 hover:border-scrumboks-white/60 backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",

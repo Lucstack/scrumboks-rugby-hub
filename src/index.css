@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scrumboks Rugby Club Design System
+/* Scrumboks Rugby Club Design System - Officiële kleuren met moderne twist
 All colors MUST be HSL for perfect theming
 */
 
@@ -12,20 +12,21 @@ All colors MUST be HSL for perfect theming
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
 
-    /* Rugby green palette */
-    --rugby-green: 140 45% 25%;
-    --rugby-green-light: 140 35% 35%;
-    --rugby-green-dark: 140 60% 15%;
+    /* Scrumboks officiële kleuren (converted to HSL) */
+    --scrumboks-blue: 230 94% 29%;        /* #081689 */
+    --scrumboks-yellow: 52 96% 49%;       /* #F8E300 */
+    --scrumboks-dark: 240 5% 13%;         /* #221F20 */
     
-    /* Gold accent for energy */
-    --rugby-gold: 45 85% 55%;
-    --rugby-gold-light: 45 80% 65%;
+    /* Extended palette voor betere UX */
+    --scrumboks-blue-light: 230 85% 45%;
+    --scrumboks-blue-dark: 230 95% 20%;
+    --scrumboks-yellow-light: 52 90% 65%;
+    --scrumboks-yellow-dark: 45 85% 35%;
     
     /* Neutral tones */
-    --rugby-black: 0 0% 8%;
-    --rugby-white: 0 0% 98%;
-    --rugby-gray: 0 0% 45%;
-    --rugby-gray-light: 0 0% 85%;
+    --scrumboks-white: 0 0% 98%;
+    --scrumboks-gray: 0 0% 45%;
+    --scrumboks-gray-light: 0 0% 85%;
 
     /* Semantic tokens */
     --card: 0 0% 100%;
@@ -34,7 +35,7 @@ All colors MUST be HSL for perfect theming
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
 
-    --primary: 140 45% 25%;
+    --primary: 230 94% 29%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 85%;
@@ -43,29 +44,31 @@ All colors MUST be HSL for perfect theming
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 45 85% 55%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 52 96% 49%;
+    --accent-foreground: 240 5% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 140 45% 25%;
+    --ring: 230 94% 29%;
 
     --radius: 0.75rem;
 
-    /* Gradients for dynamic feel */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--rugby-green)), hsl(var(--rugby-green-light)));
-    --gradient-accent: linear-gradient(45deg, hsl(var(--rugby-gold)), hsl(var(--rugby-gold-light)));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--rugby-black)), hsl(var(--rugby-green-dark)));
+    /* Gradients voor dynamisch gevoel */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--scrumboks-blue)), hsl(var(--scrumboks-blue-light)));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--scrumboks-yellow)), hsl(var(--scrumboks-yellow-light)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--scrumboks-dark)), hsl(var(--scrumboks-blue-dark)));
+    --gradient-team: linear-gradient(135deg, hsl(var(--scrumboks-blue-dark)), hsl(var(--scrumboks-blue)));
 
-    /* Shadows for depth */
-    --shadow-soft: 0 2px 10px -2px hsl(var(--rugby-green) / 0.1);
-    --shadow-medium: 0 4px 20px -4px hsl(var(--rugby-green) / 0.15);
-    --shadow-strong: 0 8px 30px -8px hsl(var(--rugby-green) / 0.25);
+    /* Shadows voor diepte */
+    --shadow-soft: 0 2px 10px -2px hsl(var(--scrumboks-blue) / 0.1);
+    --shadow-medium: 0 4px 20px -4px hsl(var(--scrumboks-blue) / 0.15);
+    --shadow-strong: 0 8px 30px -8px hsl(var(--scrumboks-blue) / 0.25);
+    --shadow-yellow: 0 4px 20px -4px hsl(var(--scrumboks-yellow) / 0.3);
 
-    /* Animations */
+    /* Animaties */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
