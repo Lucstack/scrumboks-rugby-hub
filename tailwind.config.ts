@@ -47,6 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        rugby: {
+          green: "hsl(var(--rugby-green))",
+          "green-light": "hsl(var(--rugby-green-light))",
+          "green-dark": "hsl(var(--rugby-green-dark))",
+          gold: "hsl(var(--rugby-gold))",
+          "gold-light": "hsl(var(--rugby-gold-light))",
+          black: "hsl(var(--rugby-black))",
+          white: "hsl(var(--rugby-white))",
+          gray: "hsl(var(--rugby-gray))",
+          "gray-light": "hsl(var(--rugby-gray-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
