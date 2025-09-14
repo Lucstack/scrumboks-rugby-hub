@@ -1,17 +1,17 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-muted/30 to-rugby-green/5">
+    <section id="contact" className="py-20 bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-blue/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rugby-green mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-scrumboks-blue mb-6">
             Contact & Locatie
           </h2>
-          <p className="text-lg lg:text-xl text-rugby-gray max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
             Heb je vragen of wil je langskomen? We staan klaar om je te helpen! 
             Neem gerust contact met ons op.
           </p>
@@ -22,7 +22,7 @@ const Contact = () => {
           <div className="space-y-8">
             <Card className="border-0 shadow-soft">
               <CardHeader>
-                <CardTitle className="text-rugby-green flex items-center gap-3">
+                <CardTitle className="text-scrumboks-blue flex items-center gap-3">
                   <Phone className="w-6 h-6" />
                   Contactgegevens
                 </CardTitle>
@@ -30,41 +30,41 @@ const Contact = () => {
               <CardContent className="space-y-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <Phone className="w-5 h-5 text-rugby-gold" />
+                    <Phone className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
-                      <p className="font-medium text-rugby-green">Algemeen</p>
-                      <p className="text-rugby-gray">010 - 123 4567</p>
+                      <p className="font-medium text-scrumboks-blue">Clubhuis</p>
+                      <p className="text-scrumboks-gray">0344 623201</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <Mail className="w-5 h-5 text-rugby-gold" />
+                    <Mail className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
-                      <p className="font-medium text-rugby-green">Email</p>
-                      <p className="text-rugby-gray">info@scrumboks.nl</p>
+                      <p className="font-medium text-scrumboks-blue">E-mail</p>
+                      <p className="text-scrumboks-gray">info@scrumboks.nl</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <MapPin className="w-5 h-5 text-rugby-gold" />
+                    <MapPin className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
-                      <p className="font-medium text-rugby-green">Adres</p>
-                      <p className="text-rugby-gray">
-                        Sportpark De Groene Weide<br />
-                        Rugbyweg 123<br />
-                        3000 AB Rotterdam
+                      <p className="font-medium text-scrumboks-blue">Adres</p>
+                      <p className="text-scrumboks-gray">
+                        Sportpark Rauwenhof<br />
+                        Beethovenstraat 18a<br />
+                        4003 KX Tiel
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <Clock className="w-5 h-5 text-rugby-gold" />
+                    <Clock className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
-                      <p className="font-medium text-rugby-green">Openingstijden</p>
-                      <div className="text-rugby-gray text-sm space-y-1">
-                        <p>Ma-Do: 17:00 - 21:00</p>
-                        <p>Vrijdag: 17:00 - 22:00</p>
-                        <p>Weekend: 09:00 - 18:00</p>
+                      <p className="font-medium text-scrumboks-blue">Openingstijden</p>
+                      <div className="text-scrumboks-gray text-sm space-y-1">
+                        <p>Di-Do: 18:45 - 20:30</p>
+                        <p>Vrijdag: 20:00 - 22:00</p>
+                        <p>Trainingstijden verschillen per team</p>
                       </div>
                     </div>
                   </div>
@@ -75,23 +75,23 @@ const Contact = () => {
             {/* Social Media */}
             <Card className="border-0 shadow-soft">
               <CardHeader>
-                <CardTitle className="text-rugby-green">
+                <CardTitle className="text-scrumboks-blue">
                   Volg ons online
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex gap-4">
-                  <Button variant="outline" size="icon" className="hover:bg-rugby-green hover:text-rugby-white hover:border-rugby-green">
+                  <Button variant="outline" size="icon" className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue">
                     <Facebook className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="icon" className="hover:bg-rugby-green hover:text-rugby-white hover:border-rugby-green">
+                  <Button variant="outline" size="icon" className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue">
                     <Instagram className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="icon" className="hover:bg-rugby-green hover:text-rugby-white hover:border-rugby-green">
+                  <Button variant="outline" size="icon" className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue">
                     <Twitter className="w-4 h-4" />
                   </Button>
                 </div>
-                <p className="text-sm text-rugby-gray mt-3">
+                <p className="text-sm text-scrumboks-gray mt-3">
                   Mis geen wedstrijd, training of clubactiviteit! Volg ons voor de laatste updates.
                 </p>
               </CardContent>
@@ -101,7 +101,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="border-0 shadow-soft">
             <CardHeader>
-              <CardTitle className="text-rugby-green">
+              <CardTitle className="text-scrumboks-blue">
                 Stuur ons een bericht
               </CardTitle>
             </CardHeader>
@@ -109,43 +109,43 @@ const Contact = () => {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-rugby-green mb-2">
+                    <label className="block text-sm font-medium text-scrumboks-blue mb-2">
                       Voornaam
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-rugby-gray-light focus:ring-2 focus:ring-rugby-green focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200"
                       placeholder="Je voornaam"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-rugby-green mb-2">
+                    <label className="block text-sm font-medium text-scrumboks-blue mb-2">
                       Achternaam
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-rugby-gray-light focus:ring-2 focus:ring-rugby-green focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200"
                       placeholder="Je achternaam"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-rugby-green mb-2">
-                    Email
+                  <label className="block text-sm font-medium text-scrumboks-blue mb-2">
+                    E-mail
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-rugby-gray-light focus:ring-2 focus:ring-rugby-green focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200"
                     placeholder="je@email.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-rugby-green mb-2">
+                  <label className="block text-sm font-medium text-scrumboks-blue mb-2">
                     Onderwerp
                   </label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-rugby-gray-light focus:ring-2 focus:ring-rugby-green focus:border-transparent transition-all duration-200">
+                  <select className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200">
                     <option>Algemene informatie</option>
                     <option>Lid worden</option>
                     <option>Proeftraining</option>
@@ -156,12 +156,12 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-rugby-green mb-2">
+                  <label className="block text-sm font-medium text-scrumboks-blue mb-2">
                     Bericht
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-rugby-gray-light focus:ring-2 focus:ring-rugby-green focus:border-transparent transition-all duration-200 resize-vertical"
+                    className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200 resize-vertical"
                     placeholder="Vertel ons meer over je vraag..."
                   />
                 </div>
@@ -177,11 +177,11 @@ const Contact = () => {
         {/* Map Placeholder */}
         <Card className="border-0 shadow-soft overflow-hidden">
           <CardContent className="p-0">
-            <div className="bg-muted/50 h-64 flex items-center justify-center">
-              <div className="text-center text-rugby-gray">
-                <MapPin className="w-12 h-12 mx-auto mb-3 opacity-60" />
+            <div className="bg-scrumboks-blue-light/20 h-64 flex items-center justify-center">
+              <div className="text-center text-scrumboks-gray">
+                <MapPin className="w-12 h-12 mx-auto mb-3 opacity-60 text-scrumboks-blue" />
                 <p className="font-medium">Kaart van onze locatie</p>
-                <p className="text-sm">Google Maps integratie komt hier</p>
+                <p className="text-sm">Sportpark Rauwenhof, Tiel</p>
               </div>
             </div>
           </CardContent>
@@ -189,10 +189,10 @@ const Contact = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-rugby-green mb-4">
+          <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
             Klaar om te beginnen?
           </h3>
-          <p className="text-rugby-gray mb-8 max-w-2xl mx-auto">
+          <p className="text-scrumboks-gray mb-8 max-w-2xl mx-auto">
             Kom langs voor een proeftraining of neem contact met ons op. 
             We helpen je graag op weg bij Scrumboks!
           </p>
