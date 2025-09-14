@@ -530,30 +530,88 @@ const XperienceRugby = () => {
         </div>
       </section>
 
-      {/* Rules Link */}
-      <section className="py-16 bg-gradient-to-b from-scrumboks-white to-scrumboks-gray-light/50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Card className="border-0 shadow-soft bg-gradient-to-r from-scrumboks-blue/5 to-scrumboks-yellow/5">
-            <CardContent className="py-12">
-              <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-scrumboks-blue" />
-              </div>
-              <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
-                Alvast een beetje inlezen?
+      {/* Location & Rules Section */}
+      <section className="py-20 bg-gradient-to-b from-scrumboks-white to-scrumboks-gray-light/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Google Maps */}
+            <div>
+              <h3 className="text-3xl font-bold text-scrumboks-blue mb-6 flex items-center gap-3">
+                <div className="bg-scrumboks-blue/10 w-10 h-10 rounded-full flex items-center justify-center">
+                  <Target className="w-6 h-6" />
+                </div>
+                Kom een keer kijken!
               </h3>
-              <p className="text-scrumboks-gray mb-8 text-lg">
-                Bekijk hier de rugby spelregels en kom goed voorbereid naar je eerste training!
+              <p className="text-scrumboks-gray mb-6 text-lg">
+                We trainen op Sportpark Rauwenhof in Tiel. Kom gerust langs om de sfeer te proeven!
               </p>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-scrumboks-blue text-scrumboks-blue hover:bg-scrumboks-blue hover:text-white transition-all duration-300"
-              >
-                <Target className="w-5 h-5 mr-2" />
-                Rugby Spelregels
-              </Button>
-            </CardContent>
-          </Card>
+              <div className="bg-scrumboks-blue/5 p-4 rounded-xl mb-6">
+                <h4 className="font-semibold text-scrumboks-blue mb-2">Ons adres:</h4>
+                <p className="text-scrumboks-gray">
+                  Sportpark Rauwenhof<br />
+                  Beethovenstraat 18a<br />
+                  4003 KX Tiel
+                </p>
+              </div>
+              
+              {/* Google Maps Embed */}
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.123456789!2d5.4297!3d51.8874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c8a1234567890%3A0x1234567890abcdef!2sSportpark%20Rauwenhof%2C%20Beethovenstraat%2018a%2C%204003%20KX%20Tiel!5e0!3m2!1snl!2snl!4v1234567890"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-80"
+                  title="Scrumboks Rugby Club - Sportpark Rauwenhof, Tiel"
+                ></iframe>
+                <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/10 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+
+            {/* Rules & Info */}
+            <div>
+              <Card className="border-0 shadow-soft bg-gradient-to-br from-scrumboks-blue/5 to-scrumboks-yellow/5 h-full">
+                <CardContent className="p-8 h-full flex flex-col justify-center">
+                  <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target className="w-8 h-8 text-scrumboks-blue" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-scrumboks-blue mb-4 text-center">
+                    Alvast een beetje inlezen?
+                  </h3>
+                  <p className="text-scrumboks-gray mb-8 text-lg text-center">
+                    Bekijk hier de rugby spelregels en kom goed voorbereid naar je eerste training!
+                  </p>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center gap-3 text-scrumboks-gray">
+                      <div className="w-2 h-2 bg-scrumboks-blue rounded-full"></div>
+                      <span>Trainingstijden: Di-Do 18:45-20:30 & Vrijdag 20:00-22:00</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-scrumboks-gray">
+                      <div className="w-2 h-2 bg-scrumboks-yellow rounded-full"></div>
+                      <span>Leeftijd: 5 t/m 18 jaar</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-scrumboks-gray">
+                      <div className="w-2 h-2 bg-scrumboks-blue rounded-full"></div>
+                      <span>Telefoon: 0344 623201</span>
+                    </div>
+                  </div>
+                  
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="border-2 border-scrumboks-blue text-scrumboks-blue hover:bg-scrumboks-blue hover:text-white transition-all duration-300 w-full"
+                  >
+                    <Target className="w-5 h-5 mr-2" />
+                    Rugby Spelregels
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
