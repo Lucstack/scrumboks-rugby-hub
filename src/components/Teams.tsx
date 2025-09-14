@@ -87,6 +87,45 @@ const Teams = () => {
           </p>
         </div>
 
+        {/* Photo Gallery */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=200&fit=crop&crop=center"
+              alt="Rugby training in actie"
+              className="w-full h-[150px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop&crop=center"
+              alt="Team huddle en strategie"
+              className="w-full h-[150px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-yellow/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=200&fit=crop&crop=center"
+              alt="Jeugd training en ontwikkeling"
+              className="w-full h-[150px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop&crop=center"
+              alt="Club sfeer en vriendschap"
+              className="w-full h-[150px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-gold/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        </div>
+
         {/* Teams Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teams.map((team, index) => (

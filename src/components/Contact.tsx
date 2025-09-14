@@ -28,6 +28,45 @@ const Contact = () => {
           </p>
         </div>
 
+        {/* Photo Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop&crop=center"
+              alt="Sportpark Rauwenhof exterieur"
+              className="w-full h-[200px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-3 left-3 text-scrumboks-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="font-semibold text-sm">Sportpark Rauwenhof</p>
+            </div>
+          </div>
+          
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop&crop=center"
+              alt="Clubhuis binnenkant gezellige sfeer"
+              className="w-full h-[200px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-yellow/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-3 left-3 text-scrumboks-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="font-semibold text-sm">Clubhuis</p>
+            </div>
+          </div>
+          
+          <div className="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop&crop=center"
+              alt="Training velden in gebruik"
+              className="w-full h-[200px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-gold/40 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-3 left-3 text-scrumboks-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="font-semibold text-sm">Training Veld</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Contact Information */}
           <div className="space-y-8">
