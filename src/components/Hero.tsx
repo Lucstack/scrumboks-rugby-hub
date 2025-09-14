@@ -41,6 +41,11 @@ const Hero = () => {
                 Word lid van ons team
               </Button>
             </Link>
+            <Link to="/xperience-rugby">
+              <Button variant="hero" size="xl" className="w-full sm:w-auto">
+                Xperience Rugby - €15
+              </Button>
+            </Link>
             <a href="#teams">
               <Button variant="minimal" size="xl" className="w-full sm:w-auto">
                 Bekijk onze teams

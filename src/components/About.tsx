@@ -14,7 +14,7 @@ const About = () => {
       icon: Users,
       title: 'Gemeenschap',
       description:
-        'Samen zijn we sterker. Onze club is een tweede familie voor alle leden.',
+        'Samen zijn we sterker. Onze rugbyclub is een tweede thuis voor alle leden.',
     },
     {
       icon: Heart,

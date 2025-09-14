@@ -9,7 +9,7 @@ const MembershipForm = () => {
     lastName: '',
     email: '',
     phone: '',
-    birthDate: '',
+    age: '',
     team: '',
     experience: '',
     motivation: ''
@@ -48,7 +48,7 @@ const MembershipForm = () => {
           lastName: '',
           email: '',
           phone: '',
-          birthDate: '',
+          age: '',
           team: '',
           experience: '',
           motivation: ''
@@ -91,9 +91,9 @@ const MembershipForm = () => {
           <Users className="w-6 h-6" />
           Word lid van Scrumboks
         </CardTitle>
-        <p className="text-scrumboks-gray">
-          Vul onderstaand formulier in en we nemen contact met je op voor een proeftraining!
-        </p>
+          <p className="text-scrumboks-gray">
+            Vul onderstaand formulier in en we nemen contact met je op! Alle velden zijn optioneel behalve de basisgegevens.
+          </p>
       </CardHeader>
       <CardContent>
         <form name="membership" method="POST" data-netlify="true" onSubmit={handleSubmit}>
@@ -168,15 +168,17 @@ const MembershipForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-scrumboks-blue mb-2">
-                  Geboortedatum *
+                  Leeftijd
                 </label>
                 <input
-                  type="date"
-                  name="birthDate"
-                  required
-                  value={formData.birthDate}
+                  type="number"
+                  name="age"
+                  min="5"
+                  max="99"
+                  value={formData.age}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200"
+                  placeholder="Je leeftijd"
                 />
               </div>
             </div>
@@ -190,16 +192,15 @@ const MembershipForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-scrumboks-blue mb-2">
-                  Team interesse *
+                  Team interesse
                 </label>
                 <select
                   name="team"
-                  required
                   value={formData.team}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200"
                 >
-                  <option value="">Selecteer een team</option>
+                  <option value="">Selecteer een team (optioneel)</option>
                   <option value="senioren">Senioren (18+)</option>
                   <option value="dames">Dames (16+)</option>
                   <option value="tbm">TBM (6-12 jaar)</option>
@@ -211,16 +212,15 @@ const MembershipForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-scrumboks-blue mb-2">
-                  Rugby ervaring *
+                  Rugby ervaring
                 </label>
                 <select
                   name="experience"
-                  required
                   value={formData.experience}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200"
                 >
-                  <option value="">Selecteer ervaring</option>
+                  <option value="">Selecteer ervaring (optioneel)</option>
                   <option value="beginner">Beginner - Nog nooit rugby gespeeld</option>
                   <option value="basis">Basis - Enkele keren rugby gespeeld</option>
                   <option value="gemiddeld">Gemiddeld - Regelmatig rugby gespeeld</option>
@@ -230,16 +230,15 @@ const MembershipForm = () => {
 
               <div>
                 <label className="block text-sm font-medium text-scrumboks-blue mb-2">
-                  Motivatie *
+                  Motivatie
                 </label>
                 <textarea
                   name="motivation"
-                  required
                   rows={4}
                   value={formData.motivation}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-scrumboks-gray-light focus:ring-2 focus:ring-scrumboks-blue focus:border-transparent transition-all duration-200 resize-vertical"
-                  placeholder="Vertel ons waarom je lid wilt worden van Scrumboks..."
+                  placeholder="Vertel ons waarom je lid wilt worden van Scrumboks... (optioneel)"
                 />
               </div>
             </div>
@@ -248,7 +247,7 @@ const MembershipForm = () => {
           <div className="mt-8 pt-6 border-t border-scrumboks-gray-light">
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
               <p className="text-sm text-scrumboks-gray">
-                * Verplichte velden. We nemen contact met je op voor een proeftraining.
+                * Alleen naam en e-mail zijn verplicht. We nemen contact met je op!
               </p>
               <Button 
                 type="submit" 
