@@ -17,11 +17,11 @@ All colors MUST be HSL for perfect theming
     --scrumboks-blue: 238 89% 28%; /* #081689 - Primary blue */
     --scrumboks-blue-light: 238 50% 95%; /* #E6E9F7 - Light blue background */
     --scrumboks-blue-dark: 238 95% 15%; /* Darker blue for contrast */
-    
+
     /* Accent Colors */
     --scrumboks-yellow: 54 95% 51%; /* #F8E300 - Primary yellow */
     --scrumboks-gold: 48 100% 42%; /* #D4B600 - Muted gold accent */
-    
+
     /* Neutral Tones */
     --scrumboks-black: 0 0% 13%; /* #221F20 - Club black */
     --scrumboks-white: 0 0% 98%; /* Pure white */
@@ -57,9 +57,21 @@ All colors MUST be HSL for perfect theming
     --radius: 0.75rem;
 
     /* Gradients for dynamic feel */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--rugby-green)), hsl(var(--rugby-green-light)));
-    --gradient-accent: linear-gradient(45deg, hsl(var(--rugby-gold)), hsl(var(--rugby-gold-light)));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--rugby-black)), hsl(var(--rugby-green-dark)));
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--rugby-green)),
+      hsl(var(--rugby-green-light))
+    );
+    --gradient-accent: linear-gradient(
+      45deg,
+      hsl(var(--rugby-gold)),
+      hsl(var(--rugby-gold-light))
+    );
+    --gradient-dark: linear-gradient(
+      180deg,
+      hsl(var(--rugby-black)),
+      hsl(var(--rugby-green-dark))
+    );
 
     /* Shadows for depth */
     --shadow-soft: 0 2px 10px -2px hsl(var(--rugby-green) / 0.1);

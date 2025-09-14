@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, MapPin, Users, Calendar } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Clock, MapPin, Users, Calendar } from 'lucide-react';
 
 const Teams = () => {
   const teams = [
@@ -12,7 +12,7 @@ const Teams = () => {
       members: "25 spelers",
       age: "18+",
       commitment: "Hoog",
-      color: "from-rugby-green to-rugby-green-light"
+      color: "from-scrumboks-blue to-scrumboks-blue-light"
     },
     {
       name: "Senioren 2", 
@@ -22,7 +22,7 @@ const Teams = () => {
       members: "20 spelers",
       age: "18+",
       commitment: "Gemiddeld",
-      color: "from-rugby-gold to-rugby-gold-light"
+      color: "from-scrumboks-yellow to-scrumboks-gold"
     },
     {
       name: "Jeugd U18",
@@ -32,7 +32,7 @@ const Teams = () => {
       members: "18 spelers",
       age: "15-18 jaar",
       commitment: "Gemiddeld",
-      color: "from-rugby-green-light to-rugby-gold"
+      color: "from-scrumboks-blue-light to-scrumboks-yellow"
     },
     {
       name: "Jeugd U15",
@@ -42,7 +42,7 @@ const Teams = () => {
       members: "22 spelers",
       age: "12-15 jaar", 
       commitment: "Laag",
-      color: "from-accent to-rugby-gold-light"
+      color: "from-scrumboks-yellow to-scrumboks-gold"
     },
     {
       name: "Touch Rugby",
@@ -52,7 +52,7 @@ const Teams = () => {
       members: "30+ spelers",
       age: "Alle leeftijden",
       commitment: "Flexibel",
-      color: "from-rugby-gray to-rugby-green-light"
+      color: "from-scrumboks-gray to-scrumboks-blue-light"
     },
     {
       name: "Veteranen",
@@ -62,19 +62,19 @@ const Teams = () => {
       members: "15 spelers",
       age: "35+",
       commitment: "Laag",
-      color: "from-rugby-green-dark to-rugby-green"
+      color: "from-scrumboks-blue-dark to-scrumboks-blue"
     }
   ];
 
   return (
-    <section id="teams" className="py-20 bg-muted/30">
+    <section id="teams" className="py-20 bg-scrumboks-blue-light/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rugby-green mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-scrumboks-blue mb-6">
             Onze Teams
           </h2>
-          <p className="text-lg lg:text-xl text-rugby-gray max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
             Van beginnende jeugdspelers tot ervaren veteranen - er is een plek voor iedereen bij Scrumboks.
             Ontdek welk team het beste bij jou past.
           </p>
@@ -88,38 +88,38 @@ const Teams = () => {
               <div className={`h-2 bg-gradient-to-r ${team.color}`} />
               
               <CardHeader className="pb-4">
-                <CardTitle className="text-rugby-green group-hover:text-rugby-green-dark transition-colors duration-200">
+                <CardTitle className="text-scrumboks-blue group-hover:text-scrumboks-blue-dark transition-colors duration-200">
                   {team.name}
                 </CardTitle>
-                <div className="inline-block bg-rugby-gold/20 text-rugby-green text-sm font-medium px-3 py-1 rounded-full w-fit">
+                <div className="inline-block bg-scrumboks-yellow/20 text-scrumboks-blue text-sm font-medium px-3 py-1 rounded-full w-fit">
                   {team.level}
                 </div>
               </CardHeader>
 
               <CardContent className="space-y-4">
-                <p className="text-rugby-gray leading-relaxed">
+                <p className="text-scrumboks-gray leading-relaxed">
                   {team.description}
                 </p>
 
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 text-sm text-rugby-gray">
-                    <Clock className="w-4 h-4 text-rugby-green" />
+                  <div className="flex items-center gap-3 text-sm text-scrumboks-gray">
+                    <Clock className="w-4 h-4 text-scrumboks-blue" />
                     <span>{team.training}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-rugby-gray">
-                    <Users className="w-4 h-4 text-rugby-green" />
+                  <div className="flex items-center gap-3 text-sm text-scrumboks-gray">
+                    <Users className="w-4 h-4 text-scrumboks-blue" />
                     <span>{team.members}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-rugby-gray">
-                    <Calendar className="w-4 h-4 text-rugby-green" />
+                  <div className="flex items-center gap-3 text-sm text-scrumboks-gray">
+                    <Calendar className="w-4 h-4 text-scrumboks-blue" />
                     <span>{team.age}</span>
                   </div>
                 </div>
 
                 <div className="pt-2">
                   <div className="flex justify-between items-center text-sm">
-                    <span className="text-rugby-gray">Inzet niveau:</span>
-                    <span className="font-medium text-rugby-green">{team.commitment}</span>
+                    <span className="text-scrumboks-gray">Inzet niveau:</span>
+                    <span className="font-medium text-scrumboks-blue">{team.commitment}</span>
                   </div>
                 </div>
 
@@ -135,22 +135,25 @@ const Teams = () => {
         <div className="bg-card p-8 rounded-lg shadow-soft">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-rugby-green mb-4">
+              <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
                 Trainingslocatie
               </h3>
-              <p className="text-rugby-gray mb-6 leading-relaxed">
+              <p className="text-scrumboks-gray mb-6 leading-relaxed">
                 Al onze teams trainen op ons prachtige hoofdveld met uitstekende faciliteiten. 
                 We beschikken over kleedkamers, een kantine en een moderne trainingsruimte.
               </p>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-rugby-green" />
-                  <span className="text-rugby-gray">Sportpark De Groene Weide, Rotterdam</span>
+                  <MapPin className="w-5 h-5 text-scrumboks-blue" />
+                  <span className="text-scrumboks-gray">Sportpark Rauwenhof, Beethovenstraat 18a, 4003 KX Tiel</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-rugby-green" />
-                  <span className="text-rugby-gray">Velden open van 17:00 - 21:00</span>
+                  <Clock className="w-5 h-5 text-scrumboks-blue" />
+                  <span className="text-scrumboks-gray">Openingstijden: Di-Do 18:45-20:30 & Vrijdag 20:00-22:00</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-scrumboks-gray">📞 0344 623201 (clubhuis)</span>
                 </div>
               </div>
 
@@ -159,11 +162,11 @@ const Teams = () => {
               </Button>
             </div>
 
-            <div className="bg-muted/50 h-64 rounded-lg flex items-center justify-center">
-              <div className="text-center text-rugby-gray">
-                <MapPin className="w-12 h-12 mx-auto mb-3 opacity-60" />
-                <p>Kaart van trainingslocatie</p>
-                <p className="text-sm">Google Maps integratie</p>
+            <div className="bg-scrumboks-blue-light/20 h-64 rounded-lg flex items-center justify-center">
+              <div className="text-center text-scrumboks-gray">
+                <MapPin className="w-12 h-12 mx-auto mb-3 opacity-60 text-scrumboks-blue" />
+                <p>Sportpark Rauwenhof</p>
+                <p className="text-sm">Tiel</p>
               </div>
             </div>
           </div>

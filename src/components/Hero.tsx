@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-rugby-action.jpg";
+import { Button } from '@/components/ui/button';
+import heroImage from '@/assets/hero-rugby-action.jpg';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -26,8 +29,8 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl lg:text-2xl text-scrumboks-white/90 max-w-3xl mx-auto leading-relaxed">
-            Welkom bij Scrumboks - waar passie voor rugby en gemeenschapszin samenkomen. 
-            Sluit je aan bij onze dynamische club en ervaar de kracht van teamwerk.
+            Welkom bij de Scrumboks - waar samen groeien, rugby beleven en bouwen aan onze club samenkomen. 
+            Sluit je aan en ervaar hoe écht rugby bedoeld is: voor iedereen.
           </p>
 
           {/* Call to action buttons */}
@@ -43,20 +46,36 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-12 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">150+</div>
-              <div className="text-scrumboks-white/80 text-sm lg:text-base">Leden</div>
+              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">
+                50+
+              </div>
+              <div className="text-scrumboks-white/80 text-sm lg:text-base">
+                Leden
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">6</div>
-              <div className="text-scrumboks-white/80 text-sm lg:text-base">Teams</div>
+              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">
+                8
+              </div>
+              <div className="text-scrumboks-white/80 text-sm lg:text-base">
+                Teams
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">25+</div>
-              <div className="text-scrumboks-white/80 text-sm lg:text-base">Jaren ervaring</div>
+              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">
+                50
+              </div>
+              <div className="text-scrumboks-white/80 text-sm lg:text-base">
+                Jaar jubileum
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">100%</div>
-              <div className="text-scrumboks-white/80 text-sm lg:text-base">Plezier</div>
+              <div className="text-3xl lg:text-4xl font-bold text-scrumboks-yellow">
+                100%
+              </div>
+              <div className="text-scrumboks-white/80 text-sm lg:text-base">
+                Plezier
+              </div>
             </div>
           </div>
         </div>
