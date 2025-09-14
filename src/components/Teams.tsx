@@ -5,85 +5,71 @@ import { Clock, MapPin, Users, Calendar } from 'lucide-react';
 const Teams = () => {
   const teams = [
     {
-      name: "Senioren",
-      level: "Competitie",
-      description: "Ons eerste team dat strijdt in de hoogste regionale competitie. Ervaren spelers met ambities.",
-      training: "Dinsdag & Vrijdag 20:00",
-      members: "25 spelers",
-      age: "18+",
-      commitment: "Hoog",
-      color: "from-scrumboks-blue to-scrumboks-blue-light"
+      name: 'Senioren',
+      level: 'Competitie',
+      description:
+        'Ons eerste team dat strijdt in de hoogste regionale competitie. Ervaren spelers met ambities.',
+      training: 'Dinsdag & Vrijdag 20:00',
+      members: '25 spelers',
+      age: '18+',
+      commitment: 'Hoog',
+      color: 'from-scrumboks-blue to-scrumboks-blue-light',
     },
     {
-      name: "Dames", 
-      level: "Competitie",
-      description: "Ons damesteam dat strijdt in de regionale competitie. Sterke vrouwen met passie voor rugby.",
-      training: "Dinsdag & Vrijdag 20:00",
-      members: "20 spelers",
-      age: "16+",
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-yellow to-scrumboks-gold"
+      name: 'Dames',
+      level: 'Competitie',
+      description:
+        'Ons damesteam dat strijdt in de regionale competitie. Sterke vrouwen met passie voor rugby.',
+      training: 'Dinsdag & Vrijdag 20:00',
+      members: '20 spelers',
+      age: '16+',
+      commitment: 'Gemiddeld',
+      color: 'from-scrumboks-yellow to-scrumboks-gold',
     },
     {
-      name: "Turven",
-      level: "Jeugd",
-      description: "Jonge talenten die de basis van rugby leren. Veel plezier en ontwikkeling staan centraal.",
-      training: "Dinsdag & Donderdag 18:45",
-      members: "15 spelers",
-      age: "6-8 jaar",
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-blue-light to-scrumboks-yellow"
+      name: 'TBM',
+      level: 'Jeugd',
+      description:
+        'Jonge talenten van 6-12 jaar die de basis van rugby leren. Veel plezier en ontwikkeling staan centraal in een veilige omgeving.',
+      training: 'Dinsdag & Donderdag 18:45',
+      members: '53 spelers',
+      age: '6-12 jaar',
+      commitment: 'Gemiddeld',
+      color: 'from-scrumboks-blue-light to-scrumboks-yellow',
     },
     {
-      name: "Benjamins",
-      level: "Jeugd",
-      description: "Leren van de basisprincipes van rugby in een veilige en leuke omgeving.",
-      training: "Dinsdag & Donderdag 18:45",
-      members: "18 spelers",
-      age: "8-10 jaar", 
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-yellow to-scrumboks-gold"
+      name: 'Cubs',
+      level: 'Jeugd',
+      description:
+        'Ontwikkeling van techniek en teamwork. Voorbereiding op hogere niveaus.',
+      training: 'Dinsdag & Donderdag 18:45',
+      members: '22 spelers',
+      age: '12-14 jaar',
+      commitment: 'Gemiddeld',
+      color: 'from-scrumboks-blue-dark to-scrumboks-blue',
     },
     {
-      name: "Minis",
-      level: "Jeugd",
-      description: "Jonge spelers die de eerste stappen zetten in de rugbywereld. Plezier staat voorop.",
-      training: "Dinsdag & Donderdag 18:45",
-      members: "20 spelers",
-      age: "10-12 jaar",
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-gray to-scrumboks-blue-light"
+      name: 'Junioren',
+      level: 'Jeugd',
+      description:
+        'Serieuze training voor jonge spelers die klaar zijn voor de volgende stap.',
+      training: 'Dinsdag & Donderdag 18:45',
+      members: '18 spelers',
+      age: '14-16 jaar',
+      commitment: 'Gemiddeld',
+      color: 'from-scrumboks-blue to-scrumboks-blue-light',
     },
     {
-      name: "Cubs",
-      level: "Jeugd",
-      description: "Ontwikkeling van techniek en teamwork. Voorbereiding op hogere niveaus.",
-      training: "Dinsdag & Donderdag 18:45",
-      members: "22 spelers",
-      age: "12-14 jaar",
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-blue-dark to-scrumboks-blue"
+      name: 'Colts',
+      level: 'Jeugd',
+      description:
+        'Topniveau jeugdspelers die zich voorbereiden op seniorenrugby.',
+      training: 'Dinsdag & Donderdag 18:45',
+      members: '16 spelers',
+      age: '16-18 jaar',
+      commitment: 'Gemiddeld',
+      color: 'from-scrumboks-yellow to-scrumboks-gold',
     },
-    {
-      name: "Junioren",
-      level: "Jeugd",
-      description: "Serieuze training voor jonge spelers die klaar zijn voor de volgende stap.",
-      training: "Dinsdag & Donderdag 18:45",
-      members: "18 spelers",
-      age: "14-16 jaar",
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-blue to-scrumboks-blue-light"
-    },
-    {
-      name: "Colts",
-      level: "Jeugd",
-      description: "Topniveau jeugdspelers die zich voorbereiden op seniorenrugby.",
-      training: "Dinsdag & Donderdag 18:45",
-      members: "16 spelers",
-      age: "16-18 jaar",
-      commitment: "Gemiddeld",
-      color: "from-scrumboks-yellow to-scrumboks-gold"
-    }
   ];
 
   return (
@@ -95,18 +81,22 @@ const Teams = () => {
             Onze Teams
           </h2>
           <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
-            Van beginnende jeugdspelers tot ervaren veteranen - er is een plek voor iedereen bij Scrumboks.
-            Ontdek welk team het beste bij jou past.
+            Van beginnende jeugdspelers tot ervaren veteranen - er is een plek
+            voor iedereen bij Scrumboks. Ontdek welk team het beste bij jou
+            past.
           </p>
         </div>
 
         {/* Teams Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teams.map((team, index) => (
-            <Card key={index} className="group hover:shadow-medium transition-all duration-300 border-0 overflow-hidden">
+            <Card
+              key={index}
+              className="group hover:shadow-medium transition-all duration-300 border-0 overflow-hidden"
+            >
               {/* Gradient Header */}
               <div className={`h-2 bg-gradient-to-r ${team.color}`} />
-              
+
               <CardHeader className="pb-4">
                 <CardTitle className="text-scrumboks-blue group-hover:text-scrumboks-blue-dark transition-colors duration-200">
                   {team.name}
@@ -139,7 +129,9 @@ const Teams = () => {
                 <div className="pt-2">
                   <div className="flex justify-between items-center text-sm">
                     <span className="text-scrumboks-gray">Inzet niveau:</span>
-                    <span className="font-medium text-scrumboks-blue">{team.commitment}</span>
+                    <span className="font-medium text-scrumboks-blue">
+                      {team.commitment}
+                    </span>
                   </div>
                 </div>
 
@@ -159,21 +151,28 @@ const Teams = () => {
                 Trainingslocatie
               </h3>
               <p className="text-scrumboks-gray mb-6 leading-relaxed">
-                Al onze teams trainen op ons prachtige hoofdveld met uitstekende faciliteiten. 
-                We beschikken over kleedkamers, een kantine en een moderne trainingsruimte.
+                Al onze teams trainen op ons prachtige hoofdveld met uitstekende
+                faciliteiten. We beschikken over kleedkamers, een kantine en een
+                moderne trainingsruimte.
               </p>
-              
+
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-scrumboks-blue" />
-                  <span className="text-scrumboks-gray">Sportpark Rauwenhof, Beethovenstraat 18a, 4003 KX Tiel</span>
+                  <span className="text-scrumboks-gray">
+                    Sportpark Rauwenhof, Beethovenstraat 18a, 4003 KX Tiel
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-scrumboks-blue" />
-                  <span className="text-scrumboks-gray">Openingstijden: Di-Do 18:45-20:30 & Vrijdag 20:00-22:00</span>
+                  <span className="text-scrumboks-gray">
+                    Openingstijden: Di-Do 18:45-20:30 & Vrijdag 20:00-22:00
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-scrumboks-gray">📞 0344 623201 (clubhuis)</span>
+                  <span className="text-scrumboks-gray">
+                    📞 0344 623201 (clubhuis)
+                  </span>
                 </div>
               </div>
 

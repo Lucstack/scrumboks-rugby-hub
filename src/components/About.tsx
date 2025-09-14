@@ -5,10 +5,10 @@ import teamCelebration from '@/assets/team-celebration.jpg';
 const About = () => {
   const values = [
     {
-      icon: Heart,
-      title: 'Passie',
+      icon: Target,
+      title: 'Plezier',
       description:
-        'Liefde voor rugby en respect voor de sport staan centraal in alles wat we doen.',
+        'Rugby moet leuk zijn! We combineren serieuze training met veel plezier.',
     },
     {
       icon: Users,
@@ -17,16 +17,16 @@ const About = () => {
         'Samen zijn we sterker. Onze club is een tweede familie voor alle leden.',
     },
     {
+      icon: Heart,
+      title: 'Passie',
+      description:
+        'Liefde voor rugby en respect voor de sport staan centraal in alles wat we doen.',
+    },
+    {
       icon: Trophy,
       title: 'Excellence',
       description:
         'We streven naar het beste in onszelf en ondersteunen elkaar om te groeien.',
-    },
-    {
-      icon: Target,
-      title: 'Plezier',
-      description:
-        'Rugby moet leuk zijn! We combineren serieuze training met veel plezier.',
     },
   ];
 

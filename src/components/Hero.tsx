@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-rugby-action.jpg';
 
 const Hero = () => {
@@ -35,12 +36,16 @@ const Hero = () => {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-            <Button variant="action" size="xl" className="w-full sm:w-auto">
-              Word lid van ons team
-            </Button>
-            <Button variant="minimal" size="xl" className="w-full sm:w-auto">
-              Bekijk onze teams
-            </Button>
+            <Link to="/membership">
+              <Button variant="action" size="xl" className="w-full sm:w-auto">
+                Word lid van ons team
+              </Button>
+            </Link>
+            <a href="#teams">
+              <Button variant="minimal" size="xl" className="w-full sm:w-auto">
+                Bekijk onze teams
+              </Button>
+            </a>
           </div>
 
           {/* Stats */}

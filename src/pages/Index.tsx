@@ -19,13 +19,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">SCRUMBOKS</h3>
-                <p className="text-scrumboks-white/80 mb-4 leading-relaxed">
-                  Rugbyvereniging Scrumboks - waar passie voor rugby en
-                  gemeenschapszin samenkomen. Al meer dan 45 jaar een thuis voor
-                  rugbyliefhebbers.
-                </p>
+              <p className="text-scrumboks-white/80 mb-4 leading-relaxed">
+                Rugbyvereniging Scrumboks - waar passie voor rugby en
+                gemeenschapszin samenkomen. Al meer dan 45 jaar een thuis voor
+                rugbyliefhebbers.
+              </p>
                 <p className="text-sm text-scrumboks-white/60">
-                  © 2024 Scrumboks Rugby Club. Alle rechten voorbehouden.
+                  © 2025 Scrumboks Rugby Club. Alle rechten voorbehouden.
                 </p>
             </div>
 
@@ -67,15 +67,15 @@ const Index = () => {
               </ul>
             </div>
 
-              <div>
-                <h4 className="font-semibold mb-4">Contact</h4>
-                <ul className="space-y-2 text-scrumboks-white/80 text-sm">
-                  <li>0344 623201</li>
-                  <li>info@scrumboks.nl</li>
-                  <li>Sportpark Rauwenhof</li>
-                  <li>Beethovenstraat 18a, 4003 KX Tiel</li>
-                </ul>
-              </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-scrumboks-white/80 text-sm">
+                <li>0344 623201</li>
+                <li>info@scrumboks.nl</li>
+                <li>Sportpark Rauwenhof</li>
+                <li>Beethovenstraat 18a, 4003 KX Tiel</li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>

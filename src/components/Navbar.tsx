@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
     { name: 'Over ons', href: '#about' },
     { name: 'Teams', href: '#teams' },
     { name: 'Nieuws', href: '#news' },
-    { name: 'Lid worden', href: '#membership' },
+    { name: 'Lid worden', href: '/membership' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -29,22 +30,34 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map(item => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-scrumboks-blue hover:text-scrumboks-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
+                item.name === 'Lid worden' ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-scrumboks-blue hover:text-scrumboks-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-scrumboks-blue hover:text-scrumboks-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="action" size="sm">
-              Word lid
-            </Button>
+            <Link to="/membership">
+              <Button variant="action" size="sm">
+                Word lid
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -68,19 +81,32 @@ const Navbar = () => {
         <div className="md:hidden bg-scrumboks-white/95 backdrop-blur-lg border-t border-scrumboks-gray-light/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map(item => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </a>
+              item.name === 'Lid worden' ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </a>
+              )
             ))}
             <div className="px-3 py-2">
-              <Button variant="action" size="sm" className="w-full">
-                Word lid
-              </Button>
+              <Link to="/membership">
+                <Button variant="action" size="sm" className="w-full">
+                  Word lid
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,10 +1,21 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Facebook,
+  Instagram,
+  Twitter,
+} from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-blue/5">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-blue/5"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -12,7 +23,7 @@ const Contact = () => {
             Contact & Locatie
           </h2>
           <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
-            Heb je vragen of wil je langskomen? We staan klaar om je te helpen! 
+            Heb je vragen of wil je langskomen? We staan klaar om je te helpen!
             Neem gerust contact met ons op.
           </p>
         </div>
@@ -32,11 +43,13 @@ const Contact = () => {
                   <div className="flex items-center gap-4">
                     <Phone className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
-                      <p className="font-medium text-scrumboks-blue">Clubhuis</p>
+                      <p className="font-medium text-scrumboks-blue">
+                        Clubhuis
+                      </p>
                       <p className="text-scrumboks-gray">0344 623201</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-4">
                     <Mail className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
@@ -50,8 +63,10 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-scrumboks-blue">Adres</p>
                       <p className="text-scrumboks-gray">
-                        Sportpark Rauwenhof<br />
-                        Beethovenstraat 18a<br />
+                        Sportpark Rauwenhof
+                        <br />
+                        Beethovenstraat 18a
+                        <br />
                         4003 KX Tiel
                       </p>
                     </div>
@@ -60,7 +75,9 @@ const Contact = () => {
                   <div className="flex items-center gap-4">
                     <Clock className="w-5 h-5 text-scrumboks-yellow" />
                     <div>
-                      <p className="font-medium text-scrumboks-blue">Openingstijden</p>
+                      <p className="font-medium text-scrumboks-blue">
+                        Openingstijden
+                      </p>
                       <div className="text-scrumboks-gray text-sm space-y-1">
                         <p>Di-Do: 18:45 - 20:30</p>
                         <p>Vrijdag: 20:00 - 22:00</p>
@@ -81,18 +98,34 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex gap-4">
-                  <Button variant="outline" size="icon" className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue"
+                    onClick={() => window.open('https://www.facebook.com/Scrumboks', '_blank')}
+                  >
                     <Facebook className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="icon" className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue"
+                    onClick={() => window.open('https://www.instagram.com/scrumboks_rugby/', '_blank')}
+                  >
                     <Instagram className="w-4 h-4" />
                   </Button>
-                  <Button variant="outline" size="icon" className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue"
+                    onClick={() => window.open('https://x.com/scrumboks', '_blank')}
+                  >
                     <Twitter className="w-4 h-4" />
                   </Button>
                 </div>
                 <p className="text-sm text-scrumboks-gray mt-3">
-                  Mis geen wedstrijd, training of clubactiviteit! Volg ons voor de laatste updates.
+                  Mis geen wedstrijd, training of clubactiviteit! Volg ons voor
+                  de laatste updates.
                 </p>
               </CardContent>
             </Card>
@@ -193,8 +226,8 @@ const Contact = () => {
             Klaar om te beginnen?
           </h3>
           <p className="text-scrumboks-gray mb-8 max-w-2xl mx-auto">
-            Kom langs voor een proeftraining of neem contact met ons op. 
-            We helpen je graag op weg bij Scrumboks!
+            Kom langs voor een proeftraining of neem contact met ons op. We
+            helpen je graag op weg bij Scrumboks!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="action" size="xl">
