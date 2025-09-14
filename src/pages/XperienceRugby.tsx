@@ -1,8 +1,22 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
+import BackToTop from '@/components/BackToTop';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Trophy, Users, Gift, CheckCircle, Heart, Target, Shield, Star, Zap, Clock, Award, Sparkles } from 'lucide-react';
+import {
+  Trophy,
+  Users,
+  Gift,
+  CheckCircle,
+  Heart,
+  Target,
+  Shield,
+  Star,
+  Zap,
+  Clock,
+  Award,
+  Sparkles,
+} from 'lucide-react';
 
 const XperienceRugby = () => {
   const [formData, setFormData] = useState({
@@ -15,17 +29,21 @@ const XperienceRugby = () => {
     parentEmail: '',
     parentPhone: '',
     isMinor: false,
-    motivation: ''
+    motivation: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
@@ -40,8 +58,8 @@ const XperienceRugby = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'xperience-rugby',
-          ...formData
-        })
+          ...formData,
+        }),
       });
 
       if (response.ok) {
@@ -56,7 +74,7 @@ const XperienceRugby = () => {
           parentEmail: '',
           parentPhone: '',
           isMinor: false,
-          motivation: ''
+          motivation: '',
         });
       }
     } catch (error) {
@@ -78,22 +96,20 @@ const XperienceRugby = () => {
                 Aanmelding Xperience Rugby ontvangen!
               </h3>
               <p className="text-scrumboks-gray mb-6">
-                Bedankt voor je aanmelding! We nemen zo snel mogelijk contact met je op 
-                om de details van de Xperience Rugby te bespreken.
+                Bedankt voor je aanmelding! We nemen zo snel mogelijk contact
+                met je op om de details van de Xperience Rugby te bespreken.
               </p>
               <div className="bg-scrumboks-blue/10 p-4 rounded-lg mb-6">
                 <p className="text-sm text-scrumboks-blue font-medium">
                   Wat gebeurt er nu?
                 </p>
                 <p className="text-sm text-scrumboks-gray mt-2">
-                  We sturen je binnenkort een e-mail met meer informatie over de Xperience Rugby 
-                  en een link naar een uitgebreider formulier voor je volledige profiel.
+                  We sturen je binnenkort een e-mail met meer informatie over de
+                  Xperience Rugby en een link naar een uitgebreider formulier
+                  voor je volledige profiel.
                 </p>
               </div>
-              <Button 
-                variant="hero" 
-                onClick={() => setIsSubmitted(false)}
-              >
+              <Button variant="hero" onClick={() => setIsSubmitted(false)}>
                 Nieuwe aanmelding
               </Button>
             </CardContent>
@@ -106,7 +122,7 @@ const XperienceRugby = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-scrumboks-blue via-scrumboks-blue-light to-scrumboks-yellow/20 relative overflow-hidden">
         {/* Background Pattern */}
@@ -116,13 +132,13 @@ const XperienceRugby = () => {
           <div className="absolute bottom-20 left-1/4 w-12 h-12 border-4 border-scrumboks-yellow rounded-full animate-pulse delay-1000"></div>
           <div className="absolute bottom-32 right-1/3 w-24 h-24 border-4 border-scrumboks-white rounded-full animate-bounce delay-500"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-scrumboks-yellow/20 text-scrumboks-yellow px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Sparkles className="w-4 h-4" />
             NIEUW: Xperience Rugby
           </div>
-          
+
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold bg-clip-text text-transparent">
               XPERIENCE
@@ -130,12 +146,15 @@ const XperienceRugby = () => {
             <br />
             <span className="text-white drop-shadow-lg">RUGBY</span>
           </h1>
-          
+
           <p className="text-xl lg:text-2xl text-scrumboks-white/90 max-w-4xl mx-auto leading-relaxed mb-8">
-            Geen betere manier om te proberen of rugby ook jouw ding kan zijn! 
-            <span className="text-scrumboks-yellow font-semibold">Ontdek de passie voor rugby in 10 leuke trainingen. Word lid van de club!</span>
+            Geen betere manier om te proberen of rugby ook jouw ding kan zijn!
+            <span className="text-scrumboks-yellow font-semibold">
+              Ontdek de passie voor rugby in 10 leuke trainingen. Word lid van
+              de club!
+            </span>
           </p>
-          
+
           {/* Quick Stats */}
           <div className="flex flex-wrap justify-center gap-6 text-white/80 mb-8">
             <div className="flex items-center gap-2">
@@ -170,10 +189,14 @@ const XperienceRugby = () => {
                 <div className="bg-gradient-to-br from-scrumboks-blue/20 to-scrumboks-blue/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Trophy className="w-10 h-10 text-scrumboks-blue" />
                 </div>
-                <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">10 Trainingen</h3>
+                <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
+                  10 Trainingen
+                </h3>
                 <p className="text-scrumboks-gray leading-relaxed">
-                  10x meetrainen op dinsdag- en/of vrijdagavond. 
-                  <span className="font-semibold text-scrumboks-blue">Kies zelf wanneer je komt!</span>
+                  10x meetrainen op dinsdag- en/of vrijdagavond.
+                  <span className="font-semibold text-scrumboks-blue">
+                    Kies zelf wanneer je komt!
+                  </span>
                 </p>
               </CardContent>
             </Card>
@@ -183,10 +206,14 @@ const XperienceRugby = () => {
                 <div className="bg-gradient-to-br from-scrumboks-yellow/20 to-scrumboks-yellow/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-10 h-10 text-scrumboks-yellow" />
                 </div>
-                <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">Bitje Inclusief</h3>
+                <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
+                  Bitje Inclusief
+                </h3>
                 <p className="text-scrumboks-gray leading-relaxed">
-                  Een bitje bij je eerste training. 
-                  <span className="font-semibold text-scrumboks-yellow">Veiligheid staat voorop!</span>
+                  Een bitje bij je eerste training.
+                  <span className="font-semibold text-scrumboks-yellow">
+                    Veiligheid staat voorop!
+                  </span>
                 </p>
               </CardContent>
             </Card>
@@ -196,10 +223,14 @@ const XperienceRugby = () => {
                 <div className="bg-gradient-to-br from-scrumboks-blue/20 to-scrumboks-blue/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Gift className="w-10 h-10 text-scrumboks-blue" />
                 </div>
-                <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">Rugbybal</h3>
+                <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
+                  Rugbybal
+                </h3>
                 <p className="text-scrumboks-gray leading-relaxed">
-                  Een mooie rugbybal als je de Xperience voltooid hebt. 
-                  <span className="font-semibold text-scrumboks-blue">Om thuis te oefenen!</span>
+                  Een mooie rugbybal als je de Xperience voltooid hebt.
+                  <span className="font-semibold text-scrumboks-blue">
+                    Om thuis te oefenen!
+                  </span>
                 </p>
               </CardContent>
             </Card>
@@ -211,7 +242,7 @@ const XperienceRugby = () => {
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-scrumboks-yellow/10 rounded-full -translate-y-16 translate-x-16"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-scrumboks-blue/10 rounded-full translate-y-12 -translate-x-12"></div>
-              
+
               <div className="relative z-10">
                 <div className="inline-flex items-center gap-2 bg-scrumboks-blue/10 text-scrumboks-blue px-4 py-2 rounded-full text-sm font-medium mb-4">
                   <Sparkles className="w-4 h-4" />
@@ -242,19 +273,19 @@ const XperienceRugby = () => {
               <div className="absolute bottom-16 left-1/4 w-40 h-40 border-2 border-scrumboks-yellow rounded-full"></div>
               <div className="absolute bottom-32 right-1/3 w-28 h-28 border-2 border-scrumboks-white rounded-full"></div>
             </div>
-            
+
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 bg-scrumboks-yellow/20 text-scrumboks-yellow px-6 py-3 rounded-full text-lg font-medium mb-8">
                 <Zap className="w-5 h-5" />
                 RUGBY WAARDEN
               </div>
-              
+
               <h3 className="text-5xl font-bold mb-12">
                 <span className="bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold bg-clip-text text-transparent">
                   PLAY RUGBY NOW
                 </span>
               </h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div className="text-center group">
                   <div className="bg-gradient-to-br from-scrumboks-yellow/20 to-scrumboks-yellow/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -268,24 +299,30 @@ const XperienceRugby = () => {
                     <Shield className="w-10 h-10 text-scrumboks-yellow" />
                   </div>
                   <h4 className="text-2xl font-bold mb-2">DISCIPLINE</h4>
-                  <p className="text-scrumboks-white/80 text-sm">Focus & respect</p>
+                  <p className="text-scrumboks-white/80 text-sm">
+                    Focus & respect
+                  </p>
                 </div>
                 <div className="text-center group">
                   <div className="bg-gradient-to-br from-scrumboks-yellow/20 to-scrumboks-yellow/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Target className="w-10 h-10 text-scrumboks-yellow" />
                   </div>
                   <h4 className="text-2xl font-bold mb-2">TEAMSPORT</h4>
-                  <p className="text-scrumboks-white/80 text-sm">Samen winnen</p>
+                  <p className="text-scrumboks-white/80 text-sm">
+                    Samen winnen
+                  </p>
                 </div>
                 <div className="text-center group">
                   <div className="bg-gradient-to-br from-scrumboks-yellow/20 to-scrumboks-yellow/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Heart className="w-10 h-10 text-scrumboks-yellow" />
                   </div>
                   <h4 className="text-2xl font-bold mb-2">RESPECT</h4>
-                  <p className="text-scrumboks-white/80 text-sm">Voor iedereen</p>
+                  <p className="text-scrumboks-white/80 text-sm">
+                    Voor iedereen
+                  </p>
                 </div>
               </div>
-              
+
               <div className="bg-gradient-to-r from-scrumboks-white/20 via-scrumboks-white/10 to-scrumboks-white/20 p-8 rounded-2xl backdrop-blur-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                   <div>
@@ -327,11 +364,13 @@ const XperienceRugby = () => {
               Meld je hier aan voor Xperience Rugby
             </h2>
             <p className="text-xl text-scrumboks-gray max-w-2xl mx-auto">
-              Vul onderstaand formulier in en we nemen contact met je op! 
-              <span className="text-scrumboks-blue font-semibold">Super makkelijk en snel.</span>
+              Vul onderstaand formulier in en we nemen contact met je op!
+              <span className="text-scrumboks-blue font-semibold">
+                Super makkelijk en snel.
+              </span>
             </p>
           </div>
-          
+
           <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm">
             <CardHeader className="bg-gradient-to-r from-scrumboks-blue/5 to-scrumboks-yellow/5">
               <CardTitle className="text-2xl font-bold text-scrumboks-blue flex items-center gap-3">
@@ -343,9 +382,14 @@ const XperienceRugby = () => {
               </p>
             </CardHeader>
             <CardContent>
-              <form name="xperience-rugby" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+              <form
+                name="xperience-rugby"
+                method="POST"
+                data-netlify="true"
+                onSubmit={handleSubmit}
+              >
                 <input type="hidden" name="form-name" value="xperience-rugby" />
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Speler gegevens */}
                   <div className="space-y-6">
@@ -357,7 +401,7 @@ const XperienceRugby = () => {
                         Speler gegevens
                       </h4>
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-scrumboks-blue mb-2">
                         Voornaam *
@@ -496,16 +540,18 @@ const XperienceRugby = () => {
                     <div className="flex flex-col sm:flex-row gap-6 items-center justify-between">
                       <div>
                         <p className="text-sm text-scrumboks-gray mb-2">
-                          * Verplichte velden. We nemen contact met je op voor meer informatie.
+                          * Verplichte velden. We nemen contact met je op voor
+                          meer informatie.
                         </p>
                         <p className="text-xs text-scrumboks-gray">
-                          Binnen 24 uur ontvang je een bevestiging en meer details!
+                          Binnen 24 uur ontvang je een bevestiging en meer
+                          details!
                         </p>
                       </div>
-                      <Button 
-                        type="submit" 
-                        variant="hero" 
-                        size="lg" 
+                      <Button
+                        type="submit"
+                        variant="hero"
+                        size="lg"
                         disabled={isSubmitting}
                         className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-dark hover:from-scrumboks-blue-dark hover:to-scrumboks-black shadow-lg hover:shadow-xl transition-all duration-300"
                       >
@@ -543,17 +589,22 @@ const XperienceRugby = () => {
                 Kom een keer kijken!
               </h3>
               <p className="text-scrumboks-gray mb-6 text-lg">
-                We trainen op Sportpark Rauwenhof in Tiel. Kom gerust langs om de sfeer te proeven!
+                We trainen op Sportpark Rauwenhof in Tiel. Kom gerust langs om
+                de sfeer te proeven!
               </p>
               <div className="bg-scrumboks-blue/5 p-4 rounded-xl mb-6">
-                <h4 className="font-semibold text-scrumboks-blue mb-2">Ons adres:</h4>
+                <h4 className="font-semibold text-scrumboks-blue mb-2">
+                  Ons adres:
+                </h4>
                 <p className="text-scrumboks-gray">
-                  Sportpark Rauwenhof<br />
-                  Beethovenstraat 18a<br />
+                  Sportpark Rauwenhof
+                  <br />
+                  Beethovenstraat 18a
+                  <br />
                   4003 KX Tiel
                 </p>
               </div>
-              
+
               {/* Google Maps Embed */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <iframe
@@ -582,13 +633,16 @@ const XperienceRugby = () => {
                     Alvast een beetje inlezen?
                   </h3>
                   <p className="text-scrumboks-gray mb-8 text-lg text-center">
-                    Bekijk hier de rugby spelregels en kom goed voorbereid naar je eerste training!
+                    Bekijk hier de rugby spelregels en kom goed voorbereid naar
+                    je eerste training!
                   </p>
-                  
+
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3 text-scrumboks-gray">
                       <div className="w-2 h-2 bg-scrumboks-blue rounded-full"></div>
-                      <span>Trainingstijden: Di-Do 18:45-20:30 & Vrijdag 20:00-22:00</span>
+                      <span>
+                        Trainingstijden: Di-Do 18:45-20:30 & Vrijdag 20:00-22:00
+                      </span>
                     </div>
                     <div className="flex items-center gap-3 text-scrumboks-gray">
                       <div className="w-2 h-2 bg-scrumboks-yellow rounded-full"></div>
@@ -599,9 +653,9 @@ const XperienceRugby = () => {
                       <span>Telefoon: 0344 623201</span>
                     </div>
                   </div>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     size="lg"
                     className="border-2 border-scrumboks-blue text-scrumboks-blue hover:bg-scrumboks-blue hover:text-white transition-all duration-300 w-full"
                   >
@@ -681,6 +735,7 @@ const XperienceRugby = () => {
           </div>
         </div>
       </footer>
+      <BackToTop />
     </div>
   );
 };

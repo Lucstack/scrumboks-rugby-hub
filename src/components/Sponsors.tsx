@@ -3,7 +3,10 @@ import { Heart, Users, Handshake } from 'lucide-react';
 
 const Sponsors = () => {
   return (
-    <section id="sponsors" className="py-20 bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-white">
+    <section
+      id="sponsors"
+      className="py-20 bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-white"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -11,8 +14,8 @@ const Sponsors = () => {
             Onze Sponsors & Partners
           </h2>
           <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
-            We zijn dankbaar voor de steun van onze sponsors en partners die ons helpen 
-            om rugby voor iedereen toegankelijk te maken.
+            We zijn dankbaar voor de steun van onze sponsors en partners die ons
+            helpen om rugby voor iedereen toegankelijk te maken.
           </p>
         </div>
 
@@ -33,12 +36,20 @@ const Sponsors = () => {
               </p>
               <div className="space-y-3">
                 <div className="bg-scrumboks-blue/5 p-4 rounded-lg">
-                  <p className="font-medium text-scrumboks-blue">Naam Hoofdsponsor</p>
-                  <p className="text-sm text-scrumboks-gray">Beschrijving van de sponsor</p>
+                  <p className="font-medium text-scrumboks-blue">
+                    Naam Hoofdsponsor
+                  </p>
+                  <p className="text-sm text-scrumboks-gray">
+                    Beschrijving van de sponsor
+                  </p>
                 </div>
                 <div className="bg-scrumboks-blue/5 p-4 rounded-lg">
-                  <p className="font-medium text-scrumboks-blue">Partner Bedrijf</p>
-                  <p className="text-sm text-scrumboks-gray">Lokale onderneming</p>
+                  <p className="font-medium text-scrumboks-blue">
+                    Partner Bedrijf
+                  </p>
+                  <p className="text-sm text-scrumboks-gray">
+                    Lokale onderneming
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -59,12 +70,20 @@ const Sponsors = () => {
               </p>
               <div className="space-y-3">
                 <div className="bg-scrumboks-yellow/5 p-4 rounded-lg">
-                  <p className="font-medium text-scrumboks-blue">Senioren Sponsor</p>
-                  <p className="text-sm text-scrumboks-gray">Ondersteunt ons eerste team</p>
+                  <p className="font-medium text-scrumboks-blue">
+                    Senioren Sponsor
+                  </p>
+                  <p className="text-sm text-scrumboks-gray">
+                    Ondersteunt ons eerste team
+                  </p>
                 </div>
                 <div className="bg-scrumboks-yellow/5 p-4 rounded-lg">
-                  <p className="font-medium text-scrumboks-blue">Jeugd Sponsor</p>
-                  <p className="text-sm text-scrumboks-gray">Investeert in de toekomst</p>
+                  <p className="font-medium text-scrumboks-blue">
+                    Jeugd Sponsor
+                  </p>
+                  <p className="text-sm text-scrumboks-gray">
+                    Investeert in de toekomst
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -85,12 +104,18 @@ const Sponsors = () => {
               </p>
               <div className="space-y-3">
                 <div className="bg-scrumboks-blue/5 p-4 rounded-lg">
-                  <p className="font-medium text-scrumboks-blue">Sportpark Rauwenhof</p>
+                  <p className="font-medium text-scrumboks-blue">
+                    Sportpark Rauwenhof
+                  </p>
                   <p className="text-sm text-scrumboks-gray">Onze thuisbasis</p>
                 </div>
                 <div className="bg-scrumboks-blue/5 p-4 rounded-lg">
-                  <p className="font-medium text-scrumboks-blue">Lokale Bedrijven</p>
-                  <p className="text-sm text-scrumboks-gray">Tielse ondernemers</p>
+                  <p className="font-medium text-scrumboks-blue">
+                    Lokale Bedrijven
+                  </p>
+                  <p className="text-sm text-scrumboks-gray">
+                    Tielse ondernemers
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -103,18 +128,18 @@ const Sponsors = () => {
             Word ook sponsor van Scrumboks!
           </h3>
           <p className="text-scrumboks-gray mb-6 max-w-2xl mx-auto">
-            Steun onze rugbyclub en help ons om rugby voor iedereen toegankelijk te maken. 
-            Samen maken we het verschil in de Tielse sportgemeenschap.
+            Steun onze rugbyclub en help ons om rugby voor iedereen toegankelijk
+            te maken. Samen maken we het verschil in de Tielse sportgemeenschap.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:sponsoring@scrumboks.nl" 
+            <a
+              href="mailto:sponsoring@scrumboks.nl"
               className="bg-scrumboks-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-scrumboks-blue-dark transition-colors duration-200"
             >
               Contact sponsoring
             </a>
-            <a 
-              href="tel:0344623201" 
+            <a
+              href="tel:0344623201"
               className="border-2 border-scrumboks-blue text-scrumboks-blue px-6 py-3 rounded-lg font-medium hover:bg-scrumboks-blue hover:text-white transition-colors duration-200"
             >
               0344 623201

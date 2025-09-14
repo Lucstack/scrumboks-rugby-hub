@@ -1,12 +1,13 @@
 import Navbar from '@/components/Navbar';
 import MembershipForm from '@/components/MembershipForm';
+import BackToTop from '@/components/BackToTop';
 import { Users, Heart, Trophy, Target } from 'lucide-react';
 
 const Membership = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-gradient-to-b from-scrumboks-blue-light/20 to-scrumboks-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -14,8 +15,8 @@ const Membership = () => {
             Word lid van Scrumboks
           </h1>
           <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
-            Sluit je aan bij onze rugbyfamilie! Of je nu beginner bent of ervaren speler, 
-            er is altijd een plek voor je bij Scrumboks.
+            Sluit je aan bij onze rugbyfamilie! Of je nu beginner bent of
+            ervaren speler, er is altijd een plek voor je bij Scrumboks.
           </p>
         </div>
       </section>
@@ -28,7 +29,8 @@ const Membership = () => {
               Waarom lid worden?
             </h2>
             <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto">
-              Bij Scrumboks krijg je meer dan alleen rugby training. Je wordt onderdeel van een hechte gemeenschap.
+              Bij Scrumboks krijg je meer dan alleen rugby training. Je wordt
+              onderdeel van een hechte gemeenschap.
             </p>
           </div>
 
@@ -37,9 +39,12 @@ const Membership = () => {
               <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-scrumboks-blue" />
               </div>
-              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">Gemeenschap</h3>
+              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">
+                Gemeenschap
+              </h3>
               <p className="text-scrumboks-gray">
-                Word onderdeel van een hechte rugbyfamilie waar iedereen welkom is.
+                Word onderdeel van een hechte rugbyfamilie waar iedereen welkom
+                is.
               </p>
             </div>
 
@@ -47,9 +52,12 @@ const Membership = () => {
               <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-scrumboks-blue" />
               </div>
-              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">Passie</h3>
+              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">
+                Passie
+              </h3>
               <p className="text-scrumboks-gray">
-                Train met coaches en spelers die net zoveel liefde voor rugby hebben als jij.
+                Train met coaches en spelers die net zoveel liefde voor rugby
+                hebben als jij.
               </p>
             </div>
 
@@ -57,9 +65,12 @@ const Membership = () => {
               <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Trophy className="w-8 h-8 text-scrumboks-blue" />
               </div>
-              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">Ontwikkeling</h3>
+              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">
+                Ontwikkeling
+              </h3>
               <p className="text-scrumboks-gray">
-                Groei als speler en als persoon met onze professionele begeleiding.
+                Groei als speler en als persoon met onze professionele
+                begeleiding.
               </p>
             </div>
 
@@ -67,9 +78,12 @@ const Membership = () => {
               <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-scrumboks-blue" />
               </div>
-              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">Plezier</h3>
+              <h3 className="text-xl font-bold text-scrumboks-blue mb-3">
+                Plezier
+              </h3>
               <p className="text-scrumboks-gray">
-                Rugby moet leuk zijn! Geniet van trainingen, wedstrijden en clubactiviteiten.
+                Rugby moet leuk zijn! Geniet van trainingen, wedstrijden en
+                clubactiviteiten.
               </p>
             </div>
           </div>
@@ -149,6 +163,7 @@ const Membership = () => {
           </div>
         </div>
       </footer>
+      <BackToTop />
     </div>
   );
 };

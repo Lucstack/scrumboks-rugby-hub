@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -30,10 +30,11 @@ const Hero = () => {
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl lg:text-2xl text-scrumboks-white/90 max-w-3xl mx-auto leading-relaxed">
-            Welkom bij de Scrumboks - waar samen groeien, rugby beleven en bouwen aan onze club samenkomen. 
-            Sluit je aan en ervaar hoe écht rugby bedoeld is: voor iedereen.
+            Welkom bij de Scrumboks - waar samen groeien, rugby beleven en
+            bouwen aan onze club samenkomen. Sluit je aan en ervaar hoe écht
+            rugby bedoeld is: voor iedereen.
           </p>
-          
+
           {/* Jubileum Banner */}
           <div className="bg-gradient-to-r from-scrumboks-yellow/20 to-scrumboks-gold/20 border border-scrumboks-yellow/30 rounded-full px-6 py-3 mt-6 inline-block">
             <p className="text-scrumboks-yellow font-bold text-lg">
@@ -43,18 +44,30 @@ const Hero = () => {
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            <Link to="/xperience-rugby">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold hover:from-scrumboks-gold hover:to-scrumboks-yellow text-scrumboks-black font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                🏉 Probeer Rugby - €15
+              </Button>
+            </Link>
             <Link to="/membership">
-              <Button variant="action" size="xl" className="w-full sm:w-auto">
+              <Button 
+                variant="action" 
+                size="xl" 
+                className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-dark hover:from-scrumboks-blue-dark hover:to-scrumboks-black shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
                 Word lid van ons team
               </Button>
             </Link>
-            <Link to="/xperience-rugby">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto">
-                Xperience Rugby - €15
-              </Button>
-            </Link>
-            <a href="#teams">
-              <Button variant="minimal" size="xl" className="w-full sm:w-auto">
+            <a href="/#teams">
+              <Button 
+                variant="minimal" 
+                size="xl" 
+                className="w-full sm:w-auto border-2 border-scrumboks-white/30 hover:border-scrumboks-white hover:bg-scrumboks-white/10 transition-all duration-300"
+              >
                 Bekijk onze teams
               </Button>
             </a>

@@ -25,8 +25,7 @@ const About = () => {
     {
       icon: Trophy,
       title: 'Groei',
-      description:
-        'We ontwikkelen onszelf en helpen elkaar beter te worden.',
+      description: 'We ontwikkelen onszelf en helpen elkaar beter te worden.',
     },
   ];
 
@@ -68,18 +67,18 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-card p-6 rounded-lg shadow-soft">
-                  <div className="text-3xl font-bold text-scrumboks-gold mb-2">
-                    1976
-                  </div>
-                  <div className="text-scrumboks-gray">Opgericht</div>
+              <div className="bg-card p-6 rounded-lg shadow-soft">
+                <div className="text-3xl font-bold text-scrumboks-gold mb-2">
+                  1976
                 </div>
-                <div className="bg-card p-6 rounded-lg shadow-soft">
-                  <div className="text-3xl font-bold text-scrumboks-gold mb-2">
-                    50+
-                  </div>
-                  <div className="text-scrumboks-gray">Actieve leden</div>
+                <div className="text-scrumboks-gray">Opgericht</div>
+              </div>
+              <div className="bg-card p-6 rounded-lg shadow-soft">
+                <div className="text-3xl font-bold text-scrumboks-gold mb-2">
+                  50+
                 </div>
+                <div className="text-scrumboks-gray">Actieve leden</div>
+              </div>
             </div>
 
             <Button variant="hero" size="lg">

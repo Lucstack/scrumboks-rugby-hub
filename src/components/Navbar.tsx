@@ -7,13 +7,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Over ons', href: '#about' },
-    { name: 'Teams', href: '#teams' },
-    { name: 'Sponsors', href: '#sponsors' },
-    { name: 'Vrijwilligers', href: '#volunteers' },
-    { name: 'Lid worden', href: '/membership' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/', type: 'route' },
+    { name: 'Over ons', href: '/#about', type: 'anchor' },
+    { name: 'Teams', href: '/#teams', type: 'anchor' },
+    { name: 'Sponsors', href: '/#sponsors', type: 'anchor' },
+    { name: 'Vrijwilligers', href: '/#volunteers', type: 'anchor' },
+    { name: 'Lid worden', href: '/membership', type: 'route' },
+    { name: 'Contact', href: '/#contact', type: 'anchor' },
   ];
 
   return (
@@ -32,8 +32,8 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map(item => (
-                item.name === 'Lid worden' ? (
+              {navItems.map(item =>
+                item.type === 'route' ? (
                   <Link
                     key={item.name}
                     to={item.href}
@@ -50,7 +50,7 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 )
-              ))}
+              )}
             </div>
           </div>
 
@@ -83,27 +83,27 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-scrumboks-white/95 backdrop-blur-lg border-t border-scrumboks-gray-light/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map(item => (
-              item.name === 'Lid worden' ? (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
-              )
-            ))}
+             {navItems.map(item =>
+               item.type === 'route' ? (
+                 <Link
+                   key={item.name}
+                   to={item.href}
+                   className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                   onClick={() => setIsOpen(false)}
+                 >
+                   {item.name}
+                 </Link>
+               ) : (
+                 <a
+                   key={item.name}
+                   href={item.href}
+                   className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                   onClick={() => setIsOpen(false)}
+                 >
+                   {item.name}
+                 </a>
+               )
+             )}
             <div className="px-3 py-2">
               <Link to="/membership">
                 <Button variant="action" size="sm" className="w-full">

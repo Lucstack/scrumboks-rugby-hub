@@ -5,6 +5,7 @@ import Teams from '@/components/Teams';
 import Sponsors from '@/components/Sponsors';
 import Volunteers from '@/components/Volunteers';
 import Contact from '@/components/Contact';
+import BackToTop from '@/components/BackToTop';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Sponsors />
       <Volunteers />
       <Contact />
+      <BackToTop />
 
       {/* Footer */}
       <footer className="bg-scrumboks-blue text-scrumboks-white py-12">
@@ -28,9 +30,9 @@ const Index = () => {
                 gemeenschapszin samenkomen. Al 50 jaar een thuis voor
                 rugbyliefhebbers.
               </p>
-                <p className="text-sm text-scrumboks-white/60">
-                  © 2025 Scrumboks Rugby Club. Alle rechten voorbehouden.
-                </p>
+              <p className="text-sm text-scrumboks-white/60">
+                © 2025 Scrumboks Rugby Club. Alle rechten voorbehouden.
+              </p>
             </div>
 
             <div>
@@ -38,7 +40,7 @@ const Index = () => {
               <ul className="space-y-2 text-scrumboks-white/80 text-sm">
                 <li>
                   <a
-                    href="#about"
+                    href="/#about"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Over ons
@@ -46,7 +48,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#teams"
+                    href="/#teams"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Teams
@@ -54,7 +56,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#sponsors"
+                    href="/#sponsors"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Sponsors
@@ -62,7 +64,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#volunteers"
+                    href="/#volunteers"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Vrijwilligers
@@ -78,7 +80,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="/#contact"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Contact
