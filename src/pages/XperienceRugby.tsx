@@ -133,7 +133,7 @@ const XperienceRugby = () => {
           
           <p className="text-xl lg:text-2xl text-scrumboks-white/90 max-w-4xl mx-auto leading-relaxed mb-8">
             Geen betere manier om te proberen of rugby ook jouw ding kan zijn! 
-            <span className="text-scrumboks-yellow font-semibold">Ontdek de passie voor rugby in 10 leuke trainingen.</span>
+            <span className="text-scrumboks-yellow font-semibold">Ontdek de passie voor rugby in 10 leuke trainingen. Word lid van de club!</span>
           </p>
           
           {/* Quick Stats */}
@@ -148,7 +148,7 @@ const XperienceRugby = () => {
             </div>
             <div className="flex items-center gap-2">
               <Award className="w-5 h-5 text-scrumboks-yellow" />
-              <span className="font-medium">€15,-</span>
+              <span className="font-medium">Laagdrempelig</span>
             </div>
           </div>
         </div>
@@ -215,19 +215,19 @@ const XperienceRugby = () => {
               <div className="relative z-10">
                 <div className="inline-flex items-center gap-2 bg-scrumboks-blue/10 text-scrumboks-blue px-4 py-2 rounded-full text-sm font-medium mb-4">
                   <Sparkles className="w-4 h-4" />
-                  Super deal!
+                  Voordelig kennismaken!
                 </div>
                 <h3 className="text-2xl font-bold text-scrumboks-blue mb-4">
                   Dit alles voor maar
                 </h3>
-                <div className="text-6xl font-bold bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold bg-clip-text text-transparent mb-4">
+                <div className="text-4xl font-bold bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-dark bg-clip-text text-transparent mb-4">
                   €15,-
                 </div>
                 <p className="text-scrumboks-blue font-semibold text-lg">
                   Inclusief bitje en rugbybal!
                 </p>
                 <div className="mt-4 text-sm text-scrumboks-gray">
-                  Normaal gesproken €50+ waard
+                  Perfect om rugby te ontdekken
                 </div>
               </div>
             </div>
@@ -623,7 +623,7 @@ const XperienceRugby = () => {
               <h3 className="text-2xl font-bold mb-4">SCRUMBOKS</h3>
               <p className="text-scrumboks-white/80 mb-4 leading-relaxed">
                 Rugbyvereniging Scrumboks - waar passie voor rugby en
-                gemeenschapszin samenkomen. Al meer dan 45 jaar een thuis voor
+                gemeenschapszin samenkomen. Al 50 jaar een thuis voor
                 rugbyliefhebbers.
               </p>
               <p className="text-sm text-scrumboks-white/60">

@@ -10,7 +10,8 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'Over ons', href: '#about' },
     { name: 'Teams', href: '#teams' },
-    { name: 'Nieuws', href: '#news' },
+    { name: 'Sponsors', href: '#sponsors' },
+    { name: 'Vrijwilligers', href: '#volunteers' },
     { name: 'Lid worden', href: '/membership' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -21,9 +22,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-scrumboks-blue">
-              SCRUMBOKS
-            </h1>
+            <Link to="/">
+              <h1 className="text-2xl font-bold text-scrumboks-blue hover:text-scrumboks-gold transition-colors duration-200 cursor-pointer">
+                SCRUMBOKS
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

@@ -33,6 +33,13 @@ const Hero = () => {
             Welkom bij de Scrumboks - waar samen groeien, rugby beleven en bouwen aan onze club samenkomen. 
             Sluit je aan en ervaar hoe écht rugby bedoeld is: voor iedereen.
           </p>
+          
+          {/* Jubileum Banner */}
+          <div className="bg-gradient-to-r from-scrumboks-yellow/20 to-scrumboks-gold/20 border border-scrumboks-yellow/30 rounded-full px-6 py-3 mt-6 inline-block">
+            <p className="text-scrumboks-yellow font-bold text-lg">
+              🎉 2025: 50 jaar Scrumboks! Gouden Jubileum 🏆
+            </p>
+          </div>
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">

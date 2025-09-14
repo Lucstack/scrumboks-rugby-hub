@@ -2,6 +2,8 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Teams from '@/components/Teams';
+import Sponsors from '@/components/Sponsors';
+import Volunteers from '@/components/Volunteers';
 import Contact from '@/components/Contact';
 
 const Index = () => {
@@ -11,6 +13,8 @@ const Index = () => {
       <Hero />
       <About />
       <Teams />
+      <Sponsors />
+      <Volunteers />
       <Contact />
 
       {/* Footer */}
@@ -21,7 +25,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-4">SCRUMBOKS</h3>
               <p className="text-scrumboks-white/80 mb-4 leading-relaxed">
                 Rugbyvereniging Scrumboks - waar passie voor rugby en
-                gemeenschapszin samenkomen. Al meer dan 45 jaar een thuis voor
+                gemeenschapszin samenkomen. Al 50 jaar een thuis voor
                 rugbyliefhebbers.
               </p>
                 <p className="text-sm text-scrumboks-white/60">
@@ -50,18 +54,34 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="#sponsors"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
-                    Contact
+                    Sponsors
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#volunteers"
+                    className="hover:text-scrumboks-yellow transition-colors"
+                  >
+                    Vrijwilligers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/membership"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Lid worden
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="hover:text-scrumboks-yellow transition-colors"
+                  >
+                    Contact
                   </a>
                 </li>
               </ul>

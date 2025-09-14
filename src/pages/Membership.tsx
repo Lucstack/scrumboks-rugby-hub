@@ -91,7 +91,7 @@ const Membership = () => {
               <h3 className="text-2xl font-bold mb-4">SCRUMBOKS</h3>
               <p className="text-scrumboks-white/80 mb-4 leading-relaxed">
                 Rugbyvereniging Scrumboks - waar passie voor rugby en
-                gemeenschapszin samenkomen. Al meer dan 45 jaar een thuis voor
+                gemeenschapszin samenkomen. Al 50 jaar een thuis voor
                 rugbyliefhebbers.
               </p>
               <p className="text-sm text-scrumboks-white/60">

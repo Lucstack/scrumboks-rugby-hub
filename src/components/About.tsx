@@ -24,9 +24,9 @@ const About = () => {
     },
     {
       icon: Trophy,
-      title: 'Excellence',
+      title: 'Groei',
       description:
-        'We streven naar het beste in onszelf en ondersteunen elkaar om te groeien.',
+        'We ontwikkelen onszelf en helpen elkaar beter te worden.',
     },
   ];
 
@@ -42,7 +42,7 @@ const About = () => {
             Over Scrumboks
           </h2>
           <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
-            Al meer dan 45 jaar brengen we rugbyliefhebbers samen in een warme,
+            Al 50 jaar brengen we rugbyliefhebbers samen in een warme,
             inclusieve gemeenschap waar iedereen welkom is.
           </p>
         </div>
