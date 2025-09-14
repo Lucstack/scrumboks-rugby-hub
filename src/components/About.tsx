@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Heart, Trophy, Users, Target } from 'lucide-react';
+import { Heart, Trophy, Users, Target, HandHeart, Users2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import teamCelebration from '@/assets/team-celebration.jpg';
 
 const About = () => {
@@ -98,7 +99,7 @@ const About = () => {
         </div>
 
         {/* Values */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {values.map((value, index) => (
             <div key={index} className="text-center group">
               <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-scrumboks-blue group-hover:scale-110 transition-all duration-300">
@@ -112,6 +113,40 @@ const About = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action Buttons */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-scrumboks-blue mb-8">
+            Word onderdeel van onze club!
+          </h3>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
+            {/* Vrijwilligers Button */}
+            <Link to="/volunteers" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-light hover:from-scrumboks-blue-dark hover:to-scrumboks-blue text-scrumboks-white border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+              >
+                <HandHeart className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                <span className="font-semibold">Vrijwilliger worden</span>
+              </Button>
+            </Link>
+
+            {/* Sponsors Button */}
+            <Link to="/sponsors" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold hover:from-scrumboks-gold hover:to-scrumboks-yellow text-scrumboks-blue border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group font-semibold"
+              >
+                <Users2 className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                <span>Sponsor worden</span>
+              </Button>
+            </Link>
+          </div>
+          <p className="text-scrumboks-gray mt-6 text-sm max-w-lg mx-auto">
+            Ontdek hoe je kunt bijdragen aan onze rugbyclub en onderdeel kunt worden van onze geweldige gemeenschap.
+          </p>
         </div>
       </div>
     </section>
