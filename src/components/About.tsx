@@ -6,23 +6,23 @@ const About = () => {
   const values = [
     {
       icon: Heart,
-      title: "Respect",
-      description: "Wederzijds respect voor medespelers, tegenstanders en officials staat centraal in alles wat we doen."
+      title: "Passie",
+      description: "Liefde voor rugby en respect voor de sport staan centraal in alles wat we doen."
     },
     {
       icon: Users,
-      title: "Teamwork",
-      description: "Samen zijn we sterker. Rugby draait om samenwerking en elkaar helpen om beter te worden."
+      title: "Gemeenschap",
+      description: "Samen zijn we sterker. Onze club is een tweede familie voor alle leden."
     },
     {
       icon: Trophy,
-      title: "Passie",
-      description: "Onze liefde voor rugby en de sport drijft ons elke dag om het beste uit onszelf te halen."
+      title: "Excellence",
+      description: "We streven naar het beste in onszelf en ondersteunen elkaar om te groeien."
     },
     {
       icon: Target,
-      title: "Discipline",
-      description: "Discipline in training en wedstrijden helpt ons groeien als team en als individu."
+      title: "Plezier",
+      description: "Rugby moet leuk zijn! We combineren serieuze training met veel plezier."
     }
   ];
 
@@ -31,12 +31,12 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-scrumboks-blue mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rugby-green mb-6">
             Over Scrumboks
           </h2>
-          <p className="text-lg lg:text-xl text-scrumboks-gray max-w-3xl mx-auto leading-relaxed">
-            Sinds 1975 dé tofste rugbyclub van de Betuwe! Een plek waar rugbypassie en 
-            echte vriendschap hand in hand gaan.
+          <p className="text-lg lg:text-xl text-rugby-gray max-w-3xl mx-auto leading-relaxed">
+            Al meer dan 25 jaar brengen we rugbyliefhebbers samen in een warme, 
+            inclusieve gemeenschap waar iedereen welkom is.
           </p>
         </div>
 
@@ -44,29 +44,28 @@ const About = () => {
           {/* Content */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-scrumboks-blue mb-4">
-                Onze Verhaal
+              <h3 className="text-2xl lg:text-3xl font-bold text-rugby-green mb-4">
+                Onze Missie
               </h3>
-              <p className="text-scrumboks-gray leading-relaxed mb-6">
-                Opgericht in 1975, is Scrumboks uitgegroeid tot dé rugbyclub van Tiel en omgeving. 
-                Wat begon als een kleine groep rugbyliefhebbers, is nu een hechte gemeenschap van 50 leden 
-                verdeeld over 6 diverse teams. Volgend jaar vieren we ons 50-jarig jubileum!
+              <p className="text-rugby-gray leading-relaxed mb-6">
+                Bij Scrumboks geloven we dat rugby meer is dan een sport. Het is een manier van leven 
+                die respect, teamwork en doorzettingsvermogen bevordert. We bieden een plek waar 
+                spelers van alle niveaus kunnen groeien, zowel op als naast het veld.
               </p>
-              <p className="text-scrumboks-gray leading-relaxed">
-                Of je nu voor het eerst een rugbybal vasthoudt of al jaren ervaring hebt, bij Scrumboks 
-                vind je je plek. We geloven dat rugby voor iedereen toegankelijk moet zijn en dat plezier 
-                en respect de basis vormen van onze club.
+              <p className="text-rugby-gray leading-relaxed">
+                Of je nu een ervaren speler bent of voor het eerst kennismaakt met rugby, 
+                bij ons vind je de ondersteuning en vriendschap die je nodig hebt om te floreren.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-card p-6 rounded-lg shadow-soft">
-                <div className="text-3xl font-bold text-scrumboks-yellow mb-2">1975</div>
-                <div className="text-scrumboks-gray">Opgericht in Tiel</div>
+                <div className="text-3xl font-bold text-rugby-gold mb-2">1995</div>
+                <div className="text-rugby-gray">Opgericht</div>
               </div>
               <div className="bg-card p-6 rounded-lg shadow-soft">
-                <div className="text-3xl font-bold text-scrumboks-yellow mb-2">50</div>
-                <div className="text-scrumboks-gray">Enthousiaste leden</div>
+                <div className="text-3xl font-bold text-rugby-gold mb-2">150+</div>
+                <div className="text-rugby-gray">Actieve leden</div>
               </div>
             </div>
 
@@ -90,11 +89,11 @@ const About = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <div key={index} className="text-center group">
-              <div className="bg-scrumboks-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-scrumboks-blue group-hover:scale-110 transition-all duration-300">
-                <value.icon className="w-8 h-8 text-scrumboks-blue group-hover:text-scrumboks-white transition-colors duration-300" />
+              <div className="bg-rugby-green/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rugby-green group-hover:scale-110 transition-all duration-300">
+                <value.icon className="w-8 h-8 text-rugby-green group-hover:text-rugby-white transition-colors duration-300" />
               </div>
-              <h4 className="text-xl font-bold text-scrumboks-blue mb-3">{value.title}</h4>
-              <p className="text-scrumboks-gray leading-relaxed">{value.description}</p>
+              <h4 className="text-xl font-bold text-rugby-green mb-3">{value.title}</h4>
+              <p className="text-rugby-gray leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>
