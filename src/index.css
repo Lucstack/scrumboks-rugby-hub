@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 /* Scrumboks Rugby Club Design System
+Modern, fresh color palette for professional and inviting feel
 All colors MUST be HSL for perfect theming
 */
 
@@ -10,41 +11,41 @@ All colors MUST be HSL for perfect theming
   :root {
     /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --foreground: 0 0% 17%; /* Dark gray instead of pure black */
 
-    /* Rugby green palette */
-    --rugby-green: 140 45% 25%;
-    --rugby-green-light: 140 35% 35%;
-    --rugby-green-dark: 140 60% 15%;
+    /* Primary Club Colors */
+    --scrumboks-blue: 238 89% 28%; /* #081689 - Primary blue */
+    --scrumboks-blue-light: 238 50% 95%; /* #E6E9F7 - Light blue background */
+    --scrumboks-blue-dark: 238 95% 15%; /* Darker blue for contrast */
     
-    /* Gold accent for energy */
-    --rugby-gold: 45 85% 55%;
-    --rugby-gold-light: 45 80% 65%;
+    /* Accent Colors */
+    --scrumboks-yellow: 54 95% 51%; /* #F8E300 - Primary yellow */
+    --scrumboks-gold: 48 100% 42%; /* #D4B600 - Muted gold accent */
     
-    /* Neutral tones */
-    --rugby-black: 0 0% 8%;
-    --rugby-white: 0 0% 98%;
-    --rugby-gray: 0 0% 45%;
-    --rugby-gray-light: 0 0% 85%;
+    /* Neutral Tones */
+    --scrumboks-black: 0 0% 13%; /* #221F20 - Club black */
+    --scrumboks-white: 0 0% 98%; /* Pure white */
+    --scrumboks-gray: 0 0% 17%; /* #2C2C2C - Dark gray for text */
+    --scrumboks-gray-light: 0 0% 97%; /* #F7F7F7 - Light gray background */
 
     /* Semantic tokens */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 0 0% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 0 0% 17%;
 
-    --primary: 140 45% 25%;
+    --primary: 238 89% 28%; /* Scrumboks blue */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 85%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 238 50% 95%; /* Light blue background */
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 0 0% 96%;
+    --muted: 0 0% 97%; /* Light gray background */
     --muted-foreground: 0 0% 45%;
 
-    --accent: 45 85% 55%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 54 95% 51%; /* Scrumboks yellow */
+    --accent-foreground: 238 89% 28%; /* Blue text on yellow */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;

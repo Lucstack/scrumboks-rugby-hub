@@ -15,12 +15,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-rugby-white/95 backdrop-blur-lg shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-scrumboks-white/95 backdrop-blur-lg shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-rugby-green">
+            <h1 className="text-2xl font-bold text-scrumboks-blue">
               SCRUMBOKS
             </h1>
           </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-rugby-green hover:text-rugby-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="text-scrumboks-blue hover:text-scrumboks-gold px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </a>
@@ -51,7 +51,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-rugby-green hover:text-rugby-gold focus:outline-none focus:text-rugby-gold p-2"
+              className="text-scrumboks-blue hover:text-scrumboks-gold focus:outline-none focus:text-scrumboks-gold p-2"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -65,13 +65,13 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-rugby-white/95 backdrop-blur-lg border-t border-rugby-gray-light/20">
+        <div className="md:hidden bg-scrumboks-white/95 backdrop-blur-lg border-t border-scrumboks-gray-light/20">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-rugby-green hover:text-rugby-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-scrumboks-blue hover:text-scrumboks-gold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
