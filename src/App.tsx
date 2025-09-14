@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Membership from "./pages/Membership";
 import XperienceRugby from "./pages/XperienceRugby";
+import Volunteers from "./pages/Volunteers";
+import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +22,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/xperience-rugby" element={<XperienceRugby />} />
+          <Route path="/volunteers" element={<Volunteers />} />
+          <Route path="/sponsors" element={<Sponsors />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

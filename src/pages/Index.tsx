@@ -2,8 +2,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Teams from '@/components/Teams';
-import Sponsors from '@/components/Sponsors';
-import Volunteers from '@/components/Volunteers';
 import Contact from '@/components/Contact';
 import BackToTop from '@/components/BackToTop';
 
@@ -14,8 +12,6 @@ const Index = () => {
       <Hero />
       <About />
       <Teams />
-      <Sponsors />
-      <Volunteers />
       <Contact />
       <BackToTop />
 
@@ -56,7 +52,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/#sponsors"
+                    href="/sponsors"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Sponsors
@@ -64,7 +60,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/#volunteers"
+                    href="/volunteers"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Vrijwilligers

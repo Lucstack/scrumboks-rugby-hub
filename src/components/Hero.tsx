@@ -36,11 +36,14 @@ const Hero = () => {
           </p>
 
           {/* Jubileum Banner */}
-          <div className="bg-gradient-to-r from-scrumboks-yellow/20 to-scrumboks-gold/20 border border-scrumboks-yellow/30 rounded-full px-6 py-3 mt-6 inline-block">
+          <button
+            onClick={() => window.open('https://50jaar.scrumboks.nl', '_blank')}
+            className="bg-gradient-to-r from-scrumboks-yellow/20 to-scrumboks-gold/20 border border-scrumboks-yellow/30 rounded-full px-6 py-3 mt-6 inline-block hover:from-scrumboks-yellow/30 hover:to-scrumboks-gold/30 hover:border-scrumboks-yellow/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+          >
             <p className="text-scrumboks-yellow font-bold text-lg">
               🎉 2025: 50 jaar Scrumboks! Gouden Jubileum 🏆
             </p>
-          </div>
+          </button>
 
           {/* Call to action buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">

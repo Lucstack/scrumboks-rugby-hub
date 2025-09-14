@@ -86,7 +86,7 @@ const XperienceRugby = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-white">
         <Navbar />
         <div className="pt-20 pb-12">
           <Card className="border-0 shadow-soft max-w-2xl mx-auto">
@@ -120,7 +120,7 @@ const XperienceRugby = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-scrumboks-gray-light/30 to-scrumboks-white">
       <Navbar />
 
       {/* Hero Section */}

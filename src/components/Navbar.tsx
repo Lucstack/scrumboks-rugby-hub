@@ -10,8 +10,8 @@ const Navbar = () => {
     { name: 'Home', href: '/', type: 'route' },
     { name: 'Over ons', href: '/#about', type: 'anchor' },
     { name: 'Teams', href: '/#teams', type: 'anchor' },
-    { name: 'Sponsors', href: '/#sponsors', type: 'anchor' },
-    { name: 'Vrijwilligers', href: '/#volunteers', type: 'anchor' },
+    { name: 'Sponsors', href: '/sponsors', type: 'route' },
+    { name: 'Vrijwilligers', href: '/volunteers', type: 'route' },
     { name: 'Lid worden', href: '/membership', type: 'route' },
     { name: 'Contact', href: '/#contact', type: 'anchor' },
   ];
