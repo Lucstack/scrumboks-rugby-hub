@@ -1,40 +1,112 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-rugby-action.jpg';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    setIsLoaded(true);
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100,
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
-      {/* Background Image */}
+      {/* Dynamic Background Image with Parallax */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Rugby spelers in actie op het veld"
-          className="w-full h-full object-cover"
+        <div 
+          className="w-full h-full bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}
         />
-        {/* Warm gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-scrumboks-black/60 via-scrumboks-blue-dark/50 to-scrumboks-yellow/20" />
+        {/* Dynamic gradient overlay that responds to mouse */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-br from-scrumboks-black/70 via-scrumboks-blue-dark/60 to-scrumboks-yellow/30"
+          style={{
+            background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
+              rgba(248, 227, 0, 0.1) 0%, 
+              rgba(8, 22, 137, 0.3) 30%, 
+              rgba(0, 0, 0, 0.7) 70%)`
+          }}
+        />
       </div>
 
-      {/* Scrumboks Logo Silhouette - Subtle Background */}
-      <div className="absolute inset-0 z-5 opacity-5 overflow-hidden">
+      {/* Animated Scrumboks Logo Elements */}
+      <div className="absolute inset-0 z-5 overflow-hidden pointer-events-none">
+        {/* Shield shapes with subtle animation */}
         <div 
-          className="absolute top-1/3 left-1/4 w-96 h-96 bg-scrumboks-yellow/30 transform rotate-12 opacity-20"
+          className="absolute top-1/4 left-1/6 w-80 h-80 opacity-10"
           style={{
             clipPath: "polygon(50% 0%, 65% 25%, 90% 25%, 75% 45%, 85% 75%, 50% 60%, 15% 75%, 25% 45%, 10% 25%, 35% 25%)",
-            animation: "float 20s ease-in-out infinite"
+            background: `linear-gradient(45deg, ${isLoaded ? '#F8E300' : 'transparent'}, ${isLoaded ? '#081689' : 'transparent'})`,
+            transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * 0.01}px) rotate(${isLoaded ? '12deg' : '0deg'})`,
+            transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+            animation: isLoaded ? 'float 20s ease-in-out infinite' : 'none'
           }}
         />
         <div 
-          className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-scrumboks-blue/20 transform -rotate-6 opacity-30"
+          className="absolute bottom-1/3 right-1/5 w-64 h-64 opacity-15"
           style={{
             clipPath: "polygon(50% 0%, 65% 25%, 90% 25%, 75% 45%, 85% 75%, 50% 60%, 15% 75%, 25% 45%, 10% 25%, 35% 25%)",
-            animation: "float 25s ease-in-out infinite reverse"
+            background: `linear-gradient(-45deg, ${isLoaded ? '#081689' : 'transparent'}, ${isLoaded ? '#F8E300' : 'transparent'})`,
+            transform: `translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01}px) rotate(${isLoaded ? '-6deg' : '0deg'})`,
+            transition: 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+            animation: isLoaded ? 'float 25s ease-in-out infinite reverse' : 'none'
           }}
         />
+        
+        {/* Clashing Rams Animation */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div 
+            className="relative w-32 h-16 opacity-20"
+            style={{
+              transform: `translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px)`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          >
+            {/* Left Ram */}
+            <div 
+              className="absolute left-0 top-1/2 w-8 h-8 bg-scrumboks-blue rounded-full transform -translate-y-1/2"
+              style={{
+                clipPath: "polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%)",
+                animation: isLoaded ? 'ramClash 3s ease-in-out infinite' : 'none'
+              }}
+            />
+            {/* Right Ram */}
+            <div 
+              className="absolute right-0 top-1/2 w-8 h-8 bg-scrumboks-blue rounded-full transform -translate-y-1/2"
+              style={{
+                clipPath: "polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%)",
+                transform: 'scaleX(-1)',
+                animation: isLoaded ? 'ramClash 3s ease-in-out infinite 0.5s' : 'none'
+              }}
+            />
+            {/* Rugby Ball */}
+            <div 
+              className="absolute left-1/2 top-1/2 w-4 h-6 bg-scrumboks-blue rounded-full transform -translate-x-1/2 -translate-y-1/2"
+              style={{
+                animation: isLoaded ? 'ballBounce 2s ease-in-out infinite' : 'none'
+              }}
+            />
+          </div>
+        </div>
       </div>
 
       {/* Content */}
