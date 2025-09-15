@@ -695,7 +695,7 @@ const XperienceRugby = () => {
               <ul className="space-y-2 text-scrumboks-white/80 text-sm">
                 <li>
                   <a
-                    href="/#about"
+                    href="/scrumboks-rugby-hub/#about"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Over ons
@@ -703,7 +703,7 @@ const XperienceRugby = () => {
                 </li>
                 <li>
                   <a
-                    href="/#teams"
+                    href="/scrumboks-rugby-hub/#teams"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Teams
@@ -711,7 +711,7 @@ const XperienceRugby = () => {
                 </li>
                 <li>
                   <a
-                    href="/#contact"
+                    href="/scrumboks-rugby-hub/#contact"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Contact
@@ -719,7 +719,7 @@ const XperienceRugby = () => {
                 </li>
                 <li>
                   <a
-                    href="/membership"
+                    href="/scrumboks-rugby-hub/membership"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Lid worden

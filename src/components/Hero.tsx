@@ -181,7 +181,7 @@ const Hero = () => {
                 </span>
               </Button>
             </Link>
-            <a href="/#teams">
+            <a href="/scrumboks-rugby-hub/#teams">
               <Button 
                 variant="minimal" 
                 size="xl" 
