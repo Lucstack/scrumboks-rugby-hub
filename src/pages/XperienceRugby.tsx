@@ -16,6 +16,7 @@ import {
   Clock,
   Award,
   Sparkles,
+  Calendar,
 } from 'lucide-react';
 
 const XperienceRugby = () => {
@@ -40,7 +41,8 @@ const XperienceRugby = () => {
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >
   ) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
@@ -53,13 +55,16 @@ const XperienceRugby = () => {
 
     try {
       // Netlify form submission
+      const formDataToSubmit = {
+        'form-name': 'xperience-rugby',
+        ...formData,
+        isMinor: formData.isMinor.toString(),
+      };
+      
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'xperience-rugby',
-          ...formData,
-        }),
+        body: new URLSearchParams(formDataToSubmit),
       });
 
       if (response.ok) {
