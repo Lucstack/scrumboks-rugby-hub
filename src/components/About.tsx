@@ -123,8 +123,8 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
             {/* Vrijwilligers Button */}
             <Link to="/volunteers" className="w-full sm:w-auto">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-light hover:from-scrumboks-blue-dark hover:to-scrumboks-blue text-scrumboks-white border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
               >
                 <HandHeart className="w-5 h-5 mr-2 group-hover:animate-pulse" />
@@ -134,8 +134,8 @@ const About = () => {
 
             {/* Sponsors Button */}
             <Link to="/sponsors" className="w-full sm:w-auto">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="w-full sm:w-auto bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold hover:from-scrumboks-gold hover:to-scrumboks-yellow text-scrumboks-blue border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group font-semibold"
               >
@@ -145,7 +145,8 @@ const About = () => {
             </Link>
           </div>
           <p className="text-scrumboks-gray mt-6 text-sm max-w-lg mx-auto">
-            Ontdek hoe je kunt bijdragen aan onze rugbyclub en onderdeel kunt worden van onze geweldige gemeenschap.
+            Ontdek hoe je kunt bijdragen aan onze rugbyclub en onderdeel kunt
+            worden van onze geweldige gemeenschap.
           </p>
         </div>
       </div>

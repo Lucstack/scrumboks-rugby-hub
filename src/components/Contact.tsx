@@ -102,7 +102,12 @@ const Contact = () => {
                     variant="outline"
                     size="icon"
                     className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue"
-                    onClick={() => window.open('https://www.facebook.com/Scrumboks', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        'https://www.facebook.com/Scrumboks',
+                        '_blank'
+                      )
+                    }
                   >
                     <Facebook className="w-4 h-4" />
                   </Button>
@@ -110,7 +115,12 @@ const Contact = () => {
                     variant="outline"
                     size="icon"
                     className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue"
-                    onClick={() => window.open('https://www.instagram.com/scrumboks_rugby/', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        'https://www.instagram.com/scrumboks_rugby/',
+                        '_blank'
+                      )
+                    }
                   >
                     <Instagram className="w-4 h-4" />
                   </Button>
@@ -118,7 +128,9 @@ const Contact = () => {
                     variant="outline"
                     size="icon"
                     className="hover:bg-scrumboks-blue hover:text-scrumboks-white hover:border-scrumboks-blue"
-                    onClick={() => window.open('https://x.com/scrumboks', '_blank')}
+                    onClick={() =>
+                      window.open('https://x.com/scrumboks', '_blank')
+                    }
                   >
                     <Twitter className="w-4 h-4" />
                   </Button>

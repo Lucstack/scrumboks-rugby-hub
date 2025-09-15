@@ -176,8 +176,8 @@ const Teams = () => {
                 </div>
               </div>
 
-              <Button 
-                variant="hero" 
+              <Button
+                variant="hero"
                 size="lg"
                 className="bg-gradient-to-r from-scrumboks-yellow to-scrumboks-gold hover:from-scrumboks-gold hover:to-scrumboks-yellow text-scrumboks-black font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
