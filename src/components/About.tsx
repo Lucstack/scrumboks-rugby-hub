@@ -87,45 +87,14 @@ const About = () => {
             </Button>
           </div>
 
-          {/* Photo Gallery */}
-          <div className="grid grid-cols-2 gap-4">
-            {/* Main Photo */}
-            <div className="col-span-2 relative group cursor-pointer">
-              <img
-                src={teamCelebration}
-                alt="Scrumboks team viering na overwinning"
-                className="w-full h-[300px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/30 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 text-scrumboks-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="font-semibold text-sm">Team Viering</p>
-              </div>
-            </div>
-
-            {/* Side Photos */}
-            <div className="relative group cursor-pointer">
-              <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop&crop=center"
-                alt="Clubhuis sfeer - gezellige binnenkant"
-                className="w-full h-[140px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-yellow/30 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-2 left-2 text-scrumboks-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="font-semibold text-xs">Clubhuis</p>
-              </div>
-            </div>
-
-            <div className="relative group cursor-pointer">
-              <img
-                src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=400&h=200&fit=crop&crop=center"
-                alt="Training momenten - spelers in actie"
-                className="w-full h-[140px] object-cover rounded-lg shadow-medium group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/30 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-2 left-2 text-scrumboks-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="font-semibold text-xs">Training</p>
-              </div>
-            </div>
+          {/* Image */}
+          <div className="relative">
+            <img
+              src={teamCelebration}
+              alt="Scrumboks team viering na overwinning"
+              className="w-full h-[500px] object-cover rounded-lg shadow-medium"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-scrumboks-blue/20 to-transparent rounded-lg" />
           </div>
         </div>
 
