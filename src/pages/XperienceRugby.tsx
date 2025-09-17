@@ -60,7 +60,7 @@ const XperienceRugby = () => {
         ...formData,
         isMinor: formData.isMinor.toString(),
       };
-      
+
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -695,7 +695,7 @@ const XperienceRugby = () => {
               <ul className="space-y-2 text-scrumboks-white/80 text-sm">
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#about"
+                    href="/#about"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Over ons
@@ -703,7 +703,7 @@ const XperienceRugby = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#teams"
+                    href="/#teams"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Teams
@@ -711,7 +711,7 @@ const XperienceRugby = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#contact"
+                    href="/#contact"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Contact
@@ -719,7 +719,7 @@ const XperienceRugby = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/membership"
+                    href="/membership"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Lid worden

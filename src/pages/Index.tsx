@@ -36,7 +36,7 @@ const Index = () => {
               <ul className="space-y-2 text-scrumboks-white/80 text-sm">
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#about"
+                    href="#about"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Over ons
@@ -44,7 +44,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#teams"
+                    href="#teams"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Teams
@@ -52,7 +52,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/sponsors"
+                    href="/sponsors"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Sponsors
@@ -60,7 +60,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/volunteers"
+                    href="/volunteers"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Vrijwilligers
@@ -68,7 +68,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/membership"
+                    href="/membership"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Lid worden
@@ -76,7 +76,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#contact"
+                    href="#contact"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Contact

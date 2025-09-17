@@ -11,14 +11,14 @@ const Hero = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-    
+
     const handleScroll = () => setScrollY(window.scrollY);
     const handleMouseMove = (e: MouseEvent) => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
-        
+
         containerRef.current.style.setProperty('--mouse-x', `${x * 100}%`);
         containerRef.current.style.setProperty('--mouse-y', `${y * 100}%`);
       }
@@ -37,33 +37,35 @@ const Hero = () => {
       ref={containerRef}
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        '--mouse-x': '50%',
-        '--mouse-y': '50%'
-      } as React.CSSProperties}
+      style={
+        {
+          '--mouse-x': '50%',
+          '--mouse-y': '50%',
+        } as React.CSSProperties
+      }
     >
       {/* Advanced Parallax Background */}
       <div className="absolute inset-0 z-0">
-        <div 
+        <div
           className="w-full h-[120%] bg-cover bg-center will-change-transform"
           style={{
             backgroundImage: `url(${heroImage})`,
             transform: `translateY(${scrollY * 0.5}px) scale(1.1)`,
           }}
         />
-        
+
         {/* Dynamic Multi-layer Gradients */}
         <div className="absolute inset-0 bg-gradient-to-br from-scrumboks-black/80 via-scrumboks-blue-dark/70 to-scrumboks-black/90" />
-        <div 
+        <div
           className="absolute inset-0 opacity-60"
           style={{
             background: `radial-gradient(circle at var(--mouse-x) var(--mouse-y), 
               rgba(248, 227, 0, 0.15) 0%, 
               rgba(8, 22, 137, 0.3) 40%, 
-              transparent 70%)`
+              transparent 70%)`,
           }}
         />
-        
+
         {/* Mesh Gradient Overlay */}
         <div className="absolute inset-0 gradient-mesh opacity-40" />
       </div>
@@ -82,10 +84,10 @@ const Hero = () => {
             }}
           />
         ))}
-        
+
         {/* Modern Geometric Shapes */}
         <div className="absolute top-1/4 right-1/6 w-32 h-32 opacity-20">
-          <div 
+          <div
             className="w-full h-full bg-gradient-to-br from-scrumboks-yellow/40 to-scrumboks-blue/40 transform rotate-45 rounded-xl"
             style={{
               transform: `rotate(45deg) translateY(${scrollY * 0.1}px)`,
@@ -93,19 +95,21 @@ const Hero = () => {
             }}
           />
         </div>
-        
+
         <div className="absolute bottom-1/3 left-1/8 w-20 h-20 opacity-25">
-          <div 
+          <div
             className="w-full h-full border-2 border-scrumboks-yellow/50 rounded-full"
             style={{
-              transform: `rotate(${scrollY * 0.2}deg) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
+              transform: `rotate(${scrollY * 0.2}deg) scale(${
+                1 + Math.sin(scrollY * 0.01) * 0.1
+              })`,
             }}
           />
         </div>
-        
+
         {/* Abstract Logo Elements */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10">
-          <Shield 
+          <Shield
             className="w-64 h-64 text-scrumboks-blue"
             style={{
               transform: `rotate(${scrollY * 0.05}deg)`,
@@ -117,7 +121,9 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className={`space-y-8 ${isLoaded ? 'animate-fade-up' : 'opacity-0'}`}>
+        <div
+          className={`space-y-8 ${isLoaded ? 'animate-fade-up' : 'opacity-0'}`}
+        >
           {/* Power Badge */}
           <div className="inline-block glass-gold rounded-2xl px-8 py-4 mb-6 glow-hover">
             <div className="flex items-center gap-3">
@@ -130,23 +136,29 @@ const Hero = () => {
           </div>
 
           {/* Powerful Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black text-scrumboks-white leading-none tracking-tight">
-            <span className="block font-light">DOMINEER</span>
-            <span className="block gradient-text">HET VELD</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-scrumboks-white leading-tight tracking-tight">
+            <span className="block font-medium">DOMINEER</span>
+            <span className="block gradient-text font-semibold">HET VELD</span>
           </h1>
 
           {/* Strong Subheading */}
           <p className="text-xl sm:text-2xl lg:text-3xl text-scrumboks-white/90 max-w-5xl mx-auto leading-relaxed font-medium">
-            <span className="text-scrumboks-yellow font-bold">50 jaar</span> ervaring. 
-            <span className="text-scrumboks-yellow font-bold"> 6 teams</span>. 
-            <span className="text-scrumboks-yellow font-bold"> Ongeëvenaarde passie</span>.
+            <span className="text-scrumboks-yellow font-bold">50 jaar</span>{' '}
+            ervaring.
+            <span className="text-scrumboks-yellow font-bold"> 6 teams</span>.
+            <span className="text-scrumboks-yellow font-bold">
+              {' '}
+              Ongeëvenaarde passie
+            </span>
+            .
             <span className="block mt-4 text-xl text-scrumboks-white/80">
               Waar kampioenen gemaakt worden en legenden geboren.
             </span>
           </p>
 
           {/* Powerful Jubileum Banner */}
-          <div className="glass-dark rounded-3xl p-8 mt-12 mx-auto max-w-3xl card-3d cursor-pointer group animate-pulse-glow"
+          <div
+            className="glass-dark rounded-3xl p-8 mt-12 mx-auto max-w-3xl card-3d cursor-pointer group animate-pulse-glow"
             onClick={() => window.open('https://50jaar.scrumboks.nl', '_blank')}
           >
             <div className="flex items-center justify-center space-x-6">
@@ -170,8 +182,8 @@ const Hero = () => {
           {/* Powerful Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-12">
             <Link to="/xperience-rugby">
-              <Button 
-                size="xl" 
+              <Button
+                size="xl"
                 className="w-full sm:w-auto glass-gold glow-hover magnetic-hover text-scrumboks-blue font-black text-xl px-10 py-6 rounded-2xl border-2 border-scrumboks-yellow/50 hover:border-scrumboks-yellow shadow-2xl hover:shadow-scrumboks-yellow/50 transform hover:scale-105 transition-all duration-300 group"
               >
                 <span className="flex items-center space-x-3">
@@ -181,10 +193,10 @@ const Hero = () => {
                 </span>
               </Button>
             </Link>
-            
+
             <Link to="/membership">
-              <Button 
-                size="xl" 
+              <Button
+                size="xl"
                 className="w-full sm:w-auto glass-dark text-scrumboks-yellow font-black text-xl px-10 py-6 rounded-2xl border-2 border-scrumboks-blue/50 hover:border-scrumboks-blue shadow-2xl hover:shadow-scrumboks-blue/50 transform hover:scale-105 transition-all duration-300 group"
               >
                 <span className="flex items-center space-x-3">
@@ -193,11 +205,11 @@ const Hero = () => {
                 </span>
               </Button>
             </Link>
-            
+
             <a href="#teams">
-              <Button 
+              <Button
                 variant="outline"
-                size="xl" 
+                size="xl"
                 className="w-full sm:w-auto glass border-2 border-scrumboks-white/30 hover:border-scrumboks-white text-scrumboks-white font-bold text-lg px-8 py-6 rounded-2xl transform hover:scale-105 transition-all duration-300 group"
               >
                 <span className="flex items-center space-x-2">
@@ -221,7 +233,7 @@ const Hero = () => {
                 Elite Athletes
               </div>
             </div>
-            
+
             <div className="glass-gold rounded-2xl p-6 card-3d group">
               <div className="text-5xl lg:text-6xl font-black text-scrumboks-blue mb-2 group-hover:scale-110 transition-transform duration-300">
                 6
@@ -233,7 +245,7 @@ const Hero = () => {
                 Championship Level
               </div>
             </div>
-            
+
             <div className="glass-dark rounded-2xl p-6 card-3d group">
               <div className="text-5xl lg:text-6xl font-black text-scrumboks-yellow mb-2 group-hover:scale-110 transition-transform duration-300">
                 50
@@ -245,7 +257,7 @@ const Hero = () => {
                 Legacy & Power
               </div>
             </div>
-            
+
             <div className="glass-gold rounded-2xl p-6 card-3d group">
               <div className="text-5xl lg:text-6xl font-black text-scrumboks-blue mb-2 group-hover:scale-110 transition-transform duration-300">
                 100%
@@ -262,8 +274,13 @@ const Hero = () => {
       </div>
 
       {/* Modern Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 glass rounded-full p-4 group hover:bg-scrumboks-yellow/10 transition-all duration-300 cursor-pointer"
-        onClick={() => document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })}
+      <div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 glass rounded-full p-4 group hover:bg-scrumboks-yellow/10 transition-all duration-300 cursor-pointer"
+        onClick={() =>
+          document
+            .querySelector('#about')
+            ?.scrollIntoView({ behavior: 'smooth' })
+        }
       >
         <ChevronDown className="w-6 h-6 text-scrumboks-white group-hover:text-scrumboks-yellow animate-bounce" />
       </div>

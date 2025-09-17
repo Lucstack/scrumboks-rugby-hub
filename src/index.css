@@ -14,9 +14,9 @@ All colors MUST be HSL for perfect theming
     --foreground: 0 0% 17%; /* Dark gray instead of pure black */
 
     /* Primary Club Colors */
-    --scrumboks-blue: 238 89% 28%; /* #081689 - Primary blue */
+    --scrumboks-blue: 238 89% 35%; /* #0A1A9A - Primary blue - meer verzadigd */
     --scrumboks-blue-light: 238 50% 95%; /* #E6E9F7 - Light blue background */
-    --scrumboks-blue-dark: 238 95% 15%; /* Darker blue for contrast */
+    --scrumboks-blue-dark: 238 95% 20%; /* #05156B - Darker blue for contrast - minder donker */
 
     /* Accent Colors */
     --scrumboks-yellow: 54 95% 51%; /* #F8E300 - Primary yellow */
@@ -181,21 +181,27 @@ All colors MUST be HSL for perfect theming
 
 .card-3d:hover {
   transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
-  box-shadow: 
-    0 25px 50px -12px rgba(8, 22, 137, 0.25),
+  box-shadow: 0 25px 50px -12px rgba(8, 22, 137, 0.25),
     0 0 0 1px rgba(248, 227, 0, 0.1);
 }
 
 /* Advanced Gradients */
 .gradient-mesh {
-  background: 
-    radial-gradient(at 40% 20%, rgba(8, 22, 137, 0.3) 0px, transparent 50%),
+  background: radial-gradient(
+      at 40% 20%,
+      rgba(8, 22, 137, 0.3) 0px,
+      transparent 50%
+    ),
     radial-gradient(at 80% 0%, rgba(248, 227, 0, 0.2) 0px, transparent 50%),
     radial-gradient(at 0% 50%, rgba(8, 22, 137, 0.1) 0px, transparent 50%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, hsl(var(--scrumboks-blue)), hsl(var(--scrumboks-yellow)));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--scrumboks-blue)),
+    hsl(var(--scrumboks-yellow))
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -203,15 +209,16 @@ All colors MUST be HSL for perfect theming
 
 /* Particle System */
 @keyframes float-particles {
-  0%, 100% { 
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px) rotate(0deg);
     opacity: 0.3;
   }
-  33% { 
+  33% {
     transform: translateY(-20px) translateX(10px) rotate(120deg);
     opacity: 0.8;
   }
-  66% { 
+  66% {
     transform: translateY(-10px) translateX(-5px) rotate(240deg);
     opacity: 0.5;
   }
@@ -244,7 +251,12 @@ All colors MUST be HSL for perfect theming
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(248, 227, 0, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(248, 227, 0, 0.2),
+    transparent
+  );
   transition: left 0.5s;
 }
 
@@ -296,7 +308,8 @@ All colors MUST be HSL for perfect theming
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(248, 227, 0, 0.3);
   }
   50% {

@@ -118,7 +118,7 @@ const Membership = () => {
               <ul className="space-y-2 text-scrumboks-white/80 text-sm">
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#about"
+                    href="/#about"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Over ons
@@ -126,7 +126,7 @@ const Membership = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#teams"
+                    href="/#teams"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Teams
@@ -134,7 +134,7 @@ const Membership = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/#contact"
+                    href="/#contact"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Contact
@@ -142,7 +142,7 @@ const Membership = () => {
                 </li>
                 <li>
                   <a
-                    href="/scrumboks-rugby-hub/membership"
+                    href="/membership"
                     className="hover:text-scrumboks-yellow transition-colors"
                   >
                     Lid worden
