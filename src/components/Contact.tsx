@@ -30,7 +30,8 @@ const Contact = () => {
       title: 'Clubhuis',
       value: '0344 623201',
       description: 'Bereikbaar tijdens trainingstijden',
-      color: 'from-scrumboks-navy to-scrumboks-navy-dark',
+      bgColor: 'bg-scrumboks-navy',
+      textColor: 'text-scrumboks-white',
       highlight: 'Direct contact',
     },
     {
@@ -38,7 +39,8 @@ const Contact = () => {
       title: 'E-mail',
       value: 'info@scrumboks.nl',
       description: 'We reageren binnen 24 uur',
-      color: 'from-scrumboks-gold to-scrumboks-gold-dark',
+      bgColor: 'bg-scrumboks-gold',
+      textColor: 'text-scrumboks-navy',
       highlight: 'Snelle reactie',
     },
     {
@@ -46,7 +48,8 @@ const Contact = () => {
       title: 'Adres',
       value: 'Beethovenstraat 18a',
       description: '4003 KX Tiel',
-      color: 'from-scrumboks-navy-dark to-scrumboks-gold',
+      bgColor: 'bg-scrumboks-navy-dark',
+      textColor: 'text-scrumboks-white',
       highlight: 'Centraal gelegen',
     },
     {
@@ -54,7 +57,8 @@ const Contact = () => {
       title: 'Openingstijden',
       value: 'Di-Do: 18:45-20:30',
       description: 'Vr: 20:00-22:00',
-      color: 'from-scrumboks-gold-dark to-scrumboks-navy',
+      bgColor: 'bg-scrumboks-gold-dark',
+      textColor: 'text-scrumboks-navy',
       highlight: 'Flexibele tijden',
     },
   ];
@@ -86,18 +90,18 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-b from-scrumboks-navy-light/50 via-scrumboks-white to-scrumboks-navy-light/30 relative overflow-hidden"
+      className="py-20 bg-scrumboks-white relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute top-20 left-20 w-96 h-96 bg-scrumboks-navy/15 rounded-full blur-3xl animate-pulse"
+          className="absolute top-20 left-20 w-96 h-96 bg-scrumboks-navy/20 rounded-full blur-3xl animate-pulse"
           style={{
             animation: 'float 18s ease-in-out infinite',
           }}
         />
         <div
-          className="absolute bottom-20 right-20 w-80 h-80 bg-scrumboks-gold/15 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 right-20 w-80 h-80 bg-scrumboks-gold/20 rounded-full blur-3xl animate-pulse"
           style={{
             animation: 'float 22s ease-in-out infinite reverse',
           }}
@@ -111,7 +115,7 @@ const Contact = () => {
             isVisible ? 'animate-fadeInUp' : 'opacity-0'
           }`}
         >
-          <div className="inline-block bg-scrumboks-gold/30 backdrop-blur-sm border-2 border-scrumboks-gold/40 rounded-2xl px-8 py-3 mb-6">
+          <div className="inline-block bg-scrumboks-gold rounded-2xl px-8 py-3 mb-6">
             <span className="text-scrumboks-navy font-oswald font-black text-lg tracking-wide">
               Laten we elkaar ontmoeten
             </span>
@@ -139,49 +143,37 @@ const Contact = () => {
           {contactInfo.map((info, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 ${
+              className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-2 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
-              }`}
+              } ${info.bgColor}`}
               style={{
                 animationDelay: `${index * 0.1}s`,
-                background: `linear-gradient(135deg, ${info.color})`,
-                backdropFilter: 'blur(10px)',
-                border: `2px solid ${
-                  hoveredCard === index
-                    ? 'rgba(242, 201, 76, 0.6)'
-                    : 'rgba(30, 42, 86, 0.3)'
-                }`,
-                boxShadow: `0 10px 30px -5px ${
-                  hoveredCard === index
-                    ? 'rgba(242, 201, 76, 0.3)'
-                    : 'rgba(30, 42, 86, 0.2)'
-                }`,
               }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <CardContent className="p-6 text-center">
                 {/* Icon with Animation */}
-                <div className="w-16 h-16 bg-scrumboks-white/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <info.icon className="w-8 h-8 text-scrumboks-white group-hover:text-scrumboks-gold transition-colors duration-300" />
+                <div className="w-16 h-16 bg-scrumboks-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <info.icon className={`w-8 h-8 ${info.textColor} group-hover:scale-110 transition-transform duration-300`} />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-oswald font-black text-scrumboks-white mb-2 group-hover:text-scrumboks-gold transition-colors duration-300 drop-shadow-lg">
+                <h3 className={`text-lg font-oswald font-black ${info.textColor} mb-2 group-hover:scale-105 transition-transform duration-300`}>
                   {info.title}
                 </h3>
 
-                <p className="text-xl font-oswald font-black text-scrumboks-white mb-2 drop-shadow-lg">
+                <p className={`text-xl font-oswald font-black ${info.textColor} mb-2`}>
                   {info.value}
                 </p>
 
-                <p className="text-sm text-scrumboks-white/95 mb-3 font-inter font-semibold">
+                <p className={`text-sm ${info.textColor}/90 mb-3 font-inter font-semibold`}>
                   {info.description}
                 </p>
 
                 {/* Highlight Badge */}
-                <div className="bg-scrumboks-white/40 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
-                  <span className="text-xs font-roboto-slab font-bold text-scrumboks-white">
+                <div className="bg-scrumboks-white/30 px-3 py-1 rounded-full shadow-lg">
+                  <span className={`text-xs font-roboto-slab font-bold ${info.textColor}`}>
                     {info.highlight}
                   </span>
                 </div>
@@ -191,24 +183,24 @@ const Contact = () => {
         </div>
 
         {/* Enhanced Social Media Section */}
-        <div className="bg-gradient-to-br from-scrumboks-navy/20 via-scrumboks-gold/20 to-scrumboks-navy/20 rounded-3xl p-8 border-2 border-scrumboks-navy/30 relative overflow-hidden mb-16 shadow-2xl">
+        <div className="bg-scrumboks-navy rounded-3xl p-8 relative overflow-hidden mb-16 shadow-2xl">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-40 h-40 bg-scrumboks-gold rounded-full -translate-y-20 -translate-x-20" />
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-scrumboks-navy rounded-full translate-y-16 translate-x-16" />
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-scrumboks-white rounded-full translate-y-16 translate-x-16" />
           </div>
 
           <div className="relative z-10">
             <div className="text-center mb-8">
-              <div className="inline-block bg-scrumboks-gold/40 rounded-full p-3 mb-4 shadow-lg">
+              <div className="inline-block bg-scrumboks-gold rounded-full p-3 mb-4 shadow-lg">
                 <Heart className="w-8 h-8 text-scrumboks-navy" />
               </div>
-              <h3 className="text-3xl font-oswald font-black text-scrumboks-navy mb-4">
+              <h3 className="text-3xl font-oswald font-black text-scrumboks-white mb-4">
                 Volg ons verhaal
               </h3>
-              <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab font-semibold">
+              <p className="text-lg text-scrumboks-white/90 max-w-2xl mx-auto font-roboto-slab font-semibold">
                 Blijf op de hoogte van onze laatste nieuwtjes, wedstrijden en
-                <span className="text-scrumboks-navy font-bold">
+                <span className="text-scrumboks-gold font-bold">
                   {' '}
                   onvergetelijke momenten
                 </span>{' '}
@@ -223,7 +215,7 @@ const Contact = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group relative p-4 bg-scrumboks-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${social.color} hover:text-white border-2 border-scrumboks-navy/20`}
+                  className={`group relative p-4 bg-scrumboks-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${social.color} hover:text-white border-2 border-scrumboks-gold/30`}
                 >
                   <div className="flex flex-col items-center gap-2">
                     <social.icon className="w-8 h-8 text-scrumboks-navy group-hover:text-white transition-colors duration-300" />
@@ -241,15 +233,15 @@ const Contact = () => {
         </div>
 
         {/* Enhanced Contact Form */}
-        <div className="bg-gradient-to-br from-scrumboks-white via-scrumboks-navy-light/40 to-scrumboks-white rounded-3xl p-8 border-2 border-scrumboks-navy/30 shadow-2xl">
+        <div className="bg-scrumboks-gold rounded-3xl p-8 shadow-2xl">
           <div className="text-center mb-8">
-            <div className="inline-block bg-scrumboks-gold/40 rounded-full p-3 mb-4 shadow-lg">
-              <Mail className="w-8 h-8 text-scrumboks-navy" />
+            <div className="inline-block bg-scrumboks-navy rounded-full p-3 mb-4 shadow-lg">
+              <Mail className="w-8 h-8 text-scrumboks-white" />
             </div>
             <h3 className="text-3xl font-oswald font-black text-scrumboks-navy mb-4">
               Stuur ons een bericht
             </h3>
-            <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab font-semibold">
+            <p className="text-lg text-scrumboks-navy/80 max-w-2xl mx-auto font-roboto-slab font-semibold">
               Heb je vragen over lidmaatschap, trainingen of gewoon zin in een
               praatje?
               <span className="text-scrumboks-navy font-bold">
@@ -267,7 +259,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 font-inter shadow-lg"
+                  className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-navy focus:border-scrumboks-navy transition-all duration-300 font-inter shadow-lg bg-white"
                   placeholder="Jouw naam"
                 />
               </div>
@@ -277,7 +269,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 font-inter shadow-lg"
+                  className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-navy focus:border-scrumboks-navy transition-all duration-300 font-inter shadow-lg bg-white"
                   placeholder="jouw@email.nl"
                 />
               </div>
@@ -289,7 +281,7 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 font-inter shadow-lg"
+                className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-navy focus:border-scrumboks-navy transition-all duration-300 font-inter shadow-lg bg-white"
                 placeholder="Waar gaat je bericht over?"
               />
             </div>
@@ -300,7 +292,7 @@ const Contact = () => {
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 resize-none font-inter shadow-lg"
+                className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-navy focus:border-scrumboks-navy transition-all duration-300 resize-none font-inter shadow-lg bg-white"
                 placeholder="Vertel ons wat je wilt weten..."
               />
             </div>
