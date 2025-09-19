@@ -36,16 +36,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-scrumboks-navy/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-scrumboks-navy/95 backdrop-blur-md shadow-lg'
+          : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex-shrink-0"
           >
@@ -57,7 +59,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
+              {navItems.map(item =>
                 item.type === 'route' ? (
                   <Link
                     key={item.name}
@@ -70,7 +72,7 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    onClick={(e) => {
+                    onClick={e => {
                       e.preventDefault();
                       handleNavClick(item.href, item.type);
                     }}
@@ -79,7 +81,7 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 )
-              ))}
+              )}
             </div>
           </div>
 
@@ -98,7 +100,7 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-scrumboks-navy/95 backdrop-blur-md rounded-lg mt-2">
-              {navItems.map((item) => (
+              {navItems.map(item =>
                 item.type === 'route' ? (
                   <Link
                     key={item.name}
@@ -112,7 +114,7 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    onClick={(e) => {
+                    onClick={e => {
                       e.preventDefault();
                       handleNavClick(item.href, item.type);
                     }}
@@ -121,7 +123,7 @@ const Navbar = () => {
                     {item.name}
                   </a>
                 )
-              ))}
+              )}
             </div>
           </div>
         )}

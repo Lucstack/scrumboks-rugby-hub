@@ -19,9 +19,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        'oswald': ['Oswald', 'sans-serif'],
+        oswald: ['Oswald', 'sans-serif'],
         'roboto-slab': ['Roboto Slab', 'serif'],
-        'inter': ['Inter', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',

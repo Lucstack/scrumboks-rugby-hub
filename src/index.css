@@ -1,9 +1,9 @@
+/* Import Scrumboks Brand Guide Typography */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Import Scrumboks Brand Guide Typography */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Scrumboks Rugby Club Design System
 Based on Scrumboks Brand Guide
@@ -21,7 +21,7 @@ Typography: Oswald (headings), Roboto Slab (subheadings), Inter (body)
     --scrumboks-navy: 225 50% 20%; /* #1E2A56 - Primary Navy */
     --scrumboks-navy-light: 225 30% 95%; /* Light navy background */
     --scrumboks-navy-dark: 225 60% 15%; /* Darker navy for contrast */
-    
+
     --scrumboks-gold: 45 85% 60%; /* #F2C94C - Primary Gold */
     --scrumboks-gold-light: 45 60% 90%; /* Light gold background */
     --scrumboks-gold-dark: 45 90% 45%; /* Darker gold for contrast */

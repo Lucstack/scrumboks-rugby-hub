@@ -12,7 +12,7 @@ const About = () => {
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
-    
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -36,22 +36,26 @@ const About = () => {
     {
       icon: Shield,
       title: 'Traditie',
-      description: '50 jaar ervaring en kennis die wordt doorgegeven aan elke nieuwe generatie rugbyspelers.',
+      description:
+        '50 jaar ervaring en kennis die wordt doorgegeven aan elke nieuwe generatie rugbyspelers.',
     },
     {
       icon: Zap,
       title: 'Kwaliteit',
-      description: 'Professionele training en begeleiding voor alle niveaus, van beginners tot gevorderden.',
+      description:
+        'Professionele training en begeleiding voor alle niveaus, van beginners tot gevorderden.',
     },
     {
       icon: Trophy,
       title: 'Samenhorigheid',
-      description: 'Een hechte community waar respect, teamwork en vriendschap centraal staan.',
+      description:
+        'Een hechte community waar respect, teamwork en vriendschap centraal staan.',
     },
     {
       icon: Flame,
       title: 'Passie',
-      description: 'Liefde voor het spel drijft ons voort om elke dag beter te worden en te genieten van rugby.',
+      description:
+        'Liefde voor het spel drijft ons voort om elke dag beter te worden en te genieten van rugby.',
     },
   ];
 
@@ -64,16 +68,21 @@ const About = () => {
       {/* Subtle Background Effects - No Cheap Gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Logo Silhouette - Subtle */}
-        <div 
+        <div
           className="absolute top-20 right-10 w-80 h-80 opacity-3"
           style={{
-            transform: `translateY(${scrollY * 0.1}px) rotate(${scrollY * 0.02}deg)`,
+            transform: `translateY(${scrollY * 0.1}px) rotate(${
+              scrollY * 0.02
+            }deg)`,
           }}
         >
-          <Shield className="w-full h-full text-scrumboks-gold" style={{ filter: 'blur(4px)' }} />
+          <Shield
+            className="w-full h-full text-scrumboks-gold"
+            style={{ filter: 'blur(4px)' }}
+          />
         </div>
-        
-        <div 
+
+        <div
           className="absolute bottom-40 left-10 w-60 h-60 opacity-5"
           style={{
             transform: `translateY(${scrollY * -0.05}px)`,
@@ -85,21 +94,28 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Professional Section Header - No Gradients */}
-        <div className={`text-center mb-20 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+        <div
+          className={`text-center mb-20 ${
+            isVisible ? 'animate-fade-up' : 'opacity-0'
+          }`}
+        >
           <div className="glass-gold rounded-3xl px-10 py-5 mb-8 inline-block">
             <span className="text-scrumboks-navy font-oswald font-black text-xl tracking-wider">
               OVER DE SCRUMBOKS
             </span>
           </div>
-          
+
           <h2 className="text-5xl sm:text-6xl lg:text-8xl font-oswald font-black text-scrumboks-white mb-8 leading-none">
-            <span className="block font-light text-scrumboks-white/60">MEER DAN</span>
+            <span className="block font-light text-scrumboks-white/60">
+              MEER DAN
+            </span>
             <span className="block text-scrumboks-gold">EEN CLUB</span>
           </h2>
-          
+
           <p className="text-2xl lg:text-3xl text-scrumboks-white/90 max-w-5xl mx-auto leading-relaxed font-roboto-slab font-semibold">
-            <span className="text-scrumboks-gold">50 jaar traditie</span>. 
-            Een hechte rugby community in Tiel. Sinds 1976 staan wij voor kwaliteit, respect en sportiviteit.
+            <span className="text-scrumboks-gold">50 jaar traditie</span>. Een
+            hechte rugby community in Tiel. Sinds 1976 staan wij voor kwaliteit,
+            respect en sportiviteit.
             <span className="block mt-6 text-xl text-scrumboks-white/70 font-inter font-normal">
               Join ons team en ervaar de kracht van rugby.
             </span>
@@ -108,7 +124,11 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
           {/* Professional Content */}
-          <div className={`space-y-10 ${isVisible ? 'animate-slide-right' : 'opacity-0'}`}>
+          <div
+            className={`space-y-10 ${
+              isVisible ? 'animate-slide-right' : 'opacity-0'
+            }`}
+          >
             <div className="glass-dark rounded-3xl p-8">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-16 h-16 bg-scrumboks-gold rounded-2xl flex items-center justify-center">
@@ -118,24 +138,27 @@ const About = () => {
                   RUGBY COMMUNITY
                 </h3>
               </div>
-              
+
               <p className="text-scrumboks-white/90 leading-relaxed mb-6 text-lg font-inter font-medium">
                 <span className="text-scrumboks-gold font-bold">
                   Een echte rugby community sinds 1976.
-                </span>
-                {' '}Sterkte, respect en samenhorigheid. Down-to-earth, maar met oog voor kwaliteit.
+                </span>{' '}
+                Sterkte, respect en samenhorigheid. Down-to-earth, maar met oog
+                voor kwaliteit.
               </p>
-              
+
               <p className="text-scrumboks-white/80 leading-relaxed mb-8 text-lg font-inter">
                 <span className="text-scrumboks-gold font-bold">
                   Van jeugd tot senioren,
-                </span>
-                {' '}bij de Scrumboks voel je meteen de warme sfeer. Een club waar rugby nog echt rugby is.
+                </span>{' '}
+                bij de Scrumboks voel je meteen de warme sfeer. Een club waar
+                rugby nog echt rugby is.
               </p>
-              
+
               <div className="glass-gold rounded-2xl p-6 border-2 border-scrumboks-gold/30">
                 <p className="text-scrumboks-navy font-bold text-center text-lg italic font-roboto-slab">
-                  "Bij de Scrumboks voel je meteen de warme sfeer. Een club waar rugby nog echt rugby is."
+                  "Bij de Scrumboks voel je meteen de warme sfeer. Een club waar
+                  rugby nog echt rugby is."
                 </p>
                 <p className="text-scrumboks-navy text-center text-sm mt-2 font-inter font-semibold">
                   - Mark van der Berg, Speler sinds 2018
@@ -158,7 +181,7 @@ const About = () => {
                   50 Jaar Traditie
                 </div>
               </div>
-              
+
               <div className="glass-gold rounded-2xl p-6 card-3d group">
                 <div className="flex items-center gap-3 mb-3">
                   <Zap className="w-8 h-8 text-scrumboks-navy" />
@@ -188,7 +211,7 @@ const About = () => {
                   </span>
                 </Button>
               </Link>
-              
+
               <Button
                 size="xl"
                 className="glass-dark text-scrumboks-gold font-roboto-slab font-bold text-lg px-8 py-4 rounded-2xl border-2 border-scrumboks-navy/50 hover:border-scrumboks-navy transition-all duration-300"
@@ -204,27 +227,34 @@ const About = () => {
           </div>
 
           {/* Professional Image */}
-          <div className={`relative group ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+          <div
+            className={`relative group ${
+              isVisible ? 'animate-scale-in' : 'opacity-0'
+            }`}
+            style={{ animationDelay: '0.3s' }}
+          >
             <div className="absolute -inset-6 bg-scrumboks-gold/20 rounded-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 blur-xl"></div>
-            
+
             <div className="relative glass-dark rounded-3xl p-4 card-3d">
               <img
                 src={teamCelebration}
                 alt="Scrumboks team viert overwinning"
                 className="w-full h-[600px] object-cover rounded-2xl"
               />
-              
+
               {/* Overlay Effects */}
               <div className="absolute inset-4 bg-gradient-to-t from-scrumboks-navy/60 via-transparent to-scrumboks-gold/20 rounded-2xl" />
-              
+
               {/* Professional Badge */}
               <div className="absolute top-8 right-8 glass-gold rounded-2xl p-4">
                 <div className="flex items-center gap-2">
                   <Trophy className="w-6 h-6 text-scrumboks-navy" />
-                  <span className="text-scrumboks-navy font-oswald font-black text-sm">50 JAAR</span>
+                  <span className="text-scrumboks-navy font-oswald font-black text-sm">
+                    50 JAAR
+                  </span>
                 </div>
               </div>
-              
+
               {/* Quote */}
               <div className="absolute bottom-8 left-8 right-8 glass-dark rounded-2xl p-6">
                 <p className="text-scrumboks-gold font-bold text-center text-lg font-roboto-slab">
@@ -236,7 +266,10 @@ const About = () => {
         </div>
 
         {/* Core Values - Professional */}
-        <div className={`mb-24 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
+        <div
+          className={`mb-24 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}
+          style={{ animationDelay: '0.6s' }}
+        >
           <div className="text-center mb-16">
             <h3 className="text-5xl font-oswald font-black text-scrumboks-white mb-6">
               <span className="text-scrumboks-gold">ONZE WAARDEN</span>
@@ -253,16 +286,16 @@ const About = () => {
                   <div className="w-20 h-20 bg-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                     <value.icon className="w-10 h-10 text-scrumboks-navy" />
                   </div>
-                  
+
                   <h4 className="text-2xl font-oswald font-black text-scrumboks-gold mb-4 text-center group-hover:text-scrumboks-white transition-colors duration-300">
                     {value.title}
                   </h4>
-                  
+
                   <p className="text-scrumboks-white/80 leading-relaxed text-center group-hover:text-scrumboks-white/90 transition-colors duration-300 font-inter">
                     {value.description}
                   </p>
                 </div>
-                
+
                 {/* Subtle Glow */}
                 <div className="absolute -inset-2 bg-scrumboks-gold/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-lg"></div>
               </div>
@@ -271,7 +304,12 @@ const About = () => {
         </div>
 
         {/* Professional Call to Action */}
-        <div className={`text-center glass-dark rounded-3xl p-16 relative overflow-hidden ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: '0.9s' }}>
+        <div
+          className={`text-center glass-dark rounded-3xl p-16 relative overflow-hidden ${
+            isVisible ? 'animate-scale-in' : 'opacity-0'
+          }`}
+          style={{ animationDelay: '0.9s' }}
+        >
           {/* Background Effects */}
           <div className="absolute top-0 right-0 w-40 h-40 bg-scrumboks-gold/5 rounded-full -translate-y-20 translate-x-20 blur-2xl"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-scrumboks-navy/5 rounded-full translate-y-24 -translate-x-24 blur-2xl"></div>
@@ -284,14 +322,16 @@ const About = () => {
             <h3 className="text-5xl font-oswald font-black text-scrumboks-white mb-6">
               <span className="text-scrumboks-gold">SLUIT JE BIJ ONS AAN</span>
             </h3>
-            
+
             <p className="text-scrumboks-white/90 mb-12 max-w-3xl mx-auto leading-relaxed text-xl font-roboto-slab font-medium">
               <span className="text-scrumboks-gold font-bold">
                 Bij Scrumboks draait het om kwaliteit en gemeenschap.
-              </span>
-              {' '}Of je nu wilt spelen, ons team wilt versterken, of wilt samenwerken als sponsor -
+              </span>{' '}
+              Of je nu wilt spelen, ons team wilt versterken, of wilt
+              samenwerken als sponsor -
               <span className="text-scrumboks-gold font-bold">
-                {' '}samen bouwen we aan onze rugbytraditie.
+                {' '}
+                samen bouwen we aan onze rugbytraditie.
               </span>
             </p>
 
