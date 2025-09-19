@@ -281,6 +281,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Subtle Pattern Backgrounds */
+.pattern-dots {
+  background-image: radial-gradient(circle, hsl(var(--scrumboks-navy) / 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-dots-small {
+  background-image: radial-gradient(circle, hsl(var(--scrumboks-navy) / 0.02) 0.5px, transparent 0.5px);
+  background-size: 12px 12px;
+}
+
+.pattern-shield {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath d='M50 10c-8 0-15 3-20 8v20c0 15 15 25 20 30 5-5 20-15 20-30V18c-5-5-12-8-20-8z' fill='none' stroke='hsl(var(--scrumboks-navy) / 0.05)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  background-repeat: repeat;
+}
+
+.pattern-shield-large {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath d='M50 10c-8 0-15 3-20 8v20c0 15 15 25 20 30 5-5 20-15 20-30V18c-5-5-12-8-20-8z' fill='none' stroke='hsl(var(--scrumboks-navy) / 0.03)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+  background-repeat: repeat;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
