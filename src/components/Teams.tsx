@@ -100,13 +100,21 @@ const Teams = () => {
     >
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Large Shield Silhouettes */}
-        <div className="absolute top-20 right-10 w-64 h-64 pattern-shield-large opacity-30" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 pattern-shield-large opacity-20" />
+        {/* Large Shield Silhouettes - More Visible */}
+        <div className="absolute top-20 right-10 w-64 h-64 pattern-shield-large opacity-40" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 pattern-shield-large opacity-30" />
+        
+        {/* Single Large Shield Centers */}
+        <div className="absolute top-1/2 left-1/4 w-48 h-48 pattern-shield-single opacity-25" />
+        <div className="absolute bottom-1/3 right-1/4 w-56 h-56 pattern-shield-single opacity-20" />
         
         {/* Floating Shield Elements */}
-        <div className="absolute top-40 left-20 w-32 h-32 pattern-shield opacity-20" />
-        <div className="absolute bottom-40 right-20 w-40 h-40 pattern-shield opacity-15" />
+        <div className="absolute top-40 left-20 w-32 h-32 pattern-shield opacity-35" />
+        <div className="absolute bottom-40 right-20 w-40 h-40 pattern-shield opacity-30" />
+        
+        {/* Corner Shield Accents */}
+        <div className="absolute top-10 left-10 w-24 h-24 pattern-shield opacity-40" />
+        <div className="absolute bottom-10 right-10 w-28 h-28 pattern-shield opacity-35" />
         
         {/* Subtle Gradient Overlays */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-scrumboks-white/20 to-transparent" />
@@ -161,7 +169,7 @@ const Teams = () => {
               onMouseLeave={() => setHoveredTeam(null)}
             >
               {/* Subtle Shield Pattern Overlay */}
-              <div className="absolute inset-0 pattern-shield opacity-5 group-hover:opacity-10 transition-opacity duration-500" />
+              <div className="absolute inset-0 pattern-shield opacity-8 group-hover:opacity-15 transition-opacity duration-500" />
               {/* Clean Header */}
               <CardHeader className="pb-4 relative">
                 <div className="flex items-center justify-between mb-4">
@@ -244,11 +252,14 @@ const Teams = () => {
           </div>
           
           {/* Large Shield Silhouette Background */}
-          <div className="absolute inset-0 pattern-shield-large opacity-8" />
+          <div className="absolute inset-0 pattern-shield-large opacity-15" />
           
           {/* Corner Shield Elements */}
-          <div className="absolute top-8 right-8 w-16 h-16 pattern-shield opacity-20" />
-          <div className="absolute bottom-8 left-8 w-20 h-20 pattern-shield opacity-15" />
+          <div className="absolute top-8 right-8 w-16 h-16 pattern-shield opacity-25" />
+          <div className="absolute bottom-8 left-8 w-20 h-20 pattern-shield opacity-20" />
+          
+          {/* Center Shield */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 pattern-shield-single opacity-12" />
 
           <div className="relative z-10">
             <div className="text-center mb-8">
