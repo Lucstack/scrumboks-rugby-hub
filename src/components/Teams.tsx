@@ -255,7 +255,9 @@ const Teams = () => {
                 <div className="w-16 h-16 bg-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                   <MapPin className="w-8 h-8 text-scrumboks-navy" />
                 </div>
-                <h4 className="font-oswald font-black text-scrumboks-white mb-2">Locatie</h4>
+                <h4 className="font-oswald font-black text-scrumboks-white mb-2">
+                  Locatie
+                </h4>
                 <p className="text-scrumboks-white/90 text-sm font-inter font-semibold">
                   Beethovenstraat 18a
                   <br />
@@ -281,7 +283,9 @@ const Teams = () => {
                 <div className="w-16 h-16 bg-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                   <Users className="w-8 h-8 text-scrumboks-navy" />
                 </div>
-                <h4 className="font-oswald font-black text-scrumboks-white mb-2">Contact</h4>
+                <h4 className="font-oswald font-black text-scrumboks-white mb-2">
+                  Contact
+                </h4>
                 <p className="text-scrumboks-white/90 text-sm font-inter font-semibold">
                   0344 623201
                   <br />

@@ -198,11 +198,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-6">
-              <Link to="/membership">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link to="/membership" className="w-full sm:w-auto">
                 <Button
                   size="xl"
-                  className="bg-scrumboks-gold hover:bg-scrumboks-gold-dark text-scrumboks-navy font-oswald font-black text-lg px-8 py-4 rounded-2xl border-2 border-scrumboks-gold/50 hover:border-scrumboks-gold shadow-2xl hover:shadow-scrumboks-gold/50 transform hover:scale-105 transition-all duration-300 group"
+                  className="w-full sm:w-auto bg-scrumboks-navy hover:bg-scrumboks-navy-dark text-scrumboks-white font-oswald font-black text-lg px-8 py-4 rounded-2xl border-2 border-scrumboks-navy/50 hover:border-scrumboks-navy shadow-2xl hover:shadow-scrumboks-navy/50 transform hover:scale-105 transition-all duration-300 group"
                 >
                   <span className="flex items-center gap-3">
                     <Zap className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
@@ -214,7 +214,7 @@ const About = () => {
 
               <Button
                 size="xl"
-                className="glass-dark text-scrumboks-gold font-roboto-slab font-bold text-lg px-8 py-4 rounded-2xl border-2 border-scrumboks-navy/50 hover:border-scrumboks-navy transition-all duration-300"
+                className="w-full sm:w-auto bg-scrumboks-navy hover:bg-scrumboks-navy-dark text-scrumboks-white font-oswald font-black text-lg px-8 py-4 rounded-2xl border-2 border-scrumboks-navy/50 hover:border-scrumboks-navy shadow-2xl hover:shadow-scrumboks-navy/50 transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   document
                     .querySelector('#teams')
