@@ -2,31 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Scrumboks Brand Guide Typography */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Scrumboks Rugby Club Design System
-Modern, fresh color palette for professional and inviting feel
-All colors MUST be HSL for perfect theming
+Based on Scrumboks Brand Guide
+Colors: Navy #1E2A56, Gold #F2C94C
+Typography: Oswald (headings), Roboto Slab (subheadings), Inter (body)
 */
 
 @layer base {
   :root {
     /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 0 0% 17%; /* Dark gray instead of pure black */
+    --foreground: 0 0% 17%;
 
-    /* Primary Club Colors */
-    --scrumboks-blue: 238 89% 35%; /* #0A1A9A - Primary blue - meer verzadigd */
-    --scrumboks-blue-light: 238 50% 95%; /* #E6E9F7 - Light blue background */
-    --scrumboks-blue-dark: 238 95% 20%; /* #05156B - Darker blue for contrast - minder donker */
+    /* Scrumboks Brand Guide Colors */
+    --scrumboks-navy: 225 50% 20%; /* #1E2A56 - Primary Navy */
+    --scrumboks-navy-light: 225 30% 95%; /* Light navy background */
+    --scrumboks-navy-dark: 225 60% 15%; /* Darker navy for contrast */
+    
+    --scrumboks-gold: 45 85% 60%; /* #F2C94C - Primary Gold */
+    --scrumboks-gold-light: 45 60% 90%; /* Light gold background */
+    --scrumboks-gold-dark: 45 90% 45%; /* Darker gold for contrast */
 
-    /* Accent Colors */
-    --scrumboks-yellow: 54 95% 51%; /* #F8E300 - Primary yellow */
-    --scrumboks-gold: 48 100% 42%; /* #D4B600 - Muted gold accent */
+    /* Supporting Colors */
+    --scrumboks-blue: 225 50% 20%; /* Same as navy for consistency */
+    --scrumboks-blue-light: 225 30% 95%;
+    --scrumboks-blue-dark: 225 60% 15%;
 
     /* Neutral Tones */
     --scrumboks-black: 0 0% 13%; /* #221F20 - Club black */
     --scrumboks-white: 0 0% 98%; /* Pure white */
     --scrumboks-gray: 0 0% 17%; /* #2C2C2C - Dark gray for text */
     --scrumboks-gray-light: 0 0% 97%; /* #F7F7F7 - Light gray background */
+    --scrumboks-muted: 225 20% 85%; /* Muted navy variant */
 
     /* Semantic tokens */
     --card: 0 0% 100%;
@@ -35,95 +45,63 @@ All colors MUST be HSL for perfect theming
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 17%;
 
-    --primary: 238 89% 28%; /* Scrumboks blue */
+    --primary: 225 50% 20%; /* Scrumboks navy */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 238 50% 95%; /* Light blue background */
+    --secondary: 225 30% 95%; /* Light navy background */
     --secondary-foreground: 0 0% 17%;
 
     --muted: 0 0% 97%; /* Light gray background */
     --muted-foreground: 0 0% 45%;
 
-    --accent: 54 95% 51%; /* Scrumboks yellow */
-    --accent-foreground: 238 89% 28%; /* Blue text on yellow */
+    --accent: 45 85% 60%; /* Scrumboks gold */
+    --accent-foreground: 225 50% 20%; /* Navy text on gold */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 140 45% 25%;
+    --ring: 225 50% 20%;
 
     --radius: 0.75rem;
 
-    /* Gradients for dynamic feel */
-    --gradient-hero: linear-gradient(
-      135deg,
-      hsl(var(--rugby-green)),
-      hsl(var(--rugby-green-light))
-    );
-    --gradient-accent: linear-gradient(
-      45deg,
-      hsl(var(--rugby-gold)),
-      hsl(var(--rugby-gold-light))
-    );
-    --gradient-dark: linear-gradient(
-      180deg,
-      hsl(var(--rugby-black)),
-      hsl(var(--rugby-green-dark))
-    );
-
     /* Shadows for depth */
-    --shadow-soft: 0 2px 10px -2px hsl(var(--rugby-green) / 0.1);
-    --shadow-medium: 0 4px 20px -4px hsl(var(--rugby-green) / 0.15);
-    --shadow-strong: 0 8px 30px -8px hsl(var(--rugby-green) / 0.25);
+    --shadow-soft: 0 2px 10px -2px hsl(var(--scrumboks-navy) / 0.1);
+    --shadow-medium: 0 4px 20px -4px hsl(var(--scrumboks-navy) / 0.15);
+    --shadow-strong: 0 8px 30px -8px hsl(var(--scrumboks-navy) / 0.25);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -145,10 +123,24 @@ All colors MUST be HSL for perfect theming
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Scrumboks Typography */
+  .font-oswald {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .font-roboto-slab {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
   }
 }
 
-/* Modern Advanced Effects & Animations */
+/* Professional Effects - No Cheap Gradients */
 
 /* Glassmorphism utilities */
 .glass {
@@ -158,15 +150,15 @@ All colors MUST be HSL for perfect theming
 }
 
 .glass-dark {
-  background: rgba(8, 22, 137, 0.1);
+  background: rgba(30, 42, 86, 0.1);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(8, 22, 137, 0.2);
+  border: 1px solid rgba(30, 42, 86, 0.2);
 }
 
 .glass-gold {
-  background: rgba(248, 227, 0, 0.05);
+  background: rgba(242, 201, 76, 0.05);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(248, 227, 0, 0.2);
+  border: 1px solid rgba(242, 201, 76, 0.2);
 }
 
 /* 3D Transform Effects */
@@ -180,65 +172,12 @@ All colors MUST be HSL for perfect theming
 }
 
 .card-3d:hover {
-  transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
-  box-shadow: 0 25px 50px -12px rgba(8, 22, 137, 0.25),
-    0 0 0 1px rgba(248, 227, 0, 0.1);
+  transform: rotateY(2deg) rotateX(2deg) translateZ(10px);
+  box-shadow: 0 25px 50px -12px rgba(30, 42, 86, 0.25),
+    0 0 0 1px rgba(242, 201, 76, 0.1);
 }
 
-/* Advanced Gradients */
-.gradient-mesh {
-  background: radial-gradient(
-      at 40% 20%,
-      rgba(8, 22, 137, 0.3) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 80% 0%, rgba(248, 227, 0, 0.2) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(8, 22, 137, 0.1) 0px, transparent 50%);
-}
-
-.gradient-text {
-  background: linear-gradient(
-    135deg,
-    hsl(var(--scrumboks-blue)),
-    hsl(var(--scrumboks-yellow))
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Particle System */
-@keyframes float-particles {
-  0%,
-  100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg);
-    opacity: 0.3;
-  }
-  33% {
-    transform: translateY(-20px) translateX(10px) rotate(120deg);
-    opacity: 0.8;
-  }
-  66% {
-    transform: translateY(-10px) translateX(-5px) rotate(240deg);
-    opacity: 0.5;
-  }
-}
-
-.particle {
-  animation: float-particles 8s ease-in-out infinite;
-}
-
-.particle:nth-child(2n) {
-  animation-delay: -2s;
-  animation-duration: 12s;
-}
-
-.particle:nth-child(3n) {
-  animation-delay: -4s;
-  animation-direction: reverse;
-}
-
-/* Advanced Hover Effects */
+/* Subtle Hover Effects Only */
 .glow-hover {
   position: relative;
   overflow: hidden;
@@ -254,7 +193,7 @@ All colors MUST be HSL for perfect theming
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(248, 227, 0, 0.2),
+    rgba(242, 201, 76, 0.1),
     transparent
   );
   transition: left 0.5s;
@@ -310,10 +249,10 @@ All colors MUST be HSL for perfect theming
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(248, 227, 0, 0.3);
+    box-shadow: 0 0 20px rgba(242, 201, 76, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(248, 227, 0, 0.6);
+    box-shadow: 0 0 40px rgba(242, 201, 76, 0.6);
   }
 }
 
@@ -349,10 +288,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--scrumboks-blue));
+  background: hsl(var(--scrumboks-navy));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--scrumboks-blue-dark));
+  background: hsl(var(--scrumboks-navy-dark));
 }

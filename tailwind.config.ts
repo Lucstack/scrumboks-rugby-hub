@@ -18,6 +18,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'oswald': ['Oswald', 'sans-serif'],
+        'roboto-slab': ['Roboto Slab', 'serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -53,15 +58,20 @@ export default {
           foreground: 'hsl(var(--card-foreground))',
         },
         scrumboks: {
+          navy: 'hsl(var(--scrumboks-navy))',
+          'navy-light': 'hsl(var(--scrumboks-navy-light))',
+          'navy-dark': 'hsl(var(--scrumboks-navy-dark))',
+          gold: 'hsl(var(--scrumboks-gold))',
+          'gold-light': 'hsl(var(--scrumboks-gold-light))',
+          'gold-dark': 'hsl(var(--scrumboks-gold-dark))',
           blue: 'hsl(var(--scrumboks-blue))',
           'blue-light': 'hsl(var(--scrumboks-blue-light))',
           'blue-dark': 'hsl(var(--scrumboks-blue-dark))',
-          yellow: 'hsl(var(--scrumboks-yellow))',
-          gold: 'hsl(var(--scrumboks-gold))',
           black: 'hsl(var(--scrumboks-black))',
           white: 'hsl(var(--scrumboks-white))',
           gray: 'hsl(var(--scrumboks-gray))',
           'gray-light': 'hsl(var(--scrumboks-gray-light))',
+          muted: 'hsl(var(--scrumboks-muted))',
         },
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',
