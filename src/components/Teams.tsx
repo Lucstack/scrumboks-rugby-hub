@@ -100,22 +100,6 @@ const Teams = () => {
     >
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Large Shield Silhouettes - More Visible */}
-        <div className="absolute top-20 right-10 w-64 h-64 pattern-shield-large opacity-40" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 pattern-shield-large opacity-30" />
-        
-        {/* Single Large Shield Centers */}
-        <div className="absolute top-1/2 left-1/4 w-48 h-48 pattern-shield-single opacity-25" />
-        <div className="absolute bottom-1/3 right-1/4 w-56 h-56 pattern-shield-single opacity-20" />
-        
-        {/* Floating Shield Elements */}
-        <div className="absolute top-40 left-20 w-32 h-32 pattern-shield opacity-35" />
-        <div className="absolute bottom-40 right-20 w-40 h-40 pattern-shield opacity-30" />
-        
-        {/* Corner Shield Accents */}
-        <div className="absolute top-10 left-10 w-24 h-24 pattern-shield opacity-40" />
-        <div className="absolute bottom-10 right-10 w-28 h-28 pattern-shield opacity-35" />
-        
         {/* Subtle Gradient Overlays */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-scrumboks-white/20 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-scrumboks-white/20 to-transparent" />
@@ -161,15 +145,13 @@ const Teams = () => {
               key={index}
               className={`group relative overflow-hidden border border-scrumboks-navy/10 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
-              } bg-scrumboks-white pattern-dots-small`}
+              } bg-scrumboks-navy-light/20 pattern-dots-small`}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
               onMouseEnter={() => setHoveredTeam(index)}
               onMouseLeave={() => setHoveredTeam(null)}
             >
-              {/* Subtle Shield Pattern Overlay */}
-              <div className="absolute inset-0 pattern-shield opacity-8 group-hover:opacity-15 transition-opacity duration-500" />
               {/* Clean Header */}
               <CardHeader className="pb-4 relative">
                 <div className="flex items-center justify-between mb-4">
@@ -181,13 +163,13 @@ const Teams = () => {
                       <CardTitle className="text-2xl font-oswald font-bold text-scrumboks-navy group-hover:text-scrumboks-gold transition-colors duration-300">
                         {team.name}
                       </CardTitle>
-                      <div className="text-sm font-roboto-slab font-medium text-scrumboks-gray uppercase tracking-wide">
+                      <div className="text-sm font-oswald font-medium text-scrumboks-gray uppercase tracking-wide">
                         {team.highlight}
                       </div>
                     </div>
                   </div>
                   <div className="bg-scrumboks-navy/5 border border-scrumboks-navy/20 px-3 py-1 rounded-full">
-                    <span className="text-xs font-bold text-scrumboks-navy uppercase tracking-wide">
+                    <span className="text-xs font-oswald font-bold text-scrumboks-navy uppercase tracking-wide">
                       {team.level}
                     </span>
                   </div>
@@ -250,16 +232,6 @@ const Teams = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-scrumboks-navy rounded-full -translate-y-16 translate-x-16" />
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-scrumboks-gold rounded-full translate-y-20 -translate-x-20" />
           </div>
-          
-          {/* Large Shield Silhouette Background */}
-          <div className="absolute inset-0 pattern-shield-large opacity-15" />
-          
-          {/* Corner Shield Elements */}
-          <div className="absolute top-8 right-8 w-16 h-16 pattern-shield opacity-25" />
-          <div className="absolute bottom-8 left-8 w-20 h-20 pattern-shield opacity-20" />
-          
-          {/* Center Shield */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 pattern-shield-single opacity-12" />
 
           <div className="relative z-10">
             <div className="text-center mb-8">
@@ -284,7 +256,9 @@ const Teams = () => {
                 <div className="w-16 h-16 bg-scrumboks-navy/5 border border-scrumboks-navy/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
                   <MapPin className="w-8 h-8 text-scrumboks-navy" />
                 </div>
-                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">Locatie</h4>
+                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">
+                  Locatie
+                </h4>
                 <p className="text-scrumboks-gray text-sm font-inter">
                   Beethovenstraat 18a
                   <br />
@@ -310,7 +284,9 @@ const Teams = () => {
                 <div className="w-16 h-16 bg-scrumboks-navy/5 border border-scrumboks-navy/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
                   <Users className="w-8 h-8 text-scrumboks-navy" />
                 </div>
-                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">Contact</h4>
+                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">
+                  Contact
+                </h4>
                 <p className="text-scrumboks-gray text-sm font-inter">
                   0344 623201
                   <br />
