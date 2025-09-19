@@ -266,7 +266,7 @@ const Teams = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-scrumboks-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                <div className="w-16 h-16 bg-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                   <Clock className="w-8 h-8 text-scrumboks-navy" />
                 </div>
                 <h4 className="font-oswald font-black text-scrumboks-white mb-2">
