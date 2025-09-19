@@ -137,7 +137,7 @@ const Contact = () => {
               key={index}
               className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-2 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
-              } bg-scrumboks-gold`}
+              } bg-scrumboks-cream`}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
@@ -225,7 +225,7 @@ const Contact = () => {
         </div>
 
         {/* Enhanced Contact Form */}
-        <div className="bg-scrumboks-gold rounded-3xl p-8 shadow-2xl">
+        <div className="bg-scrumboks-cream rounded-3xl p-8 shadow-2xl">
           <div className="text-center mb-8">
             <div className="inline-block bg-scrumboks-navy rounded-full p-3 mb-4 shadow-lg">
               <Mail className="w-8 h-8 text-scrumboks-white" />

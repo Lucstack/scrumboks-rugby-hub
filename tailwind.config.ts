@@ -64,6 +64,7 @@ export default {
           gold: 'hsl(var(--scrumboks-gold))',
           'gold-light': 'hsl(var(--scrumboks-gold-light))',
           'gold-dark': 'hsl(var(--scrumboks-gold-dark))',
+          cream: 'hsl(var(--scrumboks-cream))',
           blue: 'hsl(var(--scrumboks-blue))',
           'blue-light': 'hsl(var(--scrumboks-blue-light))',
           'blue-dark': 'hsl(var(--scrumboks-blue-dark))',
