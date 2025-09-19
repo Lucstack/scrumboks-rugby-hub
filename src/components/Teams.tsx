@@ -98,8 +98,38 @@ const Teams = () => {
       id="teams"
       className="py-20 bg-scrumboks-gray-light/30 relative overflow-hidden pattern-dots"
     >
-      {/* Subtle Background Elements */}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Scrollable Background Elements */}
+        <div className="absolute top-1/4 left-0 w-full h-32 opacity-5">
+          <div className="flex animate-scroll-left">
+            <div className="w-64 h-32 bg-scrumboks-navy rounded-full blur-xl mx-8" />
+            <div className="w-48 h-32 bg-scrumboks-gold rounded-full blur-xl mx-8" />
+            <div className="w-56 h-32 bg-scrumboks-navy rounded-full blur-xl mx-8" />
+            <div className="w-40 h-32 bg-scrumboks-gold rounded-full blur-xl mx-8" />
+            <div className="w-64 h-32 bg-scrumboks-navy rounded-full blur-xl mx-8" />
+            <div className="w-48 h-32 bg-scrumboks-gold rounded-full blur-xl mx-8" />
+          </div>
+        </div>
+
+        <div className="absolute bottom-1/4 right-0 w-full h-32 opacity-5">
+          <div className="flex animate-scroll-right">
+            <div className="w-56 h-32 bg-scrumboks-gold rounded-full blur-xl mx-8" />
+            <div className="w-40 h-32 bg-scrumboks-navy rounded-full blur-xl mx-8" />
+            <div className="w-64 h-32 bg-scrumboks-gold rounded-full blur-xl mx-8" />
+            <div className="w-48 h-32 bg-scrumboks-navy rounded-full blur-xl mx-8" />
+            <div className="w-56 h-32 bg-scrumboks-gold rounded-full blur-xl mx-8" />
+          </div>
+        </div>
+
+        {/* Floating Rotating Elements */}
+        <div className="absolute top-20 right-20 w-24 h-24 bg-scrumboks-navy/10 rounded-full animate-rotate-slow" />
+        <div className="absolute bottom-32 left-16 w-32 h-32 bg-scrumboks-gold/10 rounded-full animate-rotate-slow" style={{ animationDirection: 'reverse', animationDuration: '40s' }} />
+        
+        {/* Gentle Floating Elements */}
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-scrumboks-navy/5 rounded-full animate-float-gentle" />
+        <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-scrumboks-gold/8 rounded-full animate-float-gentle" style={{ animationDelay: '3s' }} />
+
         {/* Subtle Gradient Overlays */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-scrumboks-white/20 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-scrumboks-white/20 to-transparent" />
