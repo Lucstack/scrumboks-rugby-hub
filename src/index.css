@@ -13,15 +13,14 @@ All colors MUST be HSL for perfect theming
     --background: 0 0% 100%;
     --foreground: 0 0% 17%; /* Dark gray instead of pure black */
 
-    /* Primary Club Colors - Brand Guide Compliant */
-    --scrumboks-navy: 233 48% 25%; /* #1E2A56 - Scrumboks Navy (Brand Guide) */
-    --scrumboks-blue: 233 48% 25%; /* #1E2A56 - Primary blue from brand guide */
-    --scrumboks-blue-light: 233 30% 85%; /* Light navy for backgrounds */
-    --scrumboks-blue-dark: 233 60% 15%; /* Darker navy for contrast */
+    /* Primary Club Colors */
+    --scrumboks-blue: 238 89% 35%; /* #0A1A9A - Primary blue - meer verzadigd */
+    --scrumboks-blue-light: 238 50% 95%; /* #E6E9F7 - Light blue background */
+    --scrumboks-blue-dark: 238 95% 20%; /* #05156B - Darker blue for contrast - minder donker */
 
-    /* Accent Colors - Brand Guide Compliant */
-    --scrumboks-gold: 48 95% 62%; /* #F2C94C - Scrumboks Gold (Brand Guide) */
-    --scrumboks-yellow: 48 95% 62%; /* #F2C94C - Unified with gold */
+    /* Accent Colors */
+    --scrumboks-yellow: 54 95% 51%; /* #F8E300 - Primary yellow */
+    --scrumboks-gold: 48 100% 42%; /* #D4B600 - Muted gold accent */
 
     /* Neutral Tones */
     --scrumboks-black: 0 0% 13%; /* #221F20 - Club black */
@@ -36,17 +35,17 @@ All colors MUST be HSL for perfect theming
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 17%;
 
-    --primary: 233 48% 25%; /* Scrumboks Navy */
+    --primary: 238 89% 28%; /* Scrumboks blue */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 233 30% 85%; /* Light navy */
-    --secondary-foreground: 233 48% 25%;
+    --secondary: 238 50% 95%; /* Light blue background */
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 233 15% 95%; /* Light muted background */
+    --muted: 0 0% 97%; /* Light gray background */
     --muted-foreground: 0 0% 45%;
 
-    --accent: 48 95% 62%; /* Scrumboks Gold */
-    --accent-foreground: 233 48% 25%; /* Navy text on gold */
+    --accent: 54 95% 51%; /* Scrumboks yellow */
+    --accent-foreground: 238 89% 28%; /* Blue text on yellow */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -57,22 +56,27 @@ All colors MUST be HSL for perfect theming
 
     --radius: 0.75rem;
 
-    /* Professional gradients - subtle only */
-    --gradient-subtle-navy: linear-gradient(
+    /* Gradients for dynamic feel */
+    --gradient-hero: linear-gradient(
       135deg,
-      hsl(var(--scrumboks-navy)),
-      hsl(var(--scrumboks-blue-dark))
+      hsl(var(--rugby-green)),
+      hsl(var(--rugby-green-light))
     );
-    --gradient-professional: linear-gradient(
+    --gradient-accent: linear-gradient(
+      45deg,
+      hsl(var(--rugby-gold)),
+      hsl(var(--rugby-gold-light))
+    );
+    --gradient-dark: linear-gradient(
       180deg,
-      hsl(var(--scrumboks-navy) / 0.95),
-      hsl(var(--scrumboks-black))
+      hsl(var(--rugby-black)),
+      hsl(var(--rugby-green-dark))
     );
 
-    /* Professional shadows */
-    --shadow-soft: 0 2px 10px -2px hsl(var(--scrumboks-navy) / 0.1);
-    --shadow-medium: 0 4px 20px -4px hsl(var(--scrumboks-navy) / 0.15);
-    --shadow-strong: 0 8px 30px -8px hsl(var(--scrumboks-navy) / 0.25);
+    /* Shadows for depth */
+    --shadow-soft: 0 2px 10px -2px hsl(var(--rugby-green) / 0.1);
+    --shadow-medium: 0 4px 20px -4px hsl(var(--rugby-green) / 0.15);
+    --shadow-strong: 0 8px 30px -8px hsl(var(--rugby-green) / 0.25);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,15 +158,15 @@ All colors MUST be HSL for perfect theming
 }
 
 .glass-dark {
-  background: rgba(30, 42, 86, 0.1);
+  background: rgba(8, 22, 137, 0.1);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(30, 42, 86, 0.2);
+  border: 1px solid rgba(8, 22, 137, 0.2);
 }
 
 .glass-gold {
-  background: rgba(242, 201, 76, 0.05);
+  background: rgba(248, 227, 0, 0.05);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(242, 201, 76, 0.2);
+  border: 1px solid rgba(248, 227, 0, 0.2);
 }
 
 /* 3D Transform Effects */
@@ -176,28 +180,31 @@ All colors MUST be HSL for perfect theming
 }
 
 .card-3d:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 25px 50px -12px rgba(30, 42, 86, 0.25),
-    0 0 0 1px rgba(242, 201, 76, 0.1);
+  transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
+  box-shadow: 0 25px 50px -12px rgba(8, 22, 137, 0.25),
+    0 0 0 1px rgba(248, 227, 0, 0.1);
 }
 
 /* Advanced Gradients */
-/* Professional button hover gradients only */
-.btn-hover-gradient {
-  background: linear-gradient(
-    135deg,
-    hsl(var(--scrumboks-gold)),
-    hsl(var(--scrumboks-gold))
-  );
-  transition: all 0.3s ease;
+.gradient-mesh {
+  background: radial-gradient(
+      at 40% 20%,
+      rgba(8, 22, 137, 0.3) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, rgba(248, 227, 0, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(8, 22, 137, 0.1) 0px, transparent 50%);
 }
 
-.btn-hover-gradient:hover {
+.gradient-text {
   background: linear-gradient(
     135deg,
-    hsl(var(--scrumboks-gold) / 0.9),
-    hsl(var(--scrumboks-navy) / 0.1)
+    hsl(var(--scrumboks-blue)),
+    hsl(var(--scrumboks-yellow))
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Particle System */
@@ -247,7 +254,7 @@ All colors MUST be HSL for perfect theming
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(242, 201, 76, 0.2),
+    rgba(248, 227, 0, 0.2),
     transparent
   );
   transition: left 0.5s;
@@ -303,10 +310,10 @@ All colors MUST be HSL for perfect theming
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(242, 201, 76, 0.3);
+    box-shadow: 0 0 20px rgba(248, 227, 0, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(242, 201, 76, 0.6);
+    box-shadow: 0 0 40px rgba(248, 227, 0, 0.6);
   }
 }
 
@@ -342,7 +349,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--scrumboks-navy));
+  background: hsl(var(--scrumboks-blue));
   border-radius: 4px;
 }
 

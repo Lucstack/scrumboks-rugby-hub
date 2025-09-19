@@ -114,12 +114,12 @@ const Teams = () => {
   return (
     <section
       id="teams"
-      className="py-20 bg-gradient-to-b from-scrumboks-muted via-scrumboks-blue-light/30 to-scrumboks-muted relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-scrumboks-white via-scrumboks-gray-light/20 to-scrumboks-blue-light/10 relative overflow-hidden"
     >
-      {/* Professional Background Elements */}
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-scrumboks-gold/3 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-scrumboks-navy/3 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-64 h-64 bg-scrumboks-yellow/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-scrumboks-blue/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -129,26 +129,26 @@ const Teams = () => {
             isVisible ? 'animate-fadeInUp' : 'opacity-0'
           }`}
         >
-          <div className="inline-block bg-scrumboks-navy/10 backdrop-blur-sm border border-scrumboks-navy/20 rounded-2xl px-8 py-3 mb-6">
-            <span className="text-scrumboks-navy font-bold text-lg tracking-wide">
+          <div className="inline-block bg-gradient-to-r from-scrumboks-blue/10 via-scrumboks-yellow/10 to-scrumboks-blue/10 backdrop-blur-sm border border-scrumboks-blue/20 rounded-2xl px-8 py-3 mb-6">
+            <span className="text-scrumboks-blue font-bold text-lg tracking-wide">
               Onze Teams
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-scrumboks-navy mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-scrumboks-blue mb-6">
             <span className="block font-medium">Ontdek jouw</span>
-            <span className="block text-scrumboks-gold font-semibold">
+            <span className="block bg-gradient-to-r from-scrumboks-blue via-scrumboks-yellow to-scrumboks-blue bg-clip-text text-transparent font-semibold">
               Perfecte Team
             </span>
           </h2>
 
           <p className="text-xl lg:text-2xl text-scrumboks-gray max-w-4xl mx-auto leading-relaxed">
-            <span className="text-scrumboks-navy font-semibold">
+            <span className="text-scrumboks-blue font-semibold">
               Van 6 tot 60+ jaar
             </span>{' '}
             - bij Scrumboks vindt iedereen zijn plek. Of je nu net begint of al
             jaren speelt,
-            <span className="text-scrumboks-gold font-semibold">
+            <span className="text-scrumboks-yellow font-semibold">
               {' '}
               samen maken we rugby tot een levenslange passie.
             </span>
@@ -180,20 +180,20 @@ const Teams = () => {
               <CardHeader className="pb-4 relative">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-scrumboks-navy to-scrumboks-blue-dark rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-scrumboks-blue to-scrumboks-blue-dark rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <team.icon className="w-6 h-6 text-scrumboks-white" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl font-bold text-scrumboks-navy group-hover:text-scrumboks-blue-dark transition-colors duration-300">
+                      <CardTitle className="text-2xl font-bold text-scrumboks-blue group-hover:text-scrumboks-blue-dark transition-colors duration-300">
                         {team.name}
                       </CardTitle>
-                      <div className="text-sm font-semibold text-scrumboks-gold uppercase tracking-wide">
+                      <div className="text-sm font-semibold text-scrumboks-yellow uppercase tracking-wide">
                         {team.highlight}
                       </div>
                     </div>
                   </div>
-                  <div className="bg-scrumboks-navy/10 px-3 py-1 rounded-full">
-                    <span className="text-xs font-bold text-scrumboks-navy uppercase tracking-wide">
+                  <div className="bg-gradient-to-r from-scrumboks-blue/10 to-scrumboks-yellow/10 px-3 py-1 rounded-full">
+                    <span className="text-xs font-bold text-scrumboks-blue uppercase tracking-wide">
                       {team.level}
                     </span>
                   </div>
@@ -207,36 +207,36 @@ const Teams = () => {
               <CardContent className="space-y-4">
                 {/* Professional Stats */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-scrumboks-navy/5 p-4 rounded-xl border border-scrumboks-navy/10">
+                  <div className="bg-gradient-to-br from-scrumboks-blue/5 to-scrumboks-blue/10 p-4 rounded-xl border border-scrumboks-blue/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <Users className="w-4 h-4 text-scrumboks-navy" />
-                      <span className="text-sm font-semibold text-scrumboks-navy">
+                      <Users className="w-4 h-4 text-scrumboks-blue" />
+                      <span className="text-sm font-semibold text-scrumboks-blue">
                         Leden
                       </span>
                     </div>
-                    <p className="text-xl font-bold text-scrumboks-navy">
+                    <p className="text-xl font-bold text-scrumboks-blue">
                       {team.members}
                     </p>
                   </div>
 
-                  <div className="bg-scrumboks-gold/5 p-4 rounded-xl border border-scrumboks-gold/10">
+                  <div className="bg-gradient-to-br from-scrumboks-yellow/5 to-scrumboks-yellow/10 p-4 rounded-xl border border-scrumboks-yellow/10">
                     <div className="flex items-center gap-2 mb-2">
-                      <Clock className="w-4 h-4 text-scrumboks-gold" />
-                      <span className="text-sm font-semibold text-scrumboks-gold">
+                      <Clock className="w-4 h-4 text-scrumboks-yellow" />
+                      <span className="text-sm font-semibold text-scrumboks-yellow">
                         Leeftijd
                       </span>
                     </div>
-                    <p className="text-xl font-bold text-scrumboks-gold">
+                    <p className="text-xl font-bold text-scrumboks-yellow">
                       {team.age}
                     </p>
                   </div>
                 </div>
 
                 {/* Training Info */}
-                <div className="bg-scrumboks-muted/50 p-4 rounded-xl border border-scrumboks-navy/5">
+                <div className="bg-gradient-to-r from-scrumboks-gray-light/30 to-scrumboks-white/50 p-4 rounded-xl border border-scrumboks-blue/5">
                   <div className="flex items-center gap-2 mb-2">
-                    <Calendar className="w-4 h-4 text-scrumboks-navy" />
-                    <span className="font-semibold text-scrumboks-navy text-sm">
+                    <Calendar className="w-4 h-4 text-scrumboks-blue" />
+                    <span className="font-semibold text-scrumboks-blue text-sm">
                       Training
                     </span>
                   </div>
@@ -262,13 +262,13 @@ const Teams = () => {
                               : team.commitment === 'Gemiddeld'
                               ? 2
                               : 1)
-                              ? 'bg-scrumboks-gold'
+                              ? 'bg-scrumboks-yellow'
                               : 'bg-scrumboks-gray-light'
                           }`}
                         />
                       ))}
                     </div>
-                    <span className="ml-2 text-sm font-semibold text-scrumboks-navy">
+                    <span className="ml-2 text-sm font-semibold text-scrumboks-blue">
                       {team.commitment}
                     </span>
                   </div>
@@ -279,24 +279,24 @@ const Teams = () => {
         </div>
 
         {/* Professional Training Location */}
-        <div className="bg-scrumboks-muted/50 rounded-3xl p-8 border border-scrumboks-navy/10 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-scrumboks-blue/5 via-scrumboks-yellow/5 to-scrumboks-blue/5 rounded-3xl p-8 border border-scrumboks-blue/10 relative overflow-hidden">
           {/* Subtle Background Pattern */}
-          <div className="absolute inset-0 opacity-3">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-scrumboks-gold rounded-full -translate-y-16 translate-x-16" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-scrumboks-navy rounded-full translate-y-20 -translate-x-20" />
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-scrumboks-yellow rounded-full -translate-y-16 translate-x-16" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-scrumboks-blue rounded-full translate-y-20 -translate-x-20" />
           </div>
 
           <div className="relative z-10">
             <div className="text-center mb-8">
-              <div className="inline-block bg-scrumboks-gold/20 rounded-full p-3 mb-4">
-                <MapPin className="w-8 h-8 text-scrumboks-navy" />
+              <div className="inline-block bg-gradient-to-r from-scrumboks-yellow/20 to-scrumboks-blue/20 rounded-full p-3 mb-4">
+                <MapPin className="w-8 h-8 text-scrumboks-blue" />
               </div>
-              <h3 className="text-3xl font-bold text-scrumboks-navy mb-4">
+              <h3 className="text-3xl font-bold text-scrumboks-blue mb-4">
                 Waar de magie gebeurt
               </h3>
               <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto">
                 Al onze teams trainen op{' '}
-                <span className="text-scrumboks-navy font-semibold">
+                <span className="text-scrumboks-blue font-semibold">
                   Sportpark Rauwenhof
                 </span>{' '}
                 in Tiel. Een plek waar vriendschappen ontstaan en dromen
@@ -304,50 +304,51 @@ const Teams = () => {
               </p>
             </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-scrumboks-navy to-scrumboks-blue-light rounded-2xl flex items-center justify-center mx-auto mb-3">
-                    <MapPin className="w-8 h-8 text-scrumboks-white" />
-                  </div>
-                  <h4 className="font-bold text-scrumboks-navy mb-2">Locatie</h4>
-                  <p className="text-scrumboks-gray text-sm">
-                    Beethovenstraat 18a
-                    <br />
-                    4003 KX Tiel
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-scrumboks-blue to-scrumboks-blue-light rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <MapPin className="w-8 h-8 text-scrumboks-white" />
                 </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-scrumboks-gold to-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3">
-                    <Clock className="w-8 h-8 text-scrumboks-white" />
-                  </div>
-                  <h4 className="font-bold text-scrumboks-navy mb-2">
-                    Openingstijden
-                  </h4>
-                  <p className="text-scrumboks-gray text-sm">
-                    Di-Do: 18:45 - 20:30
-                    <br />
-                    Vr: 20:00 - 22:00
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-scrumboks-blue-dark to-scrumboks-navy rounded-2xl flex items-center justify-center mx-auto mb-3">
-                    <Users className="w-8 h-8 text-scrumboks-white" />
-                  </div>
-                  <h4 className="font-bold text-scrumboks-navy mb-2">Contact</h4>
-                  <p className="text-scrumboks-gray text-sm">
-                    0344 623201
-                    <br />
-                    info@scrumboks.nl
-                  </p>
-                </div>
+                <h4 className="font-bold text-scrumboks-blue mb-2">Locatie</h4>
+                <p className="text-scrumboks-gray text-sm">
+                  Beethovenstraat 18a
+                  <br />
+                  4003 KX Tiel
+                </p>
               </div>
 
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-scrumboks-yellow to-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <Clock className="w-8 h-8 text-scrumboks-white" />
+                </div>
+                <h4 className="font-bold text-scrumboks-blue mb-2">
+                  Openingstijden
+                </h4>
+                <p className="text-scrumboks-gray text-sm">
+                  Di-Do: 18:45 - 20:30
+                  <br />
+                  Vr: 20:00 - 22:00
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-scrumboks-blue-dark to-scrumboks-blue rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-8 h-8 text-scrumboks-white" />
+                </div>
+                <h4 className="font-bold text-scrumboks-blue mb-2">Contact</h4>
+                <p className="text-scrumboks-gray text-sm">
+                  0344 623201
+                  <br />
+                  info@scrumboks.nl
+                </p>
+              </div>
+            </div>
+
+            {/* Professional CTA Button */}
             <div className="text-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-scrumboks-navy to-scrumboks-blue-dark hover:from-scrumboks-blue-dark hover:to-scrumboks-black text-scrumboks-white border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group font-bold text-lg px-8 py-4"
+                className="bg-gradient-to-r from-scrumboks-blue to-scrumboks-blue-dark hover:from-scrumboks-blue-dark hover:to-scrumboks-black text-scrumboks-white border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group font-bold text-lg px-8 py-4"
                 onClick={() =>
                   document
                     .querySelector('#contact')
