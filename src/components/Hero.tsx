@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Trophy, Shield } from 'lucide-react';
 import heroImage from '@/assets/hero-rugby-action.jpg';
 
 const Hero = () => {
@@ -38,7 +39,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-block bg-scrumboks-gold/20 backdrop-blur-sm border border-scrumboks-gold/30 rounded-full px-6 py-2 mb-4">
           <p className="text-scrumboks-gold font-roboto-slab font-semibold text-lg">
-            🏠 Welkom bij jouw nieuwe rugby thuis
+            Welkom bij jouw nieuwe rugby thuis
           </p>
         </div>
 
@@ -55,7 +56,7 @@ const Hero = () => {
           bouwen wij aan verhalen, vriendschappen en onvergetelijke momenten op
           en naast het veld.
           <span className="block mt-2 text-lg text-scrumboks-white/80">
-            🌟 Waar elke tackle een verhaal wordt en elke try gevierd wordt als
+            Waar elke tackle een verhaal wordt en elke try gevierd wordt als
             teamoverwinning
           </span>
         </p>
@@ -65,7 +66,7 @@ const Hero = () => {
           className="bg-scrumboks-gold/25 backdrop-blur-sm border-2 border-scrumboks-gold/40 rounded-2xl p-6 mt-8 mx-auto max-w-2xl hover:bg-scrumboks-gold/35 hover:border-scrumboks-gold/60 transition-all duration-500 transform hover:scale-105 cursor-pointer group"
         >
           <div className="flex items-center justify-center space-x-3">
-            <span className="text-4xl group-hover:animate-bounce">🎉</span>
+            <Trophy className="w-8 h-8 text-scrumboks-gold group-hover:animate-bounce" />
             <div className="text-center">
               <p className="text-scrumboks-gold font-oswald font-bold text-xl mb-1">
                 2025: Gouden Jubileum!
@@ -74,24 +75,22 @@ const Hero = () => {
                 50 jaar verhalen, vriendschappen & rugby passie
               </p>
             </div>
-            <span className="text-4xl group-hover:animate-bounce">🏆</span>
+            <Shield className="w-8 h-8 text-scrumboks-gold group-hover:animate-bounce" />
           </div>
         </button>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
           <Link to="/xperience-rugby">
             <Button
-              variant="hero"
               size="xl"
               className="w-full sm:w-auto bg-scrumboks-gold hover:bg-scrumboks-gold-dark text-scrumboks-navy font-oswald font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              🏉 Probeer Rugby - €15
+              Probeer Rugby - €15
             </Button>
           </Link>
 
           <Link to="/membership">
             <Button
-              variant="action"
               size="xl"
               className="w-full sm:w-auto bg-scrumboks-navy hover:bg-scrumboks-navy-dark text-scrumboks-white font-oswald font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
@@ -101,9 +100,8 @@ const Hero = () => {
 
           <a href="/scrumboks-rugby-hub/#teams">
             <Button
-              variant="minimal"
               size="xl"
-              className="w-full sm:w-auto border-2 border-scrumboks-white/40 hover:border-scrumboks-white hover:bg-scrumboks-white/20 backdrop-blur-sm transition-all duration-500 transform hover:scale-105 group font-roboto-slab"
+              className="w-full sm:w-auto border-2 border-scrumboks-white/40 hover:border-scrumboks-white hover:bg-scrumboks-white/20 backdrop-blur-sm transition-all duration-500 transform hover:scale-105 group font-roboto-slab text-scrumboks-white"
             >
               Bekijk onze teams
             </Button>
