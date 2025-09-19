@@ -22,9 +22,9 @@ Typography: Oswald (headings), Roboto Slab (subheadings), Inter (body)
     --scrumboks-navy-light: 225 30% 95%; /* Light navy background */
     --scrumboks-navy-dark: 225 60% 15%; /* Darker navy for contrast */
 
-    --scrumboks-gold: 45 85% 60%; /* #F2C94C - Primary Gold */
-    --scrumboks-gold-light: 45 60% 90%; /* Light gold background */
-    --scrumboks-gold-dark: 45 90% 45%; /* Darker gold for contrast */
+    --scrumboks-gold: 45 40% 85%; /* Softer cream-gold */
+    --scrumboks-gold-light: 45 25% 95%; /* Very light cream background */
+    --scrumboks-gold-dark: 45 60% 70%; /* Darker cream for contrast */
 
     /* Supporting Colors */
     --scrumboks-blue: 225 50% 20%; /* Same as navy for consistency */
@@ -54,7 +54,7 @@ Typography: Oswald (headings), Roboto Slab (subheadings), Inter (body)
     --muted: 0 0% 97%; /* Light gray background */
     --muted-foreground: 0 0% 45%;
 
-    --accent: 45 85% 60%; /* Scrumboks gold */
+    --accent: 45 40% 85%; /* Scrumboks softer gold */
     --accent-foreground: 225 50% 20%; /* Navy text on gold */
 
     --destructive: 0 84.2% 60.2%;
