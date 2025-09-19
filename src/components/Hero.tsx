@@ -83,7 +83,7 @@ const Hero = () => {
           <Link to="/xperience-rugby">
             <Button
               size="xl"
-              className="w-full sm:w-auto bg-scrumboks-gold hover:bg-scrumboks-gold-dark text-scrumboks-navy font-oswald font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="w-full sm:w-auto border-2 border-scrumboks-white/40 hover:border-scrumboks-white hover:bg-scrumboks-white/20 backdrop-blur-sm transition-all duration-500 transform hover:scale-105 group font-oswald font-bold text-scrumboks-white text-lg px-8 py-4"
             >
               Probeer Rugby - €15
             </Button>
@@ -92,7 +92,7 @@ const Hero = () => {
           <Link to="/membership">
             <Button
               size="xl"
-              className="w-full sm:w-auto bg-scrumboks-navy hover:bg-scrumboks-navy-dark text-scrumboks-white font-oswald font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="w-full sm:w-auto border-2 border-scrumboks-white/40 hover:border-scrumboks-white hover:bg-scrumboks-white/20 backdrop-blur-sm transition-all duration-500 transform hover:scale-105 group font-oswald font-bold text-scrumboks-white text-lg px-8 py-4"
             >
               Word lid van ons team
             </Button>
@@ -101,7 +101,7 @@ const Hero = () => {
           <a href="/scrumboks-rugby-hub/#teams">
             <Button
               size="xl"
-              className="w-full sm:w-auto border-2 border-scrumboks-white/40 hover:border-scrumboks-white hover:bg-scrumboks-white/20 backdrop-blur-sm transition-all duration-500 transform hover:scale-105 group font-roboto-slab text-scrumboks-white"
+              className="w-full sm:w-auto border-2 border-scrumboks-white/40 hover:border-scrumboks-white hover:bg-scrumboks-white/20 backdrop-blur-sm transition-all duration-500 transform hover:scale-105 group font-oswald font-bold text-scrumboks-white text-lg px-8 py-4"
             >
               Bekijk onze teams
             </Button>

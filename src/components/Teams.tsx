@@ -33,8 +33,6 @@ const Teams = () => {
       training: 'Dinsdag & Vrijdag 20:00',
       members: '25 spelers',
       age: '18+',
-      bgColor: 'bg-scrumboks-navy',
-      textColor: 'text-scrumboks-white',
       icon: Trophy,
       highlight: 'Championship Level',
     },
@@ -46,8 +44,6 @@ const Teams = () => {
       training: 'Dinsdag & Vrijdag 20:00',
       members: '20 spelers',
       age: '16+',
-      bgColor: 'bg-scrumboks-gold',
-      textColor: 'text-scrumboks-navy',
       icon: Heart,
       highlight: 'Empowering Women',
     },
@@ -59,8 +55,6 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '53 spelers',
       age: '6-12 jaar',
-      bgColor: 'bg-scrumboks-navy-dark',
-      textColor: 'text-scrumboks-white',
       icon: Target,
       highlight: 'Future Stars',
     },
@@ -72,8 +66,6 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '22 spelers',
       age: '12-14 jaar',
-      bgColor: 'bg-scrumboks-gold-dark',
-      textColor: 'text-scrumboks-navy',
       icon: Zap,
       highlight: 'Rising Talent',
     },
@@ -85,8 +77,6 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '18 spelers',
       age: '14-16 jaar',
-      bgColor: 'bg-scrumboks-navy',
-      textColor: 'text-scrumboks-white',
       icon: Users,
       highlight: 'Team Building',
     },
@@ -98,8 +88,6 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '16 spelers',
       age: '16-18 jaar',
-      bgColor: 'bg-scrumboks-gold',
-      textColor: 'text-scrumboks-navy',
       icon: Star,
       highlight: 'Elite Development',
     },
@@ -149,14 +137,14 @@ const Teams = () => {
           </p>
         </div>
 
-        {/* Professional Teams Grid */}
+        {/* Professional Teams Grid - All Navy */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teams.map((team, index) => (
             <Card
               key={index}
               className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
-              } ${team.bgColor}`}
+              } bg-scrumboks-navy`}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
@@ -167,26 +155,26 @@ const Teams = () => {
               <CardHeader className="pb-4 relative">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 bg-scrumboks-white/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <team.icon className={`w-6 h-6 ${team.textColor}`} />
+                    <div className="w-12 h-12 bg-scrumboks-white/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <team.icon className="w-6 h-6 text-scrumboks-white" />
                     </div>
                     <div>
-                      <CardTitle className={`text-2xl font-oswald font-black ${team.textColor} group-hover:scale-105 transition-transform duration-300`}>
+                      <CardTitle className="text-2xl font-oswald font-black text-scrumboks-white group-hover:scale-105 transition-transform duration-300">
                         {team.name}
                       </CardTitle>
-                      <div className={`text-sm font-roboto-slab font-bold ${team.textColor}/90 uppercase tracking-wide`}>
+                      <div className="text-sm font-roboto-slab font-bold text-scrumboks-white/90 uppercase tracking-wide">
                         {team.highlight}
                       </div>
                     </div>
                   </div>
                   <div className="bg-scrumboks-white/30 px-3 py-1 rounded-full shadow-lg">
-                    <span className={`text-xs font-bold ${team.textColor} uppercase tracking-wide`}>
+                    <span className="text-xs font-bold text-scrumboks-white uppercase tracking-wide">
                       {team.level}
                     </span>
                   </div>
                 </div>
 
-                <p className={`${team.textColor} leading-relaxed text-sm font-inter font-semibold`}>
+                <p className="text-scrumboks-white leading-relaxed text-sm font-inter font-semibold">
                   {team.description}
                 </p>
               </CardHeader>
@@ -196,24 +184,24 @@ const Teams = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-scrumboks-white/30 p-4 rounded-xl shadow-lg">
                     <div className="flex items-center gap-2 mb-2">
-                      <Users className={`w-4 h-4 ${team.textColor}`} />
-                      <span className={`text-sm font-roboto-slab font-bold ${team.textColor}`}>
+                      <Users className="w-4 h-4 text-scrumboks-white" />
+                      <span className="text-sm font-roboto-slab font-bold text-scrumboks-white">
                         Leden
                       </span>
                     </div>
-                    <p className={`text-xl font-oswald font-black ${team.textColor}`}>
+                    <p className="text-xl font-oswald font-black text-scrumboks-white">
                       {team.members}
                     </p>
                   </div>
 
                   <div className="bg-scrumboks-white/30 p-4 rounded-xl shadow-lg">
                     <div className="flex items-center gap-2 mb-2">
-                      <Clock className={`w-4 h-4 ${team.textColor}`} />
-                      <span className={`text-sm font-roboto-slab font-bold ${team.textColor}`}>
+                      <Clock className="w-4 h-4 text-scrumboks-white" />
+                      <span className="text-sm font-roboto-slab font-bold text-scrumboks-white">
                         Leeftijd
                       </span>
                     </div>
-                    <p className={`text-xl font-oswald font-black ${team.textColor}`}>
+                    <p className="text-xl font-oswald font-black text-scrumboks-white">
                       {team.age}
                     </p>
                   </div>
@@ -222,12 +210,12 @@ const Teams = () => {
                 {/* Training Info */}
                 <div className="bg-scrumboks-white/30 p-4 rounded-xl shadow-lg">
                   <div className="flex items-center gap-2 mb-2">
-                    <Calendar className={`w-4 h-4 ${team.textColor}`} />
-                    <span className={`font-roboto-slab font-bold ${team.textColor} text-sm`}>
+                    <Calendar className="w-4 h-4 text-scrumboks-white" />
+                    <span className="font-roboto-slab font-bold text-scrumboks-white text-sm">
                       Training
                     </span>
                   </div>
-                  <p className={`${team.textColor} font-inter font-semibold text-sm`}>
+                  <p className="text-scrumboks-white font-inter font-semibold text-sm">
                     {team.training}
                   </p>
                 </div>

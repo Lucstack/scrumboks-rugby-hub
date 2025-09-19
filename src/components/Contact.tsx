@@ -30,8 +30,6 @@ const Contact = () => {
       title: 'Clubhuis',
       value: '0344 623201',
       description: 'Bereikbaar tijdens trainingstijden',
-      bgColor: 'bg-scrumboks-navy',
-      textColor: 'text-scrumboks-white',
       highlight: 'Direct contact',
     },
     {
@@ -39,8 +37,6 @@ const Contact = () => {
       title: 'E-mail',
       value: 'info@scrumboks.nl',
       description: 'We reageren binnen 24 uur',
-      bgColor: 'bg-scrumboks-gold',
-      textColor: 'text-scrumboks-navy',
       highlight: 'Snelle reactie',
     },
     {
@@ -48,8 +44,6 @@ const Contact = () => {
       title: 'Adres',
       value: 'Beethovenstraat 18a',
       description: '4003 KX Tiel',
-      bgColor: 'bg-scrumboks-navy-dark',
-      textColor: 'text-scrumboks-white',
       highlight: 'Centraal gelegen',
     },
     {
@@ -57,8 +51,6 @@ const Contact = () => {
       title: 'Openingstijden',
       value: 'Di-Do: 18:45-20:30',
       description: 'Vr: 20:00-22:00',
-      bgColor: 'bg-scrumboks-gold-dark',
-      textColor: 'text-scrumboks-navy',
       highlight: 'Flexibele tijden',
     },
   ];
@@ -138,14 +130,14 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Enhanced Contact Information Grid */}
+        {/* Enhanced Contact Information Grid - All Gold */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {contactInfo.map((info, index) => (
             <Card
               key={index}
               className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-700 transform hover:-translate-y-2 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
-              } ${info.bgColor}`}
+              } bg-scrumboks-gold`}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
@@ -154,26 +146,26 @@ const Contact = () => {
             >
               <CardContent className="p-6 text-center">
                 {/* Icon with Animation */}
-                <div className="w-16 h-16 bg-scrumboks-white/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <info.icon className={`w-8 h-8 ${info.textColor} group-hover:scale-110 transition-transform duration-300`} />
+                <div className="w-16 h-16 bg-scrumboks-navy/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <info.icon className="w-8 h-8 text-scrumboks-navy group-hover:scale-110 transition-transform duration-300" />
                 </div>
 
                 {/* Content */}
-                <h3 className={`text-lg font-oswald font-black ${info.textColor} mb-2 group-hover:scale-105 transition-transform duration-300`}>
+                <h3 className="text-lg font-oswald font-black text-scrumboks-navy mb-2 group-hover:scale-105 transition-transform duration-300">
                   {info.title}
                 </h3>
 
-                <p className={`text-xl font-oswald font-black ${info.textColor} mb-2`}>
+                <p className="text-xl font-oswald font-black text-scrumboks-navy mb-2">
                   {info.value}
                 </p>
 
-                <p className={`text-sm ${info.textColor}/90 mb-3 font-inter font-semibold`}>
+                <p className="text-sm text-scrumboks-navy/80 mb-3 font-inter font-semibold">
                   {info.description}
                 </p>
 
                 {/* Highlight Badge */}
-                <div className="bg-scrumboks-white/30 px-3 py-1 rounded-full shadow-lg">
-                  <span className={`text-xs font-roboto-slab font-bold ${info.textColor}`}>
+                <div className="bg-scrumboks-navy/20 px-3 py-1 rounded-full shadow-lg">
+                  <span className="text-xs font-roboto-slab font-bold text-scrumboks-navy">
                     {info.highlight}
                   </span>
                 </div>
