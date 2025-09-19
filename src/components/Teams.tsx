@@ -33,7 +33,7 @@ const Teams = () => {
       training: 'Dinsdag & Vrijdag 20:00',
       members: '25 spelers',
       age: '18+',
-      color: 'from-scrumboks-navy to-scrumboks-navy-light',
+      color: 'from-scrumboks-navy to-scrumboks-navy-dark',
       icon: Trophy,
       highlight: 'Championship Level',
     },
@@ -45,7 +45,7 @@ const Teams = () => {
       training: 'Dinsdag & Vrijdag 20:00',
       members: '20 spelers',
       age: '16+',
-      color: 'from-scrumboks-gold to-scrumboks-gold-light',
+      color: 'from-scrumboks-gold to-scrumboks-gold-dark',
       icon: Heart,
       highlight: 'Empowering Women',
     },
@@ -57,7 +57,7 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '53 spelers',
       age: '6-12 jaar',
-      color: 'from-scrumboks-navy-light to-scrumboks-gold-light',
+      color: 'from-scrumboks-navy-dark to-scrumboks-gold',
       icon: Target,
       highlight: 'Future Stars',
     },
@@ -69,7 +69,7 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '22 spelers',
       age: '12-14 jaar',
-      color: 'from-scrumboks-navy-dark to-scrumboks-navy',
+      color: 'from-scrumboks-gold-dark to-scrumboks-navy',
       icon: Zap,
       highlight: 'Rising Talent',
     },
@@ -81,7 +81,7 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '18 spelers',
       age: '14-16 jaar',
-      color: 'from-scrumboks-gold to-scrumboks-gold-dark',
+      color: 'from-scrumboks-navy to-scrumboks-gold-dark',
       icon: Users,
       highlight: 'Team Building',
     },
@@ -93,7 +93,7 @@ const Teams = () => {
       training: 'Dinsdag & Donderdag 18:45',
       members: '16 spelers',
       age: '16-18 jaar',
-      color: 'from-scrumboks-navy to-scrumboks-navy-dark',
+      color: 'from-scrumboks-gold to-scrumboks-navy-dark',
       icon: Star,
       highlight: 'Elite Development',
     },
@@ -102,12 +102,12 @@ const Teams = () => {
   return (
     <section
       id="teams"
-      className="py-20 bg-gradient-to-b from-scrumboks-navy-light/30 via-scrumboks-white to-scrumboks-navy-light/20 relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-scrumboks-navy-light/50 via-scrumboks-white to-scrumboks-navy-light/30 relative overflow-hidden"
     >
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-scrumboks-gold/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-scrumboks-navy/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-64 h-64 bg-scrumboks-gold/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-scrumboks-navy/15 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -117,13 +117,13 @@ const Teams = () => {
             isVisible ? 'animate-fadeInUp' : 'opacity-0'
           }`}
         >
-          <div className="inline-block bg-scrumboks-navy/10 backdrop-blur-sm border border-scrumboks-navy/20 rounded-2xl px-8 py-3 mb-6">
-            <span className="text-scrumboks-navy font-oswald font-bold text-lg tracking-wide">
+          <div className="inline-block bg-scrumboks-gold/30 backdrop-blur-sm border-2 border-scrumboks-gold/40 rounded-2xl px-8 py-3 mb-6">
+            <span className="text-scrumboks-navy font-oswald font-black text-lg tracking-wide">
               Onze Teams
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-oswald font-bold text-scrumboks-navy mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-oswald font-black text-scrumboks-navy mb-6">
             <span className="block font-medium">Ontdek jouw</span>
             <span className="block text-scrumboks-gold font-semibold">
               Perfecte Team
@@ -148,16 +148,21 @@ const Teams = () => {
           {teams.map((team, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 ${
+              className={`group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
               }`}
               style={{
                 animationDelay: `${index * 0.1}s`,
                 background: `linear-gradient(135deg, ${team.color})`,
                 backdropFilter: 'blur(10px)',
-                border: `1px solid ${
+                border: `2px solid ${
                   hoveredTeam === index
-                    ? 'rgba(242, 201, 76, 0.4)'
+                    ? 'rgba(242, 201, 76, 0.6)'
+                    : 'rgba(30, 42, 86, 0.3)'
+                }`,
+                boxShadow: `0 10px 30px -5px ${
+                  hoveredTeam === index
+                    ? 'rgba(242, 201, 76, 0.3)'
                     : 'rgba(30, 42, 86, 0.2)'
                 }`,
               }}
@@ -168,26 +173,26 @@ const Teams = () => {
               <CardHeader className="pb-4 relative">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-scrumboks-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-scrumboks-white/30 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <team.icon className="w-6 h-6 text-scrumboks-white" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl font-oswald font-bold text-scrumboks-white group-hover:text-scrumboks-gold transition-colors duration-300">
+                      <CardTitle className="text-2xl font-oswald font-black text-scrumboks-white group-hover:text-scrumboks-gold transition-colors duration-300 drop-shadow-lg">
                         {team.name}
                       </CardTitle>
-                      <div className="text-sm font-roboto-slab font-semibold text-scrumboks-white/90 uppercase tracking-wide">
+                      <div className="text-sm font-roboto-slab font-bold text-scrumboks-white/95 uppercase tracking-wide">
                         {team.highlight}
                       </div>
                     </div>
                   </div>
-                  <div className="bg-scrumboks-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <div className="bg-scrumboks-white/30 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                     <span className="text-xs font-bold text-scrumboks-white uppercase tracking-wide">
                       {team.level}
                     </span>
                   </div>
                 </div>
 
-                <p className="text-scrumboks-white/90 leading-relaxed text-sm font-inter">
+                <p className="text-scrumboks-white/95 leading-relaxed text-sm font-inter font-medium">
                   {team.description}
                 </p>
               </CardHeader>
@@ -195,40 +200,40 @@ const Teams = () => {
               <CardContent className="space-y-4">
                 {/* Professional Stats */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-scrumboks-white/20 backdrop-blur-sm p-4 rounded-xl border border-scrumboks-white/30">
+                  <div className="bg-scrumboks-white/30 backdrop-blur-sm p-4 rounded-xl border border-scrumboks-white/40 shadow-lg">
                     <div className="flex items-center gap-2 mb-2">
                       <Users className="w-4 h-4 text-scrumboks-white" />
-                      <span className="text-sm font-roboto-slab font-semibold text-scrumboks-white">
+                      <span className="text-sm font-roboto-slab font-bold text-scrumboks-white">
                         Leden
                       </span>
                     </div>
-                    <p className="text-xl font-oswald font-bold text-scrumboks-white">
+                    <p className="text-xl font-oswald font-black text-scrumboks-white">
                       {team.members}
                     </p>
                   </div>
 
-                  <div className="bg-scrumboks-white/20 backdrop-blur-sm p-4 rounded-xl border border-scrumboks-white/30">
+                  <div className="bg-scrumboks-white/30 backdrop-blur-sm p-4 rounded-xl border border-scrumboks-white/40 shadow-lg">
                     <div className="flex items-center gap-2 mb-2">
                       <Clock className="w-4 h-4 text-scrumboks-white" />
-                      <span className="text-sm font-roboto-slab font-semibold text-scrumboks-white">
+                      <span className="text-sm font-roboto-slab font-bold text-scrumboks-white">
                         Leeftijd
                       </span>
                     </div>
-                    <p className="text-xl font-oswald font-bold text-scrumboks-white">
+                    <p className="text-xl font-oswald font-black text-scrumboks-white">
                       {team.age}
                     </p>
                   </div>
                 </div>
 
                 {/* Training Info */}
-                <div className="bg-scrumboks-white/20 backdrop-blur-sm p-4 rounded-xl border border-scrumboks-white/30">
+                <div className="bg-scrumboks-white/30 backdrop-blur-sm p-4 rounded-xl border border-scrumboks-white/40 shadow-lg">
                   <div className="flex items-center gap-2 mb-2">
                     <Calendar className="w-4 h-4 text-scrumboks-white" />
-                    <span className="font-roboto-slab font-semibold text-scrumboks-white text-sm">
+                    <span className="font-roboto-slab font-bold text-scrumboks-white text-sm">
                       Training
                     </span>
                   </div>
-                  <p className="text-scrumboks-white/90 font-inter font-medium text-sm">
+                  <p className="text-scrumboks-white/95 font-inter font-semibold text-sm">
                     {team.training}
                   </p>
                 </div>
@@ -238,24 +243,24 @@ const Teams = () => {
         </div>
 
         {/* Professional Training Location */}
-        <div className="bg-gradient-to-br from-scrumboks-navy/10 via-scrumboks-gold/10 to-scrumboks-navy/10 rounded-3xl p-8 border border-scrumboks-navy/20 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-scrumboks-navy/20 via-scrumboks-gold/20 to-scrumboks-navy/20 rounded-3xl p-8 border-2 border-scrumboks-navy/30 relative overflow-hidden shadow-2xl">
           {/* Subtle Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-32 h-32 bg-scrumboks-gold rounded-full -translate-y-16 translate-x-16" />
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-scrumboks-navy rounded-full translate-y-20 -translate-x-20" />
           </div>
 
           <div className="relative z-10">
             <div className="text-center mb-8">
-              <div className="inline-block bg-scrumboks-gold/20 rounded-full p-3 mb-4">
+              <div className="inline-block bg-scrumboks-gold/40 rounded-full p-3 mb-4 shadow-lg">
                 <MapPin className="w-8 h-8 text-scrumboks-navy" />
               </div>
-              <h3 className="text-3xl font-oswald font-bold text-scrumboks-navy mb-4">
+              <h3 className="text-3xl font-oswald font-black text-scrumboks-navy mb-4">
                 Waar de magie gebeurt
               </h3>
-              <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab">
+              <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab font-semibold">
                 Al onze teams trainen op{' '}
-                <span className="text-scrumboks-navy font-semibold">
+                <span className="text-scrumboks-navy font-bold">
                   Sportpark Rauwenhof
                 </span>{' '}
                 in Tiel. Een plek waar vriendschappen ontstaan en dromen
@@ -265,11 +270,11 @@ const Teams = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-scrumboks-navy rounded-2xl flex items-center justify-center mx-auto mb-3">
+                <div className="w-16 h-16 bg-scrumboks-navy rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                   <MapPin className="w-8 h-8 text-scrumboks-white" />
                 </div>
-                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">Locatie</h4>
-                <p className="text-scrumboks-gray text-sm font-inter">
+                <h4 className="font-oswald font-black text-scrumboks-navy mb-2">Locatie</h4>
+                <p className="text-scrumboks-gray text-sm font-inter font-semibold">
                   Beethovenstraat 18a
                   <br />
                   4003 KX Tiel
@@ -277,13 +282,13 @@ const Teams = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3">
+                <div className="w-16 h-16 bg-scrumboks-gold rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                   <Clock className="w-8 h-8 text-scrumboks-navy" />
                 </div>
-                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">
+                <h4 className="font-oswald font-black text-scrumboks-navy mb-2">
                   Openingstijden
                 </h4>
-                <p className="text-scrumboks-gray text-sm font-inter">
+                <p className="text-scrumboks-gray text-sm font-inter font-semibold">
                   Di-Do: 18:45 - 20:30
                   <br />
                   Vr: 20:00 - 22:00
@@ -291,11 +296,11 @@ const Teams = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-scrumboks-navy-dark rounded-2xl flex items-center justify-center mx-auto mb-3">
+                <div className="w-16 h-16 bg-scrumboks-navy-dark rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg">
                   <Users className="w-8 h-8 text-scrumboks-white" />
                 </div>
-                <h4 className="font-oswald font-bold text-scrumboks-navy mb-2">Contact</h4>
-                <p className="text-scrumboks-gray text-sm font-inter">
+                <h4 className="font-oswald font-black text-scrumboks-navy mb-2">Contact</h4>
+                <p className="text-scrumboks-gray text-sm font-inter font-semibold">
                   0344 623201
                   <br />
                   info@scrumboks.nl
@@ -307,7 +312,7 @@ const Teams = () => {
             <div className="text-center">
               <Button
                 size="lg"
-                className="bg-scrumboks-gold hover:bg-scrumboks-gold-dark text-scrumboks-navy border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group font-oswald font-bold text-lg px-8 py-4"
+                className="bg-scrumboks-gold hover:bg-scrumboks-gold-dark text-scrumboks-navy border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group font-oswald font-black text-lg px-8 py-4"
                 onClick={() =>
                   document
                     .querySelector('#contact')

@@ -11,7 +11,7 @@ import {
   Heart,
   Users,
   Trophy,
-  Zap
+  Zap,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -30,33 +30,33 @@ const Contact = () => {
       title: 'Clubhuis',
       value: '0344 623201',
       description: 'Bereikbaar tijdens trainingstijden',
-      color: 'from-scrumboks-navy to-scrumboks-navy-light',
-      highlight: 'Direct contact'
+      color: 'from-scrumboks-navy to-scrumboks-navy-dark',
+      highlight: 'Direct contact',
     },
     {
       icon: Mail,
       title: 'E-mail',
       value: 'info@scrumboks.nl',
       description: 'We reageren binnen 24 uur',
-      color: 'from-scrumboks-gold to-scrumboks-gold-light',
-      highlight: 'Snelle reactie'
+      color: 'from-scrumboks-gold to-scrumboks-gold-dark',
+      highlight: 'Snelle reactie',
     },
     {
       icon: MapPin,
       title: 'Adres',
       value: 'Beethovenstraat 18a',
       description: '4003 KX Tiel',
-      color: 'from-scrumboks-navy-light to-scrumboks-gold-light',
-      highlight: 'Centraal gelegen'
+      color: 'from-scrumboks-navy-dark to-scrumboks-gold',
+      highlight: 'Centraal gelegen',
     },
     {
       icon: Clock,
       title: 'Openingstijden',
       value: 'Di-Do: 18:45-20:30',
       description: 'Vr: 20:00-22:00',
-      color: 'from-scrumboks-gold to-scrumboks-gold-dark',
-      highlight: 'Flexibele tijden'
-    }
+      color: 'from-scrumboks-gold-dark to-scrumboks-navy',
+      highlight: 'Flexibele tijden',
+    },
   ];
 
   const socialLinks = [
@@ -65,65 +65,72 @@ const Contact = () => {
       url: 'https://www.facebook.com/Scrumboks',
       icon: Facebook,
       color: 'hover:bg-blue-600',
-      description: 'Volg ons voor updates'
+      description: 'Volg ons voor updates',
     },
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/scrumboks_rugby/',
       icon: Instagram,
       color: 'hover:bg-pink-600',
-      description: 'Bekijk onze foto\'s'
+      description: "Bekijk onze foto's",
     },
     {
       name: 'Twitter',
       url: 'https://x.com/scrumboks',
       icon: Twitter,
       color: 'hover:bg-blue-400',
-      description: 'Blijf op de hoogte'
-    }
+      description: 'Blijf op de hoogte',
+    },
   ];
 
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-b from-scrumboks-navy-light/30 via-scrumboks-white to-scrumboks-navy-light/20 relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-scrumboks-navy-light/50 via-scrumboks-white to-scrumboks-navy-light/30 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
-          className="absolute top-20 left-20 w-96 h-96 bg-scrumboks-navy/10 rounded-full blur-3xl animate-pulse"
+        <div
+          className="absolute top-20 left-20 w-96 h-96 bg-scrumboks-navy/15 rounded-full blur-3xl animate-pulse"
           style={{
-            animation: 'float 18s ease-in-out infinite'
+            animation: 'float 18s ease-in-out infinite',
           }}
         />
-        <div 
-          className="absolute bottom-20 right-20 w-80 h-80 bg-scrumboks-gold/10 rounded-full blur-3xl animate-pulse"
+        <div
+          className="absolute bottom-20 right-20 w-80 h-80 bg-scrumboks-gold/15 rounded-full blur-3xl animate-pulse"
           style={{
-            animation: 'float 22s ease-in-out infinite reverse'
+            animation: 'float 22s ease-in-out infinite reverse',
           }}
         />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced Section Header */}
-        <div className={`text-center mb-16 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          <div className="inline-block bg-scrumboks-gold/20 backdrop-blur-sm border border-scrumboks-gold/30 rounded-2xl px-8 py-3 mb-6">
-            <span className="text-scrumboks-navy font-oswald font-bold text-lg tracking-wide">
+        <div
+          className={`text-center mb-16 ${
+            isVisible ? 'animate-fadeInUp' : 'opacity-0'
+          }`}
+        >
+          <div className="inline-block bg-scrumboks-gold/30 backdrop-blur-sm border-2 border-scrumboks-gold/40 rounded-2xl px-8 py-3 mb-6">
+            <span className="text-scrumboks-navy font-oswald font-black text-lg tracking-wide">
               Laten we elkaar ontmoeten
             </span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-oswald font-black text-scrumboks-navy mb-6">
             <span className="block font-light">Contact &</span>
-            <span className="block text-scrumboks-gold">
-              Locatie
-            </span>
+            <span className="block text-scrumboks-gold">Locatie</span>
           </h2>
-          
+
           <p className="text-xl lg:text-2xl text-scrumboks-gray max-w-4xl mx-auto leading-relaxed font-roboto-slab">
-            <span className="text-scrumboks-navy font-semibold">Heb je vragen of wil je langskomen?</span> 
-            We staan klaar om je te helpen! Neem gerust contact met ons op - 
-            <span className="text-scrumboks-gold font-semibold"> we horen graag van je.</span>
+            <span className="text-scrumboks-navy font-semibold">
+              Heb je vragen of wil je langskomen?
+            </span>
+            We staan klaar om je te helpen! Neem gerust contact met ons op -
+            <span className="text-scrumboks-gold font-semibold">
+              {' '}
+              we horen graag van je.
+            </span>
           </p>
         </div>
 
@@ -132,40 +139,49 @@ const Contact = () => {
           {contactInfo.map((info, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 ${
+              className={`group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2 ${
                 isVisible ? 'animate-fadeInUp' : 'opacity-0'
               }`}
               style={{
                 animationDelay: `${index * 0.1}s`,
                 background: `linear-gradient(135deg, ${info.color})`,
                 backdropFilter: 'blur(10px)',
-                border: `1px solid ${hoveredCard === index ? 'rgba(242, 201, 76, 0.4)' : 'rgba(30, 42, 86, 0.2)'}`
+                border: `2px solid ${
+                  hoveredCard === index
+                    ? 'rgba(242, 201, 76, 0.6)'
+                    : 'rgba(30, 42, 86, 0.3)'
+                }`,
+                boxShadow: `0 10px 30px -5px ${
+                  hoveredCard === index
+                    ? 'rgba(242, 201, 76, 0.3)'
+                    : 'rgba(30, 42, 86, 0.2)'
+                }`,
               }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
               <CardContent className="p-6 text-center">
                 {/* Icon with Animation */}
-                <div className="w-16 h-16 bg-scrumboks-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-scrumboks-white/40 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <info.icon className="w-8 h-8 text-scrumboks-white group-hover:text-scrumboks-gold transition-colors duration-300" />
                 </div>
-                
+
                 {/* Content */}
-                <h3 className="text-lg font-oswald font-bold text-scrumboks-white mb-2 group-hover:text-scrumboks-gold transition-colors duration-300">
+                <h3 className="text-lg font-oswald font-black text-scrumboks-white mb-2 group-hover:text-scrumboks-gold transition-colors duration-300 drop-shadow-lg">
                   {info.title}
                 </h3>
-                
-                <p className="text-xl font-oswald font-bold text-scrumboks-white mb-2">
+
+                <p className="text-xl font-oswald font-black text-scrumboks-white mb-2 drop-shadow-lg">
                   {info.value}
                 </p>
-                
-                <p className="text-sm text-scrumboks-white/90 mb-3 font-inter">
+
+                <p className="text-sm text-scrumboks-white/95 mb-3 font-inter font-semibold">
                   {info.description}
                 </p>
-                
+
                 {/* Highlight Badge */}
-                <div className="bg-scrumboks-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                  <span className="text-xs font-roboto-slab font-semibold text-scrumboks-white">
+                <div className="bg-scrumboks-white/40 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
+                  <span className="text-xs font-roboto-slab font-bold text-scrumboks-white">
                     {info.highlight}
                   </span>
                 </div>
@@ -175,24 +191,28 @@ const Contact = () => {
         </div>
 
         {/* Enhanced Social Media Section */}
-        <div className="bg-gradient-to-br from-scrumboks-navy/10 via-scrumboks-gold/10 to-scrumboks-navy/10 rounded-3xl p-8 border border-scrumboks-navy/20 relative overflow-hidden mb-16">
+        <div className="bg-gradient-to-br from-scrumboks-navy/20 via-scrumboks-gold/20 to-scrumboks-navy/20 rounded-3xl p-8 border-2 border-scrumboks-navy/30 relative overflow-hidden mb-16 shadow-2xl">
           {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-40 h-40 bg-scrumboks-gold rounded-full -translate-y-20 -translate-x-20" />
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-scrumboks-navy rounded-full translate-y-16 translate-x-16" />
           </div>
-          
+
           <div className="relative z-10">
             <div className="text-center mb-8">
-              <div className="inline-block bg-scrumboks-gold/20 rounded-full p-3 mb-4">
+              <div className="inline-block bg-scrumboks-gold/40 rounded-full p-3 mb-4 shadow-lg">
                 <Heart className="w-8 h-8 text-scrumboks-navy" />
               </div>
-              <h3 className="text-3xl font-oswald font-bold text-scrumboks-navy mb-4">
+              <h3 className="text-3xl font-oswald font-black text-scrumboks-navy mb-4">
                 Volg ons verhaal
               </h3>
-              <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab">
-                Blijf op de hoogte van onze laatste nieuwtjes, wedstrijden en 
-                <span className="text-scrumboks-navy font-semibold"> onvergetelijke momenten</span> op en naast het veld.
+              <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab font-semibold">
+                Blijf op de hoogte van onze laatste nieuwtjes, wedstrijden en
+                <span className="text-scrumboks-navy font-bold">
+                  {' '}
+                  onvergetelijke momenten
+                </span>{' '}
+                op en naast het veld.
               </p>
             </div>
 
@@ -203,14 +223,14 @@ const Contact = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group relative p-4 bg-scrumboks-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${social.color} hover:text-white`}
+                  className={`group relative p-4 bg-scrumboks-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${social.color} hover:text-white border-2 border-scrumboks-navy/20`}
                 >
                   <div className="flex flex-col items-center gap-2">
                     <social.icon className="w-8 h-8 text-scrumboks-navy group-hover:text-white transition-colors duration-300" />
-                    <span className="font-roboto-slab font-semibold text-scrumboks-navy group-hover:text-white transition-colors duration-300">
+                    <span className="font-roboto-slab font-bold text-scrumboks-navy group-hover:text-white transition-colors duration-300">
                       {social.name}
                     </span>
-                    <span className="text-xs text-scrumboks-gray group-hover:text-white/80 transition-colors duration-300 font-inter">
+                    <span className="text-xs text-scrumboks-gray group-hover:text-white/80 transition-colors duration-300 font-inter font-semibold">
                       {social.description}
                     </span>
                   </div>
@@ -221,71 +241,75 @@ const Contact = () => {
         </div>
 
         {/* Enhanced Contact Form */}
-        <div className="bg-gradient-to-br from-scrumboks-white via-scrumboks-navy-light/30 to-scrumboks-white rounded-3xl p-8 border border-scrumboks-navy/20 shadow-2xl">
+        <div className="bg-gradient-to-br from-scrumboks-white via-scrumboks-navy-light/40 to-scrumboks-white rounded-3xl p-8 border-2 border-scrumboks-navy/30 shadow-2xl">
           <div className="text-center mb-8">
-            <div className="inline-block bg-scrumboks-gold/20 rounded-full p-3 mb-4">
+            <div className="inline-block bg-scrumboks-gold/40 rounded-full p-3 mb-4 shadow-lg">
               <Mail className="w-8 h-8 text-scrumboks-navy" />
             </div>
-            <h3 className="text-3xl font-oswald font-bold text-scrumboks-navy mb-4">
+            <h3 className="text-3xl font-oswald font-black text-scrumboks-navy mb-4">
               Stuur ons een bericht
             </h3>
-            <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab">
-              Heb je vragen over lidmaatschap, trainingen of gewoon zin in een praatje? 
-              <span className="text-scrumboks-navy font-semibold"> We horen graag van je!</span>
+            <p className="text-lg text-scrumboks-gray max-w-2xl mx-auto font-roboto-slab font-semibold">
+              Heb je vragen over lidmaatschap, trainingen of gewoon zin in een
+              praatje?
+              <span className="text-scrumboks-navy font-bold">
+                {' '}
+                We horen graag van je!
+              </span>
             </p>
           </div>
 
           <form className="max-w-2xl mx-auto space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-roboto-slab font-semibold text-scrumboks-navy mb-2">
+                <label className="block text-sm font-roboto-slab font-bold text-scrumboks-navy mb-2">
                   Naam
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-scrumboks-navy/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-transparent transition-all duration-300 font-inter"
+                  className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 font-inter shadow-lg"
                   placeholder="Jouw naam"
                 />
               </div>
               <div>
-                <label className="block text-sm font-roboto-slab font-semibold text-scrumboks-navy mb-2">
+                <label className="block text-sm font-roboto-slab font-bold text-scrumboks-navy mb-2">
                   E-mail
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 border border-scrumboks-navy/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-transparent transition-all duration-300 font-inter"
+                  className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 font-inter shadow-lg"
                   placeholder="jouw@email.nl"
                 />
               </div>
             </div>
-            
+
             <div>
-              <label className="block text-sm font-roboto-slab font-semibold text-scrumboks-navy mb-2">
+              <label className="block text-sm font-roboto-slab font-bold text-scrumboks-navy mb-2">
                 Onderwerp
               </label>
               <input
                 type="text"
-                className="w-full px-4 py-3 border border-scrumboks-navy/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-transparent transition-all duration-300 font-inter"
+                className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 font-inter shadow-lg"
                 placeholder="Waar gaat je bericht over?"
               />
             </div>
-            
+
             <div>
-              <label className="block text-sm font-roboto-slab font-semibold text-scrumboks-navy mb-2">
+              <label className="block text-sm font-roboto-slab font-bold text-scrumboks-navy mb-2">
                 Bericht
               </label>
               <textarea
                 rows={4}
-                className="w-full px-4 py-3 border border-scrumboks-navy/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-transparent transition-all duration-300 resize-none font-inter"
+                className="w-full px-4 py-3 border-2 border-scrumboks-navy/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-scrumboks-gold focus:border-scrumboks-gold transition-all duration-300 resize-none font-inter shadow-lg"
                 placeholder="Vertel ons wat je wilt weten..."
               />
             </div>
-            
+
             <div className="text-center">
               <Button
                 type="submit"
                 size="lg"
-                className="bg-scrumboks-navy hover:bg-scrumboks-navy-dark text-scrumboks-white border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group font-oswald font-bold text-lg px-8 py-4"
+                className="bg-scrumboks-navy hover:bg-scrumboks-navy-dark text-scrumboks-white border-0 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 group font-oswald font-black text-lg px-8 py-4"
               >
                 <span className="flex items-center gap-3">
                   <Mail className="w-5 h-5 group-hover:animate-bounce" />
